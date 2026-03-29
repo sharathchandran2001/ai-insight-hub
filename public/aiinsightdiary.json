@@ -1,16 +1,16 @@
 [
   {
-    "aifact": "Chroma Context-1 new model release",
-    "aifactinsight": "New model with self-editing search capabilities, I think this will influence the upcoming models with better AI Search, retrieve, context management approach",
+    "aifact": "Chroma Context-1 model",
+    "aifactinsight": "New model from Chorma team with self-editing search capabilities, Multi-Hop Retrieval, Specialized Agent for downstream retrievals, ",
     "contributor": "Sharath",
     "date": "2026-03-28",
-    "practicalUsage": "Complex reasoning tasks, code generation, and multi-turn conversations with improved context handling."
+    "practicalUsage": "For project having complex, fragmented information environments where you expects a relevant retrieval. Combine TurboQuant and Chroma Context-1 while building AI Projects"
   },
     {
     "aifact": "TurboQuant is an advanced, data-oblivious compression algorithm",
     "aifactinsight": "TurboQuant is meant to optimize the Key-Value (KV) cache, removing the main memory constraint during LLM inference",
     "contributor": "Sharath",
     "date": "2026-03-29",
-    "practicalUsage": "Enables 4–6x longer context windows for LLMs on the same hardware and improves performance for vector databases"
+    "practicalUsage": "Enables 4–6x longer context windows for LLMs on the same hardware and improves performance for vector databases. Combine TurboQuant and Chroma Context-1 while building AI Projects"
   }
 ]
