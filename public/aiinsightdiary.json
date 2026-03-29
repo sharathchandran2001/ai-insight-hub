@@ -1,23 +1,9 @@
 [
   {
-    "aifact": "DeepSeek-V3 Release",
-    "aifactinsight": "The rise of efficient, open-source models challenging established closed-source giants with significantly lower training costs.",
-    "contributor": "ai_historian",
-    "date": "2024-12-26",
-    "practicalUsage": "Use for cost-effective reasoning tasks and code generation."
-  },
-  {
-    "aifact": "Sora Text-to-Video Announcement",
-    "aifactinsight": "The boundary between simulated reality and video content is blurring, enabling high-fidelity world modeling.",
-    "contributor": "visionary_dev",
-    "date": "2024-02-15",
-    "practicalUsage": "Rapid prototyping for cinematic storytelling and visual effects."
-  },
-  {
-    "aifact": "AlphaFold 3 Launch",
-    "aifactinsight": "AI is now predicting the structures and interactions of all life's molecules, accelerating drug discovery.",
-    "contributor": "bio_tech_lead",
-    "date": "2024-05-08",
-    "practicalUsage": "Accelerating research in genomics and protein engineering."
+    "aifact": "Chroma Context-1 new model release",
+    "aifactinsight": "New model with self editing search capabilities, I think this will influence the upcoming models with better AI Search, retrieve, context management approach",
+    "contributor": "Sharath",
+    "date": "2026-03-29",
+    "practicalUsage": "Complex reasoning tasks, code generation, and multi-turn conversations with improved context handling."
   }
 ]

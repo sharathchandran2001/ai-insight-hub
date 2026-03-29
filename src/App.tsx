@@ -159,10 +159,10 @@ export default function App() {
         >
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_10px_#00F0FF]" />
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em] opacity-50">Neural Archive v2.0</span>
+            <span className="text-[10px] font-mono uppercase tracking-[0.3em] opacity-50">Community Archive v2.0</span>
           </div>
           <h1 className="text-5xl font-serif italic tracking-tighter gradient-text flex items-center gap-3">
-            AI Insight Hub
+            AI Insight Org
             <Sparkles className="text-accent animate-pulse" size={24} />
           </h1>
         </motion.div>
@@ -204,12 +204,12 @@ export default function App() {
             className="lg:col-span-7 glass-card rounded-[2.5rem] p-10 flex flex-col justify-center"
           >
             <h2 className="text-3xl font-serif italic mb-6 leading-tight">
-              Capturing the <span className="text-accent">Evolution of Intelligence</span>, One Insight at a Time.
+              Documenting the <span className="text-accent">Collective Intelligence</span> of our Era.
             </h2>
             <p className="text-lg font-light leading-relaxed opacity-80 mb-8">
-              AI Insight Hub is a community-driven archive dedicated to capturing the rapid evolution of artificial intelligence. 
-              We believe the best way to track this era is through the collective eyes of the builders and thinkers shaping it. 
-              By contributing to our open-source ledger, you help build a transparent historical record while earning permanent credit in our neural archive.
+              AI Insight Org is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
+              We believe that the history of AI belongs to everyone, not just corporations. 
+              Whether you're a researcher, a developer, or a curious observer, your insights help build a transparent, decentralized record of humanity's greatest technological leap.
             </p>
             <div className="flex gap-4">
               <button 
@@ -238,7 +238,7 @@ export default function App() {
           >
             <div className="flex items-center gap-2 mb-6">
               <History size={18} className="text-accent" />
-              <h3 className="text-xs font-mono uppercase tracking-[0.3em] opacity-50">Contribution Protocol</h3>
+              <h3 className="text-xs font-mono uppercase tracking-[0.3em] opacity-50">Community Protocol</h3>
             </div>
             <div className="space-y-6 flex-1">
               <a 

@@ -1,19 +1,19 @@
-# 🧠 AI Insight Hub
-[aiinsightshub.dev](https://aiinsightshub.org) | [GitHub Repository](https://github.com/sharathchandran2001/ai-insight-hub)
+# 🧠 AI Insight Org
+[aiinsightshub.dev](https://aiinsightshub.dev) | [GitHub Repository](https://github.com/sharathchandran2001/ai-insight-hub)
 
 ## 🌟 The Vision
-The **AI Insight Hub** is a community-driven digital ledger designed to track the rapid evolution of artificial intelligence. Think of it as a **shared historical diary** for humanity's most significant technological leap. 
+The **AI Insight Org** is a community-owned collective designed to track the rapid evolution of artificial intelligence. We believe that history shouldn't be written by a few corporations, but by the **collective voice** of humanity.
 
-In an era where AI breakthroughs happen daily, we believe the best way to document this history is through the collective eyes of the people building and using it.
+Our mission is to provide a **decentralized historical record** where insights from researchers, developers, and everyday users are preserved forever.
 
 ---
 
-## 🚀 How It Works (For Everyone)
-You don't need to be a computer scientist to understand or contribute to the Hub.
+## 🚀 How It Works (Community First)
+We believe insights can come from anyone—from a top researcher to a curious student.
 
-1.  **The Ledger**: A live feed of AI "Archive Nodes" (breakthroughs).
-2.  **The Insight**: Each entry explains not just *what* happened, but *why it matters* for our future.
-3.  **The Community**: Anyone can contribute a new node to the archive, earning their place in our permanent neural record.
+1.  **The Collective Ledger**: A live feed of AI "Archive Nodes" (breakthroughs).
+2.  **Public Insights**: Each entry explains the human impact of AI, written by the community.
+3.  **Open Governance**: Anyone can contribute, and the data is owned by everyone.
 
 ---
 
