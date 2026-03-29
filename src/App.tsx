@@ -16,7 +16,8 @@ import {
   Check,
   ArrowUp,
   Hash,
-  Sparkles
+  Sparkles,
+  Github
 } from 'lucide-react';
 import { AIInsight } from './types';
 
@@ -97,20 +98,27 @@ export default function App() {
     setTimeout(() => setCopyStatus(null), 2000);
   };
 
-  const handleShare = async (item: AIInsight) => {
+  const handleShare = async (item?: AIInsight) => {
     const shareData = {
-      title: 'AI Insight Hub',
-      text: `${item.aifact}: ${item.aifactinsight}`,
-      url: window.location.href
+      title: item ? `AI Insight: ${item.aifact}` : 'AI Insight Hub',
+      text: item 
+        ? `${item.aifact}: ${item.aifactinsight}` 
+        : 'Documenting the evolution of artificial intelligence through community-driven insights.',
+      url: window.location.origin
     };
     if (navigator.share) {
       try {
         await navigator.share(shareData);
       } catch (err) {
-        console.error('Error sharing:', err);
+        if ((err as Error).name !== 'AbortError') {
+          console.error('Error sharing:', err);
+        }
       }
     } else {
-      handleCopy(`${item.aifact}: ${item.aifactinsight}`, item.aifact);
+      const textToCopy = item 
+        ? `${item.aifact}: ${item.aifactinsight}` 
+        : 'AI Insight Hub: Documenting the evolution of artificial intelligence.';
+      handleCopy(textToCopy, item ? item.aifact : 'Hub Link');
     }
   };
 
@@ -211,34 +219,52 @@ export default function App() {
                 <span className="text-sm font-bold uppercase tracking-widest">Join the Initiative</span>
                 <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
+              <button 
+                onClick={() => handleShare()}
+                className="px-8 py-4 rounded-2xl bg-accent/10 border border-accent/20 hover:bg-accent/20 transition-all flex items-center gap-3 group text-accent"
+              >
+                <span className="text-sm font-bold uppercase tracking-widest">Share Hub</span>
+                <Share2 size={18} className="group-hover:scale-110 transition-transform" />
+              </button>
             </div>
           </motion.div>
 
           <motion.div 
+            id="protocol"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="lg:col-span-5 glass-card rounded-[2.5rem] p-10 flex flex-col"
+            className="lg:col-span-5 glass-card rounded-[2.5rem] p-10 flex flex-col scroll-mt-24"
           >
             <div className="flex items-center gap-2 mb-6">
               <History size={18} className="text-accent" />
               <h3 className="text-xs font-mono uppercase tracking-[0.3em] opacity-50">Contribution Protocol</h3>
             </div>
             <div className="space-y-6 flex-1">
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent">01</div>
+              <a 
+                href="https://github.com/sharathchandran2001/ai-insight-hub" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex gap-4 group/item cursor-pointer"
+              >
+                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent group-hover/item:border-accent group-hover/item:bg-accent/10 transition-all">01</div>
                 <div>
-                  <h4 className="text-sm font-semibold mb-1">Fork the Ledger</h4>
+                  <h4 className="text-sm font-semibold mb-1 group-hover/item:text-accent transition-colors">Fork the Ledger</h4>
                   <p className="text-xs opacity-60 leading-relaxed">Access our public GitHub repository and fork the core JSON database.</p>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent">02</div>
+              </a>
+              <a 
+                href="https://github.com/sharathchandran2001/ai-insight-hub/edit/main/public/aiinsightdiary.json" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex gap-4 group/item cursor-pointer"
+              >
+                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent group-hover/item:border-accent group-hover/item:bg-accent/10 transition-all">02</div>
                 <div>
-                  <h4 className="text-sm font-semibold mb-1">Append Insight</h4>
+                  <h4 className="text-sm font-semibold mb-1 group-hover/item:text-accent transition-colors">Append Insight</h4>
                   <p className="text-xs opacity-60 leading-relaxed">Add your AI fact following our schema in <code className="bg-white/5 px-1 rounded">aiinsightdiary.json</code>.</p>
                 </div>
-              </div>
+              </a>
               <div className="flex gap-4">
                 <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent">03</div>
                 <div>
@@ -257,7 +283,7 @@ export default function App() {
       </section>
 
       {/* Main Content */}
-      <main className="flex-1 px-8 pb-8 z-10">
+      <main id="archive" className="flex-1 px-8 pb-8 z-10 scroll-mt-24">
         <div className="mb-8 flex items-center justify-between">
           <h2 className="text-2xl font-serif italic">Historical Archive</h2>
           <div className="h-px flex-1 mx-8 bg-white/5" />
@@ -528,9 +554,17 @@ export default function App() {
             <span>Archive Size: {insights.length} Nodes</span>
           </div>
           <div className="flex items-center gap-6 text-[10px] font-mono uppercase tracking-widest opacity-40">
-            <a href="#" className="hover:text-accent transition-colors">Protocol</a>
-            <a href="#" className="hover:text-accent transition-colors">Neural Net</a>
-            <a href="#" className="hover:text-accent transition-colors">GitHub</a>
+            <a href="#protocol" className="hover:text-accent transition-colors">Protocol</a>
+            <a href="#archive" className="hover:text-accent transition-colors">Neural Net</a>
+            <a 
+              href="https://github.com/sharathchandran2001/ai-insight-hub" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors flex items-center gap-2"
+            >
+              <Github size={12} />
+              GitHub
+            </a>
           </div>
         </div>
       </footer>
@@ -652,6 +686,25 @@ export default function App() {
                     Commit to Archive
                   </div>
                 </button>
+
+                <div className="relative">
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="w-full border-t border-white/5"></div>
+                  </div>
+                  <div className="relative flex justify-center text-[10px] uppercase font-mono tracking-widest">
+                    <span className="bg-[#050505] px-4 opacity-30">or</span>
+                  </div>
+                </div>
+
+                <a 
+                  href="https://github.com/sharathchandran2001/ai-insight-hub/edit/main/public/aiinsightdiary.json"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full h-16 rounded-2xl border border-white/10 hover:bg-white/5 flex items-center justify-center gap-3 text-sm font-bold uppercase tracking-[0.2em] transition-all group"
+                >
+                  <Github size={20} className="group-hover:scale-110 transition-transform" />
+                  Initiate GitHub PR
+                </a>
               </form>
             </motion.div>
           </div>

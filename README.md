@@ -1,4 +1,5 @@
 # 🧠 AI Insight Hub
+[aiinsightshub.dev](https://aiinsightshub.org) | [GitHub Repository](https://github.com/sharathchandran2001/ai-insight-hub)
 
 ## 🌟 The Vision
 The **AI Insight Hub** is a community-driven digital ledger designed to track the rapid evolution of artificial intelligence. Think of it as a **shared historical diary** for humanity's most significant technological leap. 
