@@ -2,7 +2,7 @@
 [aiinsightshub.org](https://aiinsightshub.org) | [GitHub Repository](https://github.com/sharathchandran2001/ai-insight-hub)
 
 ## 🌟 The Vision
-The **AI Insight Hub Org** is a community-owned collective designed to track the rapid evolution of artificial intelligence. We believe that history shouldn't be written by a few corporations, but by the **collective voice** of humanity.
+The **AI Insight Hub Org** is a community-owned collective designed to track the rapid evolution of artificial intelligence. We believe that the history of AI belongs to everyone, and that by contributing our insights, we can create a living archive that reflects the diverse perspectives of researchers, developers, and enthusiasts around the world. Whether you're a researcher, a developer, or a curious observer, your insights help build a transparent, decentralized record of humanity's greatest technological leap.
 
 Our mission is to provide a **decentralized historical record** where insights from researchers, developers, and everyday users are preserved forever.
 
