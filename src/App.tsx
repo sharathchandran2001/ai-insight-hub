@@ -206,12 +206,11 @@ export default function App() {
             className="lg:col-span-7 glass-card rounded-[2.5rem] p-10 flex flex-col justify-center"
           >
             <h2 className="text-3xl font-serif italic mb-6 leading-tight">
-              Documenting the <span className="text-accent">Collective Intelligence</span> of our Era.
+              Documenting the <span className="text-accent">Collective AI</span> Intelligence.
             </h2>
             <p className="text-lg font-light leading-relaxed opacity-80 mb-8">
-              AI Insights Hub is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
-              We believe that the history of AI belongs to everyone. 
-              Whether you're a researcher, a developer, or a curious observer, your insights help build a transparent, decentralized record of humanity's greatest technological leap.
+              AI Insight Hub is a community-owned ledger capturing AI Insights. 
+              Use these insights to spark ideas and build new technology while contributing to a transparent, decentralized record of our era’s greatest leap.
             </p>
             <div className="flex gap-4">
               <button 
