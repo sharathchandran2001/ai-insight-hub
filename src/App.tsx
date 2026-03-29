@@ -162,7 +162,7 @@ export default function App() {
             <span className="text-[10px] font-mono uppercase tracking-[0.3em] opacity-50">Community Archive v2.0</span>
           </div>
           <h1 className="text-5xl font-serif italic tracking-tighter gradient-text flex items-center gap-3">
-            AI Insight Org
+            AI Insight Hub Org
             <Sparkles className="text-accent animate-pulse" size={24} />
           </h1>
         </motion.div>
@@ -207,8 +207,8 @@ export default function App() {
               Documenting the <span className="text-accent">Collective Intelligence</span> of our Era.
             </h2>
             <p className="text-lg font-light leading-relaxed opacity-80 mb-8">
-              AI Insight Org is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
-              We believe that the history of AI belongs to everyone, not just corporations. 
+              AI Insight Hub Org is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
+              We believe that the history of AI belongs to everyone, and that by contributing our insights, we can create a living archive that reflects the diverse perspectives of researchers, developers, and enthusiasts around the world.
               Whether you're a researcher, a developer, or a curious observer, your insights help build a transparent, decentralized record of humanity's greatest technological leap.
             </p>
             <div className="flex gap-4">
@@ -285,7 +285,7 @@ export default function App() {
       {/* Main Content */}
       <main id="archive" className="flex-1 px-8 pb-8 z-10 scroll-mt-24">
         <div className="mb-8 flex items-center justify-between">
-          <h2 className="text-2xl font-serif italic">Historical Archive</h2>
+          <h2 className="text-2xl font-serif italic">Historical Insights Archive</h2>
           <div className="h-px flex-1 mx-8 bg-white/5" />
           <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest opacity-40">
             <Database size={12} />
