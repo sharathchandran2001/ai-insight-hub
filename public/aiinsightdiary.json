@@ -5,5 +5,12 @@
     "contributor": "Sharath",
     "date": "2026-03-28",
     "practicalUsage": "Complex reasoning tasks, code generation, and multi-turn conversations with improved context handling."
+  },
+    {
+    "aifact": "TurboQuant is an advanced, data-oblivious compression algorithm",
+    "aifactinsight": "TurboQuant is meant to optimize the Key-Value (KV) cache, removing the main memory constraint during LLM inference",
+    "contributor": "Sharath",
+    "date": "2026-03-29",
+    "practicalUsage": "Enables 4–6x longer context windows for LLMs on the same hardware and improves performance for vector databases"
   }
 ]
