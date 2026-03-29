@@ -164,7 +164,7 @@ export default function App() {
             <span className="text-[10px] font-mono uppercase tracking-[0.3em] opacity-50">Community Archive v2.0</span>
           </div>
           <h1 className="text-5xl font-serif italic tracking-tighter gradient-text flex items-center gap-3">
-            AI Insight Hub Org
+            AI Insight Hub
             <Sparkles className="text-accent animate-pulse" size={24} />
           </h1>
         </motion.div>
@@ -209,7 +209,7 @@ export default function App() {
               Documenting the <span className="text-accent">Collective Intelligence</span> of our Era.
             </h2>
             <p className="text-lg font-light leading-relaxed opacity-80 mb-8">
-              AI Insight Hub Org is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
+              AI Insight Hub is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
               We believe that the history of AI belongs to everyone. 
               Whether you're a researcher, a developer, or a curious observer, your insights help build a transparent, decentralized record of humanity's greatest technological leap.
             </p>
@@ -221,13 +221,6 @@ export default function App() {
                 <span className="text-sm font-bold uppercase tracking-widest">Join the Initiative</span>
                 <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
-              {/* <button 
-                onClick={() => handleShare()}
-                className="px-8 py-4 rounded-2xl bg-accent/10 border border-accent/20 hover:bg-accent/20 transition-all flex items-center gap-3 group text-accent"
-              >
-                <span className="text-sm font-bold uppercase tracking-widest">Share Hub</span>
-                <Share2 size={18} className="group-hover:scale-110 transition-transform" />
-              </button> */}
             </div>
           </motion.div>
 
