@@ -221,13 +221,13 @@ export default function App() {
                 <span className="text-sm font-bold uppercase tracking-widest">Join the Initiative</span>
                 <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
-              <button 
+              {/* <button 
                 onClick={() => handleShare()}
                 className="px-8 py-4 rounded-2xl bg-accent/10 border border-accent/20 hover:bg-accent/20 transition-all flex items-center gap-3 group text-accent"
               >
                 <span className="text-sm font-bold uppercase tracking-widest">Share Hub</span>
                 <Share2 size={18} className="group-hover:scale-110 transition-transform" />
-              </button>
+              </button> */}
             </div>
           </motion.div>
 
