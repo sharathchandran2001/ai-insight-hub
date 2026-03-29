@@ -53,7 +53,9 @@ export default function App() {
 
   const fetchInsights = async () => {
     try {
-      const response = await fetch('/api/insights');
+      // Fetching directly from the public folder (the "magic" from your other project)
+      // This allows the archive to show up on Vercel deployments.
+      const response = await fetch('/aiinsightdiary.json');
       const data = await response.json();
       setInsights(data);
     } catch (error) {
@@ -208,7 +210,7 @@ export default function App() {
             </h2>
             <p className="text-lg font-light leading-relaxed opacity-80 mb-8">
               AI Insight Hub Org is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
-              We believe that the history of AI belongs to everyone, and that by contributing our insights, we can create a living archive that reflects the diverse perspectives of researchers, developers, and enthusiasts around the world.
+              We believe that the history of AI belongs to everyone. 
               Whether you're a researcher, a developer, or a curious observer, your insights help build a transparent, decentralized record of humanity's greatest technological leap.
             </p>
             <div className="flex gap-4">
