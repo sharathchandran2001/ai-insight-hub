@@ -602,7 +602,7 @@ export default function App() {
               </div>
 
               <form onSubmit={handleSubmit} className="p-10 space-y-8">
-                <div className="grid grid-cols-2 gap-8">
+                {/* <div className="grid grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
                       <label className="text-[10px] uppercase font-mono tracking-widest opacity-40 ml-1">Contributor ID</label>
@@ -628,9 +628,9 @@ export default function App() {
                       onChange={e => setNewEntry({...newEntry, date: e.target.value})}
                     />
                   </div>
-                </div>
+                </div> */}
 
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <label className="text-[10px] uppercase font-mono tracking-widest opacity-40 ml-1">Breakthrough Event</label>
                     <span className="text-[9px] font-mono opacity-30">{(newEntry.aifact?.length || 0)}/120</span>
@@ -644,9 +644,9 @@ export default function App() {
                     value={newEntry.aifact}
                     onChange={e => setNewEntry({...newEntry, aifact: e.target.value})}
                   />
-                </div>
+                </div> */}
 
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <label className="text-[10px] uppercase font-mono tracking-widest opacity-40 ml-1">Deep Implication</label>
                     <span className="text-[9px] font-mono opacity-30">{(newEntry.aifactinsight?.length || 0)}/600</span>
@@ -675,9 +675,9 @@ export default function App() {
                     value={newEntry.practicalUsage}
                     onChange={e => setNewEntry({...newEntry, practicalUsage: e.target.value})}
                   />
-                </div>
+                </div> */}
 
-                <button 
+                {/* <button 
                   disabled={isSubmitting}
                   type="submit"
                   className="w-full relative group h-16 rounded-2xl overflow-hidden"
@@ -687,16 +687,16 @@ export default function App() {
                     {isSubmitting ? <Loader2 className="animate-spin" size={20} /> : <ArrowUpRight size={20} />}
                     Commit to Archive
                   </div>
-                </button>
+                </button> */}
 
-                <div className="relative">
+                {/* <div className="relative">
                   <div className="absolute inset-0 flex items-center">
                     <div className="w-full border-t border-white/5"></div>
                   </div>
                   <div className="relative flex justify-center text-[10px] uppercase font-mono tracking-widest">
                     <span className="bg-[#050505] px-4 opacity-30">or</span>
                   </div>
-                </div>
+                </div> */}
 
                 <a 
                   href="https://github.com/sharathchandran2001/ai-insight-hub/edit/main/public/aiinsightdiary.json"
