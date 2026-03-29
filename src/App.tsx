@@ -164,7 +164,7 @@ export default function App() {
             <span className="text-[10px] font-mono uppercase tracking-[0.3em] opacity-50">Community Archive v2.0</span>
           </div>
           <h1 className="text-5xl font-serif italic tracking-tighter gradient-text flex items-center gap-3">
-            AI Insight Hub
+            AI Insights Hub
             <Sparkles className="text-accent animate-pulse" size={24} />
           </h1>
         </motion.div>
@@ -209,7 +209,7 @@ export default function App() {
               Documenting the <span className="text-accent">Collective Intelligence</span> of our Era.
             </h2>
             <p className="text-lg font-light leading-relaxed opacity-80 mb-8">
-              AI Insight Hub is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
+              AI Insights Hub is a community-owned collective dedicated to capturing the rapid evolution of artificial intelligence. 
               We believe that the history of AI belongs to everyone. 
               Whether you're a researcher, a developer, or a curious observer, your insights help build a transparent, decentralized record of humanity's greatest technological leap.
             </p>
