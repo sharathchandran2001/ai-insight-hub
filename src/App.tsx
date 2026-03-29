@@ -285,7 +285,7 @@ export default function App() {
       {/* Main Content */}
       <main id="archive" className="flex-1 px-8 pb-8 z-10 scroll-mt-24">
         <div className="mb-8 flex items-center justify-between">
-          <h2 className="text-2xl font-serif italic">Historical Insights Archive</h2>
+          <h2 className="text-2xl font-serif italic">Historical Archive</h2>
           <div className="h-px flex-1 mx-8 bg-white/5" />
           <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest opacity-40">
             <Database size={12} />
