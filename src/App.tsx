@@ -245,7 +245,7 @@ export default function App() {
                 <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent group-hover/item:border-accent group-hover/item:bg-accent/10 transition-all">01</div>
                 <div>
                   <h4 className="text-sm font-semibold mb-1 group-hover/item:text-accent transition-colors">Fork the Ledger</h4>
-                  <p className="text-xs opacity-60 leading-relaxed">Access our public GitHub repository and fork the core JSON database.</p>
+                  <p className="text-xs opacity-60 leading-relaxed">Access our public GitHub repository (Refer README steps) and fork the core JSON to add your Insights.</p>
                 </div>
               </a>
               <a 
