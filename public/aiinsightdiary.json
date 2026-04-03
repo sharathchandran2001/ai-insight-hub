@@ -1,23 +1,23 @@
 [
-  {
-    "aifact": "Chroma Context-1 model",
-    "aifactinsight": "New model from Chroma team with self-editing search capabilities, Multi-Hop Retrieval, and specialized agents for downstream retrievals.",
-    "contributor": "Sharath",
-    "date": "2026-03-28",
-    "practicalUsage": "For projects having complex, fragmented information environments where you expect a relevant retrieval. Combine TurboQuant and Chroma Context-1 while building AI Projects."
+    {
+    "aifact": "Gemma 4 on llama.cpp",
+    "aifactinsight": "AI FACT/INSIGHT: A high-performance implementation for running Google’s open-weight Gemma 4 models locally using the llama.cpp engine. It features optimized GGUF quantization levels to balance intelligence and speed across various consumer hardware tiers",
+    "contributor": "PC",
+    "date": "2026-04-02",
+    "practicalUsage": "Perfect for private enterprise environments requiring high-security data processing without cloud dependency. Deploy locally on MacBook or RTX hardware to eliminate API costs while maintaining full control over model parameters."
   },
   {
     "aifact": "TurboQuant algorithm",
-    "aifactinsight": "Advanced, data-oblivious compression meant to optimize the Key-Value (KV) cache, removing memory constraints during LLM inference.",
+    "aifactinsight": "AI FACT/INSIGHT: Advanced, data-oblivious compression meant to optimize the Key-Value (KV) cache, removing memory constraints during LLM inference.",
     "contributor": "Sharath",
     "date": "2026-03-29",
     "practicalUsage": "Enables 4–6x longer context windows for LLMs on existing hardware. Combine with Chroma Context-1 for long-document RAG."
   },
-  {
-    "aifact": "Gemma 4 on llama.cpp",
-    "aifactinsight": "A high-performance implementation for running Google’s open-weight Gemma 4 models locally using the llama.cpp engine. It features optimized GGUF quantization levels to balance intelligence and speed across various consumer hardware tiers",
-    "contributor": "PC",
-    "date": "2026-04-02",
-    "practicalUsage": "Perfect for private enterprise environments requiring high-security data processing without cloud dependency. Deploy locally on MacBook or RTX hardware to eliminate API costs while maintaining full control over model parameters."
+    {
+    "aifact": "Chroma Context-1 model",
+    "aifactinsight": "AI FACT/INSIGHT: New model from Chroma team with self-editing search capabilities, Multi-Hop Retrieval, and specialized agents for downstream retrievals.",
+    "contributor": "Sharath",
+    "date": "2026-03-28",
+    "practicalUsage": "For projects having complex, fragmented information environments where you expect a relevant retrieval. Combine TurboQuant and Chroma Context-1 while building AI Projects."
   }
 ]
