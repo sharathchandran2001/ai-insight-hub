@@ -1,7 +1,7 @@
 [
 {
     "aifact": "AI for Quantum Architecture Search(QAS)",
-    "aifactinsight": "AI FACT/INSIGHT: Quantum Architecture Search (QAS) uses classical AI agents to automatically design and optimize quantum circuits for specific hardware, such as Superconducting or Neutral Atom systems. This shifts quantum computing from manual, error-prone gate placement to an automated, hardware-aware engineering process that maximizes qubit performance"
+    "aifactinsight": "AI FACT/INSIGHT: Quantum Architecture Search (QAS) uses classical AI agents to automatically design and optimize quantum circuits for specific hardware, such as Superconducting or Neutral Atom systems. This shifts quantum computing from manual, error-prone gate placement to an automated, hardware-aware engineering process that maximizes qubit performance",
     "contributor": "Sharath",
     "date": "2026-04-03",
     "practicalUsage": " Essential for enterprises navigating the NISQ era to reduce decoherence and noise by discovering the shortest, most efficient circuits for a given task. Deploy QAS to future-proof quantum applications, allowing them to be instantly re-optimized when switching between different quantum hardware providers or topologies. "
