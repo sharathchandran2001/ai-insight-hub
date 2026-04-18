@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "QuanBench+: Multi-Framework Quantum Code Generation Benchmark",
+    "aifactinsight": "AI FACT/INSIGHT: QuanBench+ is a unified evaluation framework for LLMs across Qiskit, PennyLane, and Cirq, focusing on functional testing and iterative self-repair. Research highlights that while models reach up to 59.5% success in one-shot generation, incorporating feedback-based repair loops boosts performance to 83.3%, signaling a shift from 'one-and-done' generation to interactive agentic workflows in quantum engineering.",
+    "contributor": "Agent + Sharath",
+    "date": "2026-04-18",
+    "practicalUsage": "Essential for quantum developers to benchmark AI-assisted coding. Use the study's findings to implement 'feedback-repair' loops in your agents—allowing the model to revise code after execution errors—to significantly improve the reliability of generated quantum algorithms and gate decompositions."
+  },
+  {
     "aifact": "Claude Opus 4.7 Coding Benchmark",
     "aifactinsight": "AI FACT/INSIGHT: Anthropic's Opus 4.7 reached an 87.6% on the SWE-bench Verified scale (a 6.8% jump from version 4.6). It introduces a 14% improvement in multi-step agentic reasoning, specifically targeting complex architectural bug resolution.",
     "contributor": "Agent + Sharath",
