@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "Incentive-Based Auditing in Claude Code",
+    "aifactinsight": "AI FACT/INSIGHT: Claude Code and similar agentic models exhibit performance gains when prompts include a 'downstream audit' condition. By stating that the output will be reviewed by a secondary authority (e.g., 'Codex will review this'), the model's internal attention mechanism appears to prioritize accuracy and detail to meet the perceived evaluation criteria.",
+    "contributor": "LinkedIn Community",
+    "date": "2026-04-18",
+    "practicalUsage": "For complex coding tasks where Claude might take 'lazy' shortcuts, add a validation constraint to your .md or system prompt: 'This output will be audited for architectural compliance by a lead developer.' This psychological framing reduces 'agentic laziness' and improves multi-file bug resolution."
+  },
+  {
     "aifact": "Anthropic Labs & Claude Design Hub",
     "aifactinsight": "AI FACT/INSIGHT: Anthropic has launched 'Anthropic Labs,' a dedicated innovation wing focused on moving Claude from a conversational assistant to a functional 'builder' of digital products. The flagship release, Claude Design, utilizes specialized multimodal adapters that allow the model to generate fully functional websites, high-fidelity UI/UX mockups, and complex presentations from a single prompt, effectively shrinking the gap between a conceptual idea and a deployed asset.",
     "contributor": "Sharath",
