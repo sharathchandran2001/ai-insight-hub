@@ -2,7 +2,7 @@
   {
     "aifact": "Incentive-Based Auditing in Claude Code",
     "aifactinsight": "AI FACT/INSIGHT: Claude Code and similar agentic models exhibit performance gains when prompts include a 'downstream audit' condition. By stating that the output will be reviewed by a secondary authority (e.g., 'Codex will review this'), the model's internal attention mechanism appears to prioritize accuracy and detail to meet the perceived evaluation criteria.",
-    "contributor": "LinkedIn Community",
+    "contributor": "Community Feed Curated",
     "date": "2026-04-18",
     "practicalUsage": "For complex coding tasks where Claude might take 'lazy' shortcuts, add a validation constraint to your .md or system prompt: 'This output will be audited for architectural compliance by a lead developer.' This psychological framing reduces 'agentic laziness' and improves multi-file bug resolution."
   },
@@ -21,9 +21,16 @@
     "practicalUsage": "Essential for quantum developers to benchmark AI-assisted coding. Use the study's findings to implement 'feedback-repair' loops in your agents—allowing the model to revise code after execution errors—to significantly improve the reliability of generated quantum algorithms and gate decompositions."
   },
   {
+    "aifact": "The 'Behavior-First' CLAUDE.md Framework",
+    "aifactinsight": "AI FACT/INSIGHT: Effective agentic workflows are shifting from providing 'Documentation' (context-heavy) to 'Instructions' (rule-heavy). By defining explicit 'Playbooks,' 'Do Not' constraints, and 'Known Failure Modes' in a CLAUDE.md file, developers can reduce agentic drift and 'over-hedging.' Research shows that defining how an agent should behave inside a system is more effective for code generation than explaining the system itself.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-18",
+    "practicalUsage": "Stop writing long project summaries for your coding agents. Instead, create a CLAUDE.md in your root directory that lists: 1. Your specific tech stack 'Playbooks' (e.g., 'Use pnpm, not npm'), 2. A 'Do Not' list to ban AI-isms like 'delve' or 'leverage', and 3. 'Failure Modes' that force the agent to stop and ask a sharp question if it gets stuck, preventing hallucinated workarounds."
+  },
+  {
     "aifact": "The 5 Layer Enterprise AI Stack",
     "aifactinsight": "AI FACT/INSIGHT: Production-grade AI has evolved into a modular 5-layer architecture—Infrastructure, Data, LLM, Orchestration, and Interface. This stack shifts the focus from 'model-centric' development to 'system-centric' design, where the Orchestration layer (managing state, memory, and multi-agent coordination) is now recognized as the critical engine for reliability and enterprise scalability.",
-    "contributor": "Community Feed",
+    "contributor": "Community Feed Curated",
     "date": "2026-04-18",
     "practicalUsage": "Use this stack to audit your current AI projects. If your system is failing in production, it is likely due to a gap in the Orchestration Layer (e.g., poor memory handling via Mem0) or the Data Layer (e.g., lack of Knowledge Graphs via Neo4j). Ensure your architecture addresses all five layers to move beyond 'vibe-based' prompting into a robust, observable software lifecycle."
   },
