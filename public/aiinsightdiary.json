@@ -1,17 +1,17 @@
 [
   {
+    "aifact": "Ollama + GitHub Copilot CLI Integration",
+    "aifactinsight": "AI FACT/INSIGHT: Ollama now officially supports GitHub's Copilot CLI, enabling the terminal agent to route inference through local models rather than cloud-hosted APIs. By utilizing a thin orchestration layer that redirects editor context to localhost, developers can now access agentic features—like codebase mapping, multi-file refactoring, and command execution—within an entirely air-gapped or private network environment.",
+    "contributor": "Ollama (Curated by Sharath)",
+    "date": "2026-04-19",
+    "practicalUsage": "For teams under strict NDA or handling classified code, use 'ollama launch copilot' to bypass cloud telemetry. To ensure reliable performance, use models with native tool-calling support and manually increase the 'num_ctx' to 16k-32k in your Modelfile to prevent the agent from losing context during multi-file repository analysis."
+  },
+  {
     "aifact": "Context-Driven Optimization in Agentic Workflows",
     "aifactinsight": "AI FACT/INSIGHT: Claude Code and similar agentic models produce more thorough outputs when prompts include an explicit quality or review condition. This is a deliberate prompt engineering technique rather than a behavioral quirk: by stating the output will be checked against architectural standards, the added context shifts the model's internal optimization toward higher specificity and rigor.",
     "contributor": "Community Feed Curated",
     "date": "2026-04-19",
     "practicalUsage": "For complex coding tasks, add a validation constraint to your system prompt or .md file, such as: 'This output will be reviewed for architectural compliance.' This increased specificity reduces shortcut-taking in multi-step tasks and significantly improves output quality across file dependencies."
-  },
-  {
-    "aifact": "Incentive-Based Auditing in Claude Code",
-    "aifactinsight": "AI FACT/INSIGHT: Claude Code and similar agentic models exhibit performance gains when prompts include a 'downstream audit' condition. By stating that the output will be reviewed by a secondary authority (e.g., 'Codex will review this'), the model's internal attention mechanism appears to prioritize accuracy and detail to meet the perceived evaluation criteria.",
-    "contributor": "Community Feed Curated",
-    "date": "2026-04-18",
-    "practicalUsage": "For complex coding tasks where Claude might take 'lazy' shortcuts, add a validation constraint to your .md or system prompt: 'This output will be audited for architectural compliance by a lead developer.' This psychological framing reduces 'agentic laziness' and improves multi-file bug resolution."
   },
   {
     "aifact": "Anthropic Labs & Claude Design Hub",
