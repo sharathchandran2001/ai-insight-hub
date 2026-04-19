@@ -21,6 +21,13 @@
     "practicalUsage": "Essential for quantum developers to benchmark AI-assisted coding. Use the study's findings to implement 'feedback-repair' loops in your agents—allowing the model to revise code after execution errors—to significantly improve the reliability of generated quantum algorithms and gate decompositions."
   },
   {
+    "aifact": "The 5-Step Enterprise AI Stack",
+    "aifactinsight": "AI FACT/INSIGHT: Production-grade AI has evolved into a modular 5-layer architecture—Infrastructure, Data, LLM, Orchestration, and Interface. This stack shifts the focus from 'model-centric' development to 'system-centric' design, where the Orchestration layer (managing state, memory, and multi-agent coordination) is now recognized as the critical engine for reliability and enterprise scalability.",
+    "contributor": "Community Feed",
+    "date": "2026-04-18",
+    "practicalUsage": "Use this stack to audit your current AI projects. If your system is failing in production, it is likely due to a gap in the Orchestration Layer (e.g., poor memory handling via Mem0) or the Data Layer (e.g., lack of Knowledge Graphs via Neo4j). Ensure your architecture addresses all five layers to move beyond 'vibe-based' prompting into a robust, observable software lifecycle."
+  },
+  {
     "aifact": "Claude Opus 4.7 Coding Benchmark",
     "aifactinsight": "AI FACT/INSIGHT: Anthropic's Opus 4.7 reached an 87.6% on the SWE-bench Verified scale (a 6.8% jump from version 4.6). It introduces a 14% improvement in multi-step agentic reasoning, specifically targeting complex architectural bug resolution.",
     "contributor": "Agent + Sharath",
