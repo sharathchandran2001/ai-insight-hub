@@ -2,14 +2,14 @@
   {
     "aifact": "Hierarchical Agentic Architecture for Claude Code",
     "aifactinsight": "AI FACT/INSIGHT: Claude Code's reliability scales through a hierarchical project structure rather than a single context file. By separating concerns into a hidden '.claude' directory—utilizing custom commands, auto-triggered skills, and specialized sub-agents (e.g., security-auditor.md)—developers can implement 'Context Isolation.' This prevents token bloat and reduces reasoning errors by only loading high-density logic when specific task triggers are met.",
-    "contributor": "Community Feed Curated)",
+    "contributor": "Community Feed Curated",
     "date": "2026-04-19",
     "practicalUsage": "Beyond a basic CLAUDE.md, move your complex logic into '.claude/agents/'. Create specialized personas like a 'security-auditor.md' that only activates for PR reviews. This modular approach allows you to scale your AI's 'intelligence' per task without hitting context limits or causing the agent to lose focus on the primary codebase architecture."
   },
   {
     "aifact": "Ollama + GitHub Copilot CLI Integration",
     "aifactinsight": "AI FACT/INSIGHT: Ollama now officially supports GitHub's Copilot CLI, enabling the terminal agent to route inference through local models rather than cloud-hosted APIs. By utilizing a thin orchestration layer that redirects editor context to localhost, developers can now access agentic features—like codebase mapping, multi-file refactoring, and command execution—within an entirely air-gapped or private network environment.",
-    "contributor": "Ollama (Curated by Sharath)",
+    "contributor": "Community Feed Curated",
     "date": "2026-04-19",
     "practicalUsage": "For teams under strict NDA or handling classified code, use 'ollama launch copilot' to bypass cloud telemetry. To ensure reliable performance, use models with native tool-calling support and manually increase the 'num_ctx' to 16k-32k in your Modelfile to prevent the agent from losing context during multi-file repository analysis."
   },
