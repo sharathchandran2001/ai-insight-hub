@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "Context-Driven Optimization in Agentic Workflows",
+    "aifactinsight": "AI FACT/INSIGHT: Claude Code and similar agentic models produce more thorough outputs when prompts include an explicit quality or review condition. This is a deliberate prompt engineering technique rather than a behavioral quirk: by stating the output will be checked against architectural standards, the added context shifts the model's internal optimization toward higher specificity and rigor.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-19",
+    "practicalUsage": "For complex coding tasks, add a validation constraint to your system prompt or .md file, such as: 'This output will be reviewed for architectural compliance.' This increased specificity reduces shortcut-taking in multi-step tasks and significantly improves output quality across file dependencies."
+  },
+  {
     "aifact": "Incentive-Based Auditing in Claude Code",
     "aifactinsight": "AI FACT/INSIGHT: Claude Code and similar agentic models exhibit performance gains when prompts include a 'downstream audit' condition. By stating that the output will be reviewed by a secondary authority (e.g., 'Codex will review this'), the model's internal attention mechanism appears to prioritize accuracy and detail to meet the perceived evaluation criteria.",
     "contributor": "Community Feed Curated",
