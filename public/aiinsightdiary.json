@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "The 'Inference-First' ASIC Strategy (Google + Marvell)",
+    "aifactinsight": "AI FACT/INSIGHT: Google is diversifying its custom silicon architecture by partnering with Marvell Technology to develop two specialized chips: a dedicated Memory Processing Unit (MPU) and an inference-optimized TPU. This signals a fundamental shift in the AI race from 'Training' (compute-bottlenecked) to 'Inference' (memory-bottlenecked). By offloading KV cache and data movement to an MPU, Google aims to reduce the 70-80% of total compute spend currently consumed by inference, effectively moving the competition from 'Model vs. Model' to 'Infrastructure vs. Margins.'",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-19",
+    "practicalUsage": "For architects, this validates that high-scale AI reliability and cost-efficiency will soon depend on 'Memory-Centric' rather than just 'GPU-Centric' infrastructure. When designing production RAG or agentic systems, prioritize optimizations that reduce memory overhead (like KV cache compression or TurboQuant) rather than just upgrading raw compute power, as the hardware itself is now being redesigned to fix these specific data-movement bottlenecks."
+  },
+  {
     "aifact": "Hierarchical Agentic Architecture for Claude Code",
     "aifactinsight": "AI FACT/INSIGHT: Claude Code's reliability scales through a hierarchical project structure rather than a single context file. By separating concerns into a hidden '.claude' directory—utilizing custom commands, auto-triggered skills, and specialized sub-agents (e.g., security-auditor.md)—developers can implement 'Context Isolation.' This prevents token bloat and reduces reasoning errors by only loading high-density logic when specific task triggers are met.",
     "contributor": "Community Feed Curated",
