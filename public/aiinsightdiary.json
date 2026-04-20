@@ -1,10 +1,10 @@
 [
   {
     "aifact": "Mechanical Taxonomy of 6 Core AI Architectures",
-    "aifactinsight": "AI FACT/INSIGHT: Production AI is architecturally segmented into six mechanical families—ML, Deep Learning, Generative, Hybrid, NLP, and Vision. As of Q2 2026, the industry is shifting focus toward 'Hybrid Architecture,' which utilizes connection logic to route inputs across multiple specialized models to maximize accuracy. The 'Hybrid' layer is the true precursor to modern agency. My curated improvement is to view this not just as 'multiple models working together,' but as a **State-Managed Pipeline.** By integrating a persistent memory layer (like the Orchestration Layer in the 5-Step Stack) into these Hybrid connections, you transform static model routing into an evolving, autonomous system capable of long-horizon reasoning.",
-    "contributor": "Community Feed Curated",
+    "aifactinsight": "AI FACT/INSIGHT: Production AI is architecturally segmented into six mechanical families—ML, Deep Learning, Generative, Hybrid, NLP, and Vision. As of Q2 2026, the industry is shifting focus toward 'Hybrid Architecture,' which utilizes connection logic to route inputs across multiple specialized models to maximize accuracy. AGENTIC INSIGHT: The 'Hybrid' layer is the true precursor to modern agency. My curated improvement is to view this not just as 'multiple models working together,' but as a State-Managed Pipeline. By integrating a persistent memory layer into these Hybrid connections, you transform static model routing into an evolving, autonomous system capable of long-horizon reasoning.",
+    "contributor": "Community Feed Curated (via Sharath)",
     "date": "2026-04-20",
-    "practicalUsage": "Use this taxonomy to right-size your architecture. Avoid the 'Generative Bias' of using an LLM for simple classification; instead, deploy a classical NLP or ML model for cost-effective labeling and reserve your Hybrid/Generative resources for tasks requiring creative synthesis or complex reasoning. This tiered approach ensures high performance without unnecessary computational overhead.",
+    "practicalUsage": "Use this taxonomy to right-size your architecture. Avoid the 'Generative Bias' of using an LLM for simple classification; instead, deploy a classical NLP or ML model for cost-effective labeling and reserve your Hybrid/Generative resources for tasks requiring creative synthesis or complex reasoning."
   },
   {
     "aifact": "The 'Inference-First' ASIC Strategy (Google + Marvell)",
