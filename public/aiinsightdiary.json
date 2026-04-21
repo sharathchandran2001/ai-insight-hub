@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "The Transition to Continuous AI Governance Systems",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, industry standards have shifted from treating AI governance as a static policy document to a 'Continuous Enforcement System.' Organizations are now integrating governance directly into the AI stack—specifically within the Orchestration Layer—to manage agentic AI risks autonomously. AGENTIC INSIGHT: This represents the move from 'Compliance-as-Documentation' to 'Governance-as-Code.' My curated improvement is to implement 'Time-Bound Autonomous Gates' within your agentic workflows. By building systems that enforce usage rules, risk tiering (per EU AI Act standards), and real-time monitoring for drift or misuse, you move from asking 'Do we have a policy?' to 'Can we enforce this policy in production?'",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-21",
+    "practicalUsage": "When building your AI Governance Playbook, do not stop at risk registers. Map your policies to technical controls: use 'Agentic Oversight' with human-in-the-loop triggers for irreversible actions and implement 'Continuous Red-Teaming' to test for prompt injection. Focus on building an incident response plan that includes automated containment and fast reporting to ensure your production agents remain within defined ethical and business boundaries."
+  },
+  {
     "aifact": "Mechanical Taxonomy of 6 Core AI Architectures",
     "aifactinsight": "AI FACT/INSIGHT: Production AI is architecturally segmented into six mechanical families—ML, Deep Learning, Generative, Hybrid, NLP, and Vision. As of Q2 2026, the industry is shifting focus toward 'Hybrid Architecture,' which utilizes connection logic to route inputs across multiple specialized models to maximize accuracy. AGENTIC INSIGHT: The 'Hybrid' layer is the true precursor to modern agency. My curated improvement is to view this not just as 'multiple models working together,' but as a State-Managed Pipeline. By integrating a persistent memory layer into these Hybrid connections, you transform static model routing into an evolving, autonomous system capable of long-horizon reasoning.",
     "contributor": "Community Feed Curated",
