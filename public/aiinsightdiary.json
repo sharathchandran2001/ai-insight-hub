@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "The 3 Core Agentic Workflow Patterns for 2026",
+    "aifactinsight": "AI FACT/INSIGHT: Enterprise AI has evolved into three dominant architectural patterns: 1. The Orchestrator-Worker (for task decomposition), 2. The Evaluator-Optimizer (for iterative refinement), and 3. Multi-Agent Collaboration (for specialized role-play). As of Q2 2026, the industry is moving away from single-prompt complexity toward these modular 'Agentic Loops' to ensure deterministic quality. AGENTIC INSIGHT: The 'Evaluator-Optimizer' pattern is the most critical for QA and Lead roles. My curated improvement is to implement 'Cross-Model Peer Review,' where a high-reasoning model acts as the Optimizer for a high-speed Worker model. This creates a self-healing system where the agent identifies its own logic gaps before the output ever reaches the user, effectively automating the 'First Level Review' in data environments.",
+    "contributor": "Community Feed Curated (via Sharath)",
+    "date": "2026-04-22",
+    "practicalUsage": "When designing a new AI feature, do not rely on a single long prompt. Instead, build a loop: Have one agent generate the draft, a second 'Reviewer' agent audit it against your specific standards (like your Governance Playbook), and the first agent refine the output based on that feedback. This 'Reflection' pattern is the current gold standard for reducing hallucinations in complex coding and data analysis tasks."
+  },
+  {
     "aifact": "The Transition to Continuous AI Governance Systems",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, industry standards have shifted from treating AI governance as a static policy document to a 'Continuous Enforcement System.' Organizations are now integrating governance directly into the AI stack—specifically within the Orchestration Layer—to manage agentic AI risks autonomously. AGENTIC INSIGHT: This represents the move from 'Compliance-as-Documentation' to 'Governance-as-Code.' My curated improvement is to implement 'Time-Bound Autonomous Gates' within your agentic workflows. By building systems that enforce usage rules, risk tiering (per EU AI Act standards), and real-time monitoring for drift or misuse, you move from asking 'Do we have a policy?' to 'Can we enforce this policy in production?'",
     "contributor": "Community Feed Curated",
