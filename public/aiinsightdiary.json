@@ -1,5 +1,19 @@
 [
   {
+    "aifact": "The 6-Layer Enterprise AI Application Architecture",
+    "aifactinsight": "AI FACT/INSIGHT: Enterprise AI has matured into a 6-layer blueprint that separates core data from the final interface. As of Q2 2026, the 'Orchestration & Agent' layer is the most volatile, with specialized frameworks like LangChain, LlamaIndex, and Haystack competing for logic-control. AGENTIC INSIGHT: The breakthrough in this stack is the formalization of 'Enterprise Guardrails' as a standalone layer. My curated improvement is to implement 'Shift-Left AI Governance': move your safety filters and policy checks into the Orchestration Layer itself rather than the final Application Layer. This ensures that every sub-agent and tool-call is governed before a response is even generated, significantly reducing the risk of 'jailbreaks' or logic-drift in multi-agent environments.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-24",
+    "practicalUsage": "When building your next AI service, use this layer-by-layer map as a checklist. Start at Layer 1 (Data) with a RAG/GraphRAG approach, then choose your framework in Layer 4 (Orchestration) based on complexity: use LlamaIndex for simple document search or LangChain for complex agentic tool-use. Crucially, ensure your Layer 5 (Guardrails) is active across all LLMs in Layer 3 to maintain consistent safety standards regardless of the model provider."
+  },
+  {
+    "aifact": "GPT-5.5: The Rise of Autonomous Computer Use",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, GPT-5.5 has redefined 'Agentic IQ' by achieving state-of-the-art performance on benchmarks like OSWorld-Verified and Terminal-Bench 2.0. Unlike previous iterations, this model is designed for long-horizon planning, allowing it to operate software, navigate file systems, and move across tools autonomously until a multi-part task is complete. AGENTIC INSIGHT: The critical shift is 'Conceptual Clarity' in coding. My curated improvement is to transition from 'Snippet-Based Prompting' to 'System-Level Delegation.' Because GPT-5.5 can reason across large codebases and predict side effects, architects should now provide 'High-Level Objectives' rather than 'Step-by-Step Instructions.' This allows the model to utilize its internal verification loops to catch architectural inconsistencies that a human might overlook during a manual refactor.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-23",
+    "practicalUsage": "For leads and architects, GPT-5.5 should be treated as a 'Junior Partner' rather than a tool. Use it for 'Expert-level SWE' tasks that normally take a human 20+ hours—such as re-architecting legacy systems or merging complex, conflicting branches. To maximize performance, utilize the new 'Codex' environment where the model has direct terminal access, and focus your efforts on 'Review and Audit' rather than implementation."
+  },
+  {
     "aifact": "The 3 Core Agentic Workflow Patterns for 2026",
     "aifactinsight": "AI FACT/INSIGHT: Enterprise AI has evolved into three dominant architectural patterns: 1. The Orchestrator-Worker (for task decomposition), 2. The Evaluator-Optimizer (for iterative refinement), and 3. Multi-Agent Collaboration (for specialized role-play). As of Q2 2026, the industry is moving away from single-prompt complexity toward these modular 'Agentic Loops' to ensure deterministic quality. AGENTIC INSIGHT: The 'Evaluator-Optimizer' pattern is the most critical for QA and Lead roles. My curated improvement is to implement 'Cross-Model Peer Review,' where a high-reasoning model acts as the Optimizer for a high-speed Worker model. This creates a self-healing system where the agent identifies its own logic gaps before the output ever reaches the user, effectively automating the 'First Level Review' in data environments.",
     "contributor": "Community Feed Curated (via Sharath)",
