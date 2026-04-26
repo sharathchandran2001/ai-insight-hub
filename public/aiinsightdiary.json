@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "The AI Hierarchy of Needs: From Data to Autonomy",
+    "aifactinsight": "AI FACT/INSIGHT: Enterprise AI maturity follows a 5-stage hierarchy: 1. Data Foundation, 2. Analytics/ML, 3. Generative AI, 4. Agentic Workflows, and 5. Autonomous Agents. As of Q2 2026, the industry has realized that 'Agentic Drift' is primarily a data-integrity issue; an agent is only as reliable as the underlying knowledge graph it queries. AGENTIC INSIGHT: This hierarchy mirrors Maslow's. My curated improvement is to treat 'Governance' as the connective tissue across all five levels. Instead of waiting until Level 5 to implement guardrails, architects should deploy 'Identity Tokens' at Level 1 that carry permissions and audit trails through to the final agentic action, ensuring 'Persistent Trust' regardless of the agent's autonomy level.",
+    "contributor": "Community Feed Curated (via Sharath)",
+    "date": "2026-04-25",
+    "practicalUsage": "When a project hits a 'hallucination wall' at the Agent level, do not keep tuning the prompt. Instead, descend the hierarchy: audit your Data Foundation (Level 1) for schema inconsistencies or missing context. Use this pyramid as a diagnostic tool to explain to stakeholders why investing in 'unsexy' data cleaning is the only way to achieve 'sexy' autonomous agents."
+  },
+  {
     "aifact": "The 6-Layer Enterprise AI Application Architecture",
     "aifactinsight": "AI FACT/INSIGHT: Enterprise AI has matured into a 6-layer blueprint that separates core data from the final interface. As of Q2 2026, the 'Orchestration & Agent' layer is the most volatile, with specialized frameworks like LangChain, LlamaIndex, and Haystack competing for logic-control. AGENTIC INSIGHT: The breakthrough in this stack is the formalization of 'Enterprise Guardrails' as a standalone layer. My curated improvement is to implement 'Shift-Left AI Governance': move your safety filters and policy checks into the Orchestration Layer itself rather than the final Application Layer. This ensures that every sub-agent and tool-call is governed before a response is even generated, significantly reducing the risk of 'jailbreaks' or logic-drift in multi-agent environments.",
     "contributor": "Community Feed Curated",
