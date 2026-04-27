@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "OpenClaw: The Proactive Messaging-First Agentic Framework",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, OpenClaw has emerged as the leading open-source execution layer for 'Always-On' agents. Unlike browser-based LLMs, OpenClaw operates via 50+ messaging channels (WhatsApp, Slack, Signal) and utilizes a unique three-file architecture: SOUL.md (Personality), MEMORY.md (Context), and SKILL.md (Tools). AGENTIC INSIGHT: This framework transitions AI from 'Reactive Chat' to 'Proactive Agency.' My curated improvement is to implement **'Hardened Local Binding.'** Given the CVE-2026-25253 'One-Click Hijack' vulnerability, architects must bind the OpenClaw Gateway to loopback only and use encrypted tunnels (like Tailscale) for remote access. This preserves the 'Local-First' privacy advantage while neutralizing the risk of browser-based remote code execution.",
+    "contributor": "Community Feed Curated (via Sharath)",
+    "date": "2026-04-26",
+    "practicalUsage": "For technical leads, OpenClaw is best used for 'High-Context Personal Automation'—such as supply chain monitoring or lead enrichment—where the agent needs to live in your team's Slack or WhatsApp. However, due to the 'ClawHavoc' supply chain attacks of Q1 2026, you must vet all SKILL.md files manually. Never install unvetted third-party skills that require shell access, and maintain your SOUL.md in a version-controlled repository to prevent 'personality drift' during autonomous updates."
+  },
+  {
     "aifact": "The AI Hierarchy of Needs: From Data to Autonomy",
     "aifactinsight": "AI FACT/INSIGHT: Enterprise AI maturity follows a 5-stage hierarchy: 1. Data Foundation, 2. Analytics/ML, 3. Generative AI, 4. Agentic Workflows, and 5. Autonomous Agents. As of Q2 2026, the industry has realized that 'Agentic Drift' is primarily a data-integrity issue; an agent is only as reliable as the underlying knowledge graph it queries. AGENTIC INSIGHT: This hierarchy mirrors Maslow's. My curated improvement is to treat 'Governance' as the connective tissue across all five levels. Instead of waiting until Level 5 to implement guardrails, architects should deploy 'Identity Tokens' at Level 1 that carry permissions and audit trails through to the final agentic action, ensuring 'Persistent Trust' regardless of the agent's autonomy level.",
     "contributor": "Community Feed Curated (via Sharath)",
