@@ -1,15 +1,22 @@
 [
   {
+    "aifact": "The Advanced RAG Pipeline & Hybrid Customization Matrix",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, production RAG has transitioned from 'Naive' (simple search) to 'Advanced' modular pipelines. This architecture inserts Query Transformation (expansion/rewriting) and Post-Retrieval Reranking into the flow to bypass 'Lost in the Middle' effects in large context windows. AGENTIC INSIGHT: The breakthrough in 2026 is the 'RAG-then-Long-Context' hybrid. My curated improvement is to use RAG to retrieve a high-density 'Top 100' document set, then utilize a high-ECL model (like Claude 4.7 or GPT-5.5) for the final reasoning. This creates a 'Reasoning-First' environment that outperforms fine-tuning for dynamic enterprise data because it maintains real-time accuracy while utilizing the model's full reasoning capacity for synthesis rather than just retrieval.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-26",
+    "practicalUsage": "When choosing between RAG and Fine-Tuning, use RAG for 'What' (knowledge/facts) and Fine-Tuning for 'How' (style/format/industry-specific jargon). For your QA leads, implement a 'Reranker' (like Cohere or a specialized SLM) as a mandatory step in the pipeline. This reduces noise by 30-40% before the data hits your expensive frontier model, ensuring your agent's reasoning is based only on high-signal context."
+  },
+  {
     "aifact": "OpenClaw: The Proactive Messaging-First Agentic Framework",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, OpenClaw has emerged as the leading open-source execution layer for 'Always-On' agents. Unlike browser-based LLMs, OpenClaw operates via 50+ messaging channels (WhatsApp, Slack, Signal) and utilizes a unique three-file architecture: SOUL.md (Personality), MEMORY.md (Context), and SKILL.md (Tools). AGENTIC INSIGHT: This framework transitions AI from 'Reactive Chat' to 'Proactive Agency.' My curated improvement is to implement **'Hardened Local Binding.'** Given the CVE-2026-25253 'One-Click Hijack' vulnerability, architects must bind the OpenClaw Gateway to loopback only and use encrypted tunnels (like Tailscale) for remote access. This preserves the 'Local-First' privacy advantage while neutralizing the risk of browser-based remote code execution.",
-    "contributor": "Community Feed Curated (via Sharath)",
+    "contributor": "Community Feed Curated",
     "date": "2026-04-26",
     "practicalUsage": "For technical leads, OpenClaw is best used for 'High-Context Personal Automation'—such as supply chain monitoring or lead enrichment—where the agent needs to live in your team's Slack or WhatsApp. However, due to the 'ClawHavoc' supply chain attacks of Q1 2026, you must vet all SKILL.md files manually. Never install unvetted third-party skills that require shell access, and maintain your SOUL.md in a version-controlled repository to prevent 'personality drift' during autonomous updates."
   },
   {
     "aifact": "The AI Hierarchy of Needs: From Data to Autonomy",
     "aifactinsight": "AI FACT/INSIGHT: Enterprise AI maturity follows a 5-stage hierarchy: 1. Data Foundation, 2. Analytics/ML, 3. Generative AI, 4. Agentic Workflows, and 5. Autonomous Agents. As of Q2 2026, the industry has realized that 'Agentic Drift' is primarily a data-integrity issue; an agent is only as reliable as the underlying knowledge graph it queries. AGENTIC INSIGHT: This hierarchy mirrors Maslow's. My curated improvement is to treat 'Governance' as the connective tissue across all five levels. Instead of waiting until Level 5 to implement guardrails, architects should deploy 'Identity Tokens' at Level 1 that carry permissions and audit trails through to the final agentic action, ensuring 'Persistent Trust' regardless of the agent's autonomy level.",
-    "contributor": "Community Feed Curated (via Sharath)",
+    "contributor": "Community Feed Curated",
     "date": "2026-04-25",
     "practicalUsage": "When a project hits a 'hallucination wall' at the Agent level, do not keep tuning the prompt. Instead, descend the hierarchy: audit your Data Foundation (Level 1) for schema inconsistencies or missing context. Use this pyramid as a diagnostic tool to explain to stakeholders why investing in 'unsexy' data cleaning is the only way to achieve 'sexy' autonomous agents."
   },
