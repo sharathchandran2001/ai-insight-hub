@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "The 4 Essential Agentic Design Patterns for 2026",
+    "aifactinsight": "AI FACT/INSIGHT: Enterprise AI has consolidated into four modular design patterns: 1. The Router (Intent-based dispatch), 2. Parallelization (Simultaneous multi-perspective analysis), 3. Orchestrator-Worker (Dynamic task decomposition), and 4. Evaluator-Optimizer (Iterative self-correction). As of Q2 2026, the industry is moving away from the 'Single Long Prompt' toward these modular 'Systemic Loops.' AGENTIC INSIGHT: The breakthrough is 'Context-Isolated Specialization.' By using an Orchestrator to give each Worker a distinct, narrow context, you eliminate the 'Context Rot' found in massive 1M+ token prompts. My curated improvement is to implement 'Cross-Architecture Validation'—using a high-reasoning model (like Claude 4.7) as the Evaluator for a high-speed local model (like Llama 4-8B) to maximize accuracy without the latency of a full frontier-model stack.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-27",
+    "practicalUsage": "When a task requires high precision (e.g., QA testing or regulatory compliance), avoid the 'one-shot' approach. Implement the 'Evaluator-Optimizer' loop: have Agent A generate the test case, and Agent B—grounded in your specific Governance Playbook—act as the critic. This iterative refinement loop identifies 85% more logic errors than a single-agent pass, making it essential for high-stakes enterprise data environments."
+  },
+  {
     "aifact": "The Advanced RAG Pipeline & Hybrid Customization Matrix",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, production RAG has transitioned from 'Naive' (simple search) to 'Advanced' modular pipelines. This architecture inserts Query Transformation (expansion/rewriting) and Post-Retrieval Reranking into the flow to bypass 'Lost in the Middle' effects in large context windows. AGENTIC INSIGHT: The breakthrough in 2026 is the 'RAG-then-Long-Context' hybrid. My curated improvement is to use RAG to retrieve a high-density 'Top 100' document set, then utilize a high-ECL model (like Claude 4.7 or GPT-5.5) for the final reasoning. This creates a 'Reasoning-First' environment that outperforms fine-tuning for dynamic enterprise data because it maintains real-time accuracy while utilizing the model's full reasoning capacity for synthesis rather than just retrieval.",
     "contributor": "Community Feed Curated",
