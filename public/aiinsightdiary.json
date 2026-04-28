@@ -1,5 +1,12 @@
 [
   {
+    "aifact": "The AlphaGo Legacy: Scaling 'System 2' Reasoning via AlphaProof",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the 10-year evolution of AlphaGo has transitioned from mastering games to solving advanced mathematical and scientific proofs. By combining reinforcement learning with formal verification (AlphaProof), AI systems are now moving beyond 'probabilistic guessing' toward 'verifiable logic.' AGENTIC INSIGHT: This represents a shift from Generative Sampling to Verification-Guided Search. My curated improvement is to implement 'Formal Logic Gates' in your agentic workflows. Instead of relying solely on the LLM's intuition, integrate a symbolic verifier or a code-interpreter check into the reasoning loop. This forces the agent to prove its conclusion is logically sound before providing an answer, effectively automating high-level architectural validation in complex data environments.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-28",
+    "practicalUsage": "When architecting agents for high-stakes domains like finance or legal QA, move beyond simple multi-prompting. Implement a 'Deep Think' pattern where the agent uses a search-and-planning loop to simulate multiple logical paths, then utilizes an internal verifier to select the one that meets your specific compliance rules. This 'Search + Logic' approach ensures that your autonomous systems find 'Move 37' solutions—strategies that are highly effective but counter-intuitive to standard human processes."
+  },
+  {
     "aifact": "The 4 Essential Agentic Design Patterns for 2026",
     "aifactinsight": "AI FACT/INSIGHT: Enterprise AI has consolidated into four modular design patterns: 1. The Router (Intent-based dispatch), 2. Parallelization (Simultaneous multi-perspective analysis), 3. Orchestrator-Worker (Dynamic task decomposition), and 4. Evaluator-Optimizer (Iterative self-correction). As of Q2 2026, the industry is moving away from the 'Single Long Prompt' toward these modular 'Systemic Loops.' AGENTIC INSIGHT: The breakthrough is 'Context-Isolated Specialization.' By using an Orchestrator to give each Worker a distinct, narrow context, you eliminate the 'Context Rot' found in massive 1M+ token prompts. My curated improvement is to implement 'Cross-Architecture Validation'—using a high-reasoning model (like Claude 4.7) as the Evaluator for a high-speed local model (like Llama 4-8B) to maximize accuracy without the latency of a full frontier-model stack.",
     "contributor": "Community Feed Curated",
