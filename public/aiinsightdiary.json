@@ -1,5 +1,26 @@
 [
   {
+    "aifact": "Google Agent Skills: The New Markdown Capability Standard",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, Google has launched an official 'Agent Skills' repository—a standardized, open format for equipping agents with condensed expertise. Unlike traditional documentation, 'Skills' are compact Markdown files optimized for agentic consumption, significantly reducing token costs. AGENTIC INSIGHT: This is the 'pip install' moment for AI agents. My curated improvement is to treat Skills as 'Pre-compiled Context.' By architecting your agents to load these skills dynamically (using the `npx skills` protocol) rather than hardcoding knowledge, you decouple the agent's logic from the fast-moving API versions of underlying cloud services.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-28",
+    "practicalUsage": "When building agents for GCP (AlloyDB, GKE, BigQuery), do not feed them raw PDF manuals. Instead, point them to the official Skills repo. Use the skill files as the 'Reference Layer' in your RAG pipeline to ensure the agent uses the most current, architecturally sound 'Well-Architected' patterns for security and reliability."
+  },
+  {
+    "aifact": "Solving 'Context Bloat' via Modular Skill Loading",
+    "aifactinsight": "AI FACT/INSIGHT: A major bottleneck in 2026 agentic performance is 'Context Bloat'—the degradation of model reasoning when over-leveraging Model Context Protocol (MCP) servers. Google's Agent Skills address this by using 'condensed expertise' that agents load only as-needed. AGENTIC INSIGHT: This represents a move toward 'Lazy Loading' for AI reasoning. My curated improvement is to implement a 'Skill Dispatcher' in your Orchestration Layer. Instead of mounting every skill at startup, have a lightweight router agent identify the required capability (e.g., 'Network Observability') and mount the specific Skill file only for that execution sub-step. This keeps the active context window lean and the reasoning sharp.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-28",
+    "practicalUsage": "For leads managing high-volume data agents, monitor your 'Token Efficiency' metrics. If reasoning accuracy drops, audit for Context Bloat. Switch from full documentation retrieval to the new Agent Skills format to trim the noise while maintaining the signal required for complex cloud-native tasks."
+  },
+  {
+    "aifact": "Well-Architected AI: Integrating Security & Cost Skills",
+    "aifactinsight": "AI FACT/INSIGHT: Google’s new Skills repository includes dedicated 'Well-Architected' modules for Security, Reliability, and Cost Optimization. This ensures that autonomous agents don't just 'solve the task' but do so within enterprise guardrails. AGENTIC INSIGHT: This is the first step toward 'Autonomous Compliance.' My curated improvement is to make 'Security' and 'Cost Optimization' skills mandatory 'Sidecar Skills' for every production agent. By forcing the agent to cross-reference its proposed plan against these skill-based constraints, you automate the 'Risk Register' checks you've been developing, ensuring every cloud deployment is pre-validated for governance.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-28",
+    "practicalUsage": "In your Governance Playbook, define a 'Certified Agent' as one that has successfully ingested and applied the Google Well-Architected Skills. Use these skills as the 'Judge' in an Evaluator-Optimizer loop to audit agent-generated terraform scripts or cloud configurations before they reach production."
+  },
+  {
     "aifact": "The AlphaGo Legacy: Scaling 'System 2' Reasoning via AlphaProof",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the 10-year evolution of AlphaGo has transitioned from mastering games to solving advanced mathematical and scientific proofs. By combining reinforcement learning with formal verification (AlphaProof), AI systems are now moving beyond 'probabilistic guessing' toward 'verifiable logic.' AGENTIC INSIGHT: This represents a shift from Generative Sampling to Verification-Guided Search. My curated improvement is to implement 'Formal Logic Gates' in your agentic workflows. Instead of relying solely on the LLM's intuition, integrate a symbolic verifier or a code-interpreter check into the reasoning loop. This forces the agent to prove its conclusion is logically sound before providing an answer, effectively automating high-level architectural validation in complex data environments.",
     "contributor": "Community Feed Curated",
