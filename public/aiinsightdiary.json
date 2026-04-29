@@ -1,5 +1,26 @@
 [
   {
+    "aifact": "Hierarchical Multi-Agent Orchestration (HMAO)",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, enterprise multi-agent systems have transitioned to a hierarchical model where a Lead Agent (Orchestrator) manages specialized sub-agents with strict context boundaries. This architecture prevents 'Context Noise' and reduces the blast radius of potential hallucinations. AGENTIC INSIGHT: This is effectively 'Microservices for AI.' My curated improvement is to implement **'Contextual Paging.'** Instead of passing the full conversation history to every sub-agent, use a shared state-store (like an MCP-linked Redis) to pass only the specific 'Intent Tokens' needed for that sub-task. This keeps sub-agent reasoning sharp and minimizes token costs by avoiding redundant data transfers.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-29",
+    "practicalUsage": "When building RPA or GenAI solutions for complex data environments, assign one agent to 'Parsing,' one to 'Compliance,' and one to 'Execution.' Use the Lead Agent only to route and synthesize results. This separation of concerns allows you to swap out individual models (e.g., using a cheaper Llama 4 for parsing) without re-architecting the entire system."
+  },
+  {
+    "aifact": "Path-Trace Validation: The New Standard for Agent Evaluation",
+    "aifactinsight": "AI FACT/INSIGHT: The 'Vibe Check' era of AI is over. Q2 2026 standards require 'Path-Trace Validation,' where an evaluator model audits the specific reasoning steps and tool-calls an agent took, rather than just the final output. AGENTIC INSIGHT: We are moving from 'Black Box' to 'Observable Logic.' My curated improvement is to implement **'Cross-Architecture Peer Review.'** Use a high-reasoning model (like Claude 4.7 or GPT-5.5) as the 'Judge' to audit the execution paths of smaller, faster production agents. If the Judge identifies a logic gap in the planning phase, it triggers an immediate 'Reflect-and-Retry' loop before the final response is generated.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-29",
+    "practicalUsage": "In your QA testing lead role, automate your evaluations by logging every agentic 'thought' to a graph database. Run an LLM-as-a-Judge script nightly to identify where agents are taking inefficient paths or ignoring specific governance guardrails. This provides a clear 'Reliability Score' that you can present to stakeholders."
+  },
+  {
+    "aifact": "Deterministic Routing via Semantic Fingerprinting",
+    "aifactinsight": "AI FACT/INSIGHT: To scale agentic systems, architects are deploying 'Deterministic Routers'—lightweight classification layers that identify user intent before engaging heavy reasoning models. As of April 2026, this reduces 'Reasoning Overkill' and ensures high-stakes queries hit the appropriate security guardrails. AGENTIC INSIGHT: This is the 'Control Plane' for the AI stack. My curated improvement is to use **'Semantic Fingerprinting.'** Instead of simple keyword matching, use vector embeddings to classify intents into 'Safe,' 'Complex,' and 'Restricted' buckets. This allows your system to instantly route 'Restricted' data queries through a specific PII-scrubbing agent while keeping 'General' queries on a low-latency, low-cost inference path.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-04-29",
+    "practicalUsage": "For solution architects, implement an 'Intent Gateway' at the top of your stack. It should attach metadata to every query (e.g., 'Requires_Search=True', 'Compliance_Level=High'). This metadata guides the downstream agents, ensuring they don't waste compute on unnecessary tool-calls or bypass critical security checks."
+  },
+  {
     "aifact": "Google Agent Skills: The New Markdown Capability Standard",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, Google has launched an official 'Agent Skills' repository—a standardized, open format for equipping agents with condensed expertise. Unlike traditional documentation, 'Skills' are compact Markdown files optimized for agentic consumption, significantly reducing token costs. AGENTIC INSIGHT: This is the 'pip install' moment for AI agents. My curated improvement is to treat Skills as 'Pre-compiled Context.' By architecting your agents to load these skills dynamically (using the `npx skills` protocol) rather than hardcoding knowledge, you decouple the agent's logic from the fast-moving API versions of underlying cloud services.",
     "contributor": "Community Feed Curated",
