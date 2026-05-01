@@ -1,5 +1,26 @@
 [
   {
+    "aifact": "Beyond Content: The Rise of Agentic AI (Layer 6)",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the industry has hit a 'Generative Plateau' where simply creating content (Layer 5) no longer provides a competitive edge. The new frontier is Agentic AI (Layer 6), which transitions from 'creative assistance' to 'operational contribution' by pursuing long-term goals and executing multi-step tasks with minimal human intervention. AGENTIC INSIGHT: This represents the shift from 'Sampling' to 'Execution.' My curated improvement is to implement **'Intent Persistence'** in your workflows. Instead of treating a prompt as a one-off request, architect your agents to maintain a continuous 'Observe-Plan-Act' loop. This ensures the agent doesn't just provide an answer but remains active until a verifiable business outcome is achieved.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-01",
+    "practicalUsage": "When moving from pilots to production, stop evaluating agents on 'fluency' and start testing them on 'Task Success Rate'. For example, in customer service, move from an agent that 'drafts an email' (Generative) to one that 'reconciles the order, updates the tracking, and issues the refund autonomously' (Agentic)."
+  },
+  {
+    "aifact": "The AI Hierarchy: Scaling from Logic to AGI",
+    "aifactinsight": "AI FACT/INSIGHT: The evolution of AI is not a single breakthrough but a seven-layer progression—starting from rule-based Classical AI (Layer 1) to the eventual goal of AGI (Layer 7). Each layer builds upon the last: Machine Learning (Layer 2) added pattern recognition, while Deep Learning (Layer 4) unlocked complex perception. AGENTIC INSIGHT: We are currently at the **'Action Milestone'**. My curated improvement is to move beyond 'Siloed Intelligence.' Use a high-reasoning model as a central 'Brain' to orchestrate specialized Layer 2 and Layer 4 models. This 'Hierarchical Intelligence' allows you to leverage the reliability of rule-based systems for compliance while using Agentic AI for flexible problem-solving.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-01",
+    "practicalUsage": "Audit your current AI stack to identify which layer you are operating in. If you are stuck in Layer 5 (Generative), you are likely facing 'Content Debt'. To reach Layer 6, you must integrate your models with external tools and APIs, transforming them from 'talkers' into 'doers' that can manipulate your enterprise environment."
+  },
+  {
+    "aifact": "Eliminating 'Content Debt' through Agentic Execution",
+    "aifactinsight": "AI FACT/INSIGHT: By Q2 2026, many organizations are 'suffocating' under Content Debt—the unmanageable fragmentation of data caused by excessive use of Generative AI without an execution layer. Strategic success now requires migrating from pilot assistance tools to automated execution models. AGENTIC INSIGHT: This is the death of 'Shallow Work.' My curated improvement is to implement **'Cognitive Amplification.'** Use agents to handle 'shallow' reporting and synchronization tasks, freeing human teams for 'Deep Work' like strategy and empathy. This architecture effectively turns your workforce into 'Orchestrators' rather than 'Doers.'",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-01",
+    "practicalUsage": "In marketing and operations, focus on 'Workflow Reconstruction' rather than 'AI Overlay'. Instead of adding a chatbot to a siloed process, rebuild the process to be 'Agent-Native'—where real-time execution and autonomous adjustments are the baseline, not the exception."
+  },
+  {
     "aifact": "The 'Commodity Trap': Architecting for Business Durability",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, organizations facing total displacement are those whose value proposition is tied to 'Information Asymmetry' (charging for access to data/experts) rather than 'Workflow Integration.' When a generative or reasoning model can solve the core utility of a service for near-zero marginal cost, the business model collapses. AGENTIC INSIGHT: This is the 'Direct Utility Displacement' phenomenon. My curated improvement is to pivot from 'Point-Solution' architecture to 'Ecosystem-Embedded' architecture. By building agents that don't just 'provide answers' but instead 'execute cross-platform workflows' and 'manage complex approvals,' you move from a replaceable utility to a mission-critical operating layer that is too complex for a generic model to displace.",
     "contributor": "Community Feed Curated",
