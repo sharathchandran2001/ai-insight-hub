@@ -1,5 +1,26 @@
 [
   {
+    "aifact": "Layer 1: The Memory Layer (The Agent's Constitution)",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, leading agentic architectures have moved away from 'pasting context' to using persistent constitution files (like CLAUDE.md). This layer defines architecture rules, naming conventions, and repo maps that are always active, ensuring consistent behavior across all sessions without repeating prompts. AGENTIC INSIGHT: This is the 'Base-DNA' of your agent. My curated improvement is to implement **'Scoped Inheritance.'** Use a global constitution for company-wide standards and project-specific constitutions for technical requirements. This creates a 'Shared Mental Model' between the developer and the agent that remains stable even as models or tools are updated.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-03",
+    "practicalUsage": "In your GenAI architect role, stop including 'coding standards' in every prompt. Move them into a persistent Layer 1 configuration file. This reduces token noise and ensures that every sub-agent spawned automatically inherits your specific technical requirements, such as your preference for Next.js and FastAPI patterns."
+  },
+  {
+    "aifact": "Layer 2: The Knowledge Layer (Modular Skill Execution)",
+    "aifactinsight": "AI FACT/INSIGHT: Bloated context windows are the primary cause of reasoning decay in production agents. The 2026 standard uses 'Modular Skills'—isolated markdown files containing task-specific context that are only forked into an active sub-agent when the orchestrator matches the intent at runtime. AGENTIC INSIGHT: This is 'Just-In-Time Intelligence.' My curated improvement is to implement **'Skill-Based Forking.'** Instead of loading all tools, the main agent should only load the 'Skill Description.' Once a task is identified, the environment forks into a clean sub-agent with that specific skill's context. This keeps the main orchestrator's context window pristine and prevents the agent from getting 'lost' in too much documentation.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-03",
+    "practicalUsage": "When building RAG or GraphRAG systems, don't feed the agent the entire documentation library. Break your expertise into 'Skill Modules' (e.g., 'Database Optimization,' 'API Integration'). Let the agent pull only the relevant module for the current ticket, significantly increasing the precision of its technical decisions."
+  },
+  {
+    "aifact": "Layer 3: The Guardrail Layer (Deterministic Infrastructure)",
+    "aifactinsight": "AI FACT/INSIGHT: High-reliability agentic systems do not rely on LLMs to police themselves. Instead, they use 'Hooks'—event-driven shell commands that fire before or after tool use. These are deterministic, non-AI shell triggers that enforce quality at the infrastructure level. AGENTIC INSIGHT: This is the 'Hard-Coded Safety' layer. My curated improvement is to use **'Pre-Flight Linting.'** Set hooks to automatically run linter checks or security scans every time an agent writes code or attempts a terminal command. If a hook identifies a violation (like a 'rm -rf' command or a syntax error), it hard-blocks the execution before the AI can commit the error.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-03",
+    "practicalUsage": "In your QA testing lead capacity, implement 'Post-Action Hooks' that automatically trigger a test suite whenever an agent completes a code generation task. This transforms the agent from an 'Unsupervised Coder' into a 'Regulated Contributor' that must pass your infrastructure-level gates before its output is even considered for review."
+  },
+  {
     "aifact": "Beyond Content: The Rise of Agentic AI (Layer 6)",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the industry has hit a 'Generative Plateau' where simply creating content (Layer 5) no longer provides a competitive edge. The new frontier is Agentic AI (Layer 6), which transitions from 'creative assistance' to 'operational contribution' by pursuing long-term goals and executing multi-step tasks with minimal human intervention. AGENTIC INSIGHT: This represents the shift from 'Sampling' to 'Execution.' My curated improvement is to implement **'Intent Persistence'** in your workflows. Instead of treating a prompt as a one-off request, architect your agents to maintain a continuous 'Observe-Plan-Act' loop. This ensures the agent doesn't just provide an answer but remains active until a verifiable business outcome is achieved.",
     "contributor": "Community Feed Curated",
