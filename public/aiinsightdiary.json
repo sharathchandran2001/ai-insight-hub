@@ -1,5 +1,26 @@
 [
   {
+    "aifact": "The 'LLM-is-not-a-Pipeline' Engineering Reality",
+    "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, 78% of organizations have moved AI into operational document processing, but the majority fail because they underestimate the engineering overhead. 'Just using an LLM' is not a solution; a production pipeline requires distinct layers for pre-processing, segmentation, classification, and verification. AGENTIC INSIGHT: This is the 'Integration Debt.' My curated improvement is to implement **'Multimodal Extraction Protocols'**—where OCR-produced text provides the reliable content while document images provide the visual layout context. This 'Dual-Stream' approach consistently outperforms single-modal LLM extraction, especially for messy, real-world enterprise documents like handwritten medical prescriptions or blurry invoices.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-04",
+    "practicalUsage": "When building for B2B, separate 'Parsing' from 'Enrichment.' Use specialized, low-latency engines for raw extraction and reserve high-reasoning LLMs for the 'Cognitive Layer' (e.g., verifying business rules or identifying intent). This prevents your pipeline from becoming a single point of failure and drastically reduces token costs."
+  },
+  {
+    "aifact": "Manual Ground Truth: The Prerequisite for AI Evaluation",
+    "aifactinsight": "AI FACT/INSIGHT: Enterprise AI performance is invisible without a 'Ground Truth' dataset. In 2026, the standard for a viable evaluation set starts at manually labeling 130+ documents across dozens of entity types. Without this baseline, you cannot distinguish between a model that is 'accurate' and one that is merely 'confidently wrong.' AGENTIC INSIGHT: This is the 'Data-First Mandate.' My curated improvement is to use **'Reference Solutions'**—known working outputs that have been verified by two independent domain experts. If experts cannot agree on a pass/fail verdict for a document, your task specification is too ambiguous for an AI to solve reliably.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-04",
+    "practicalUsage": "In early development, don't wait for thousands of examples. Start with 20-50 high-impact failures from your real-world messy documents. Converting these 'edge cases' into your initial eval set ensures your pipeline improvements are solving actual user problems rather than chasing meaningless leaderboard scores."
+  },
+  {
+    "aifact": "The 99% Accuracy Gap: Moving to 'Human-on-the-Loop' Governance",
+    "aifactinsight": "AI FACT/INSIGHT: Enterprise clients typically demand 99% accuracy for critical data, a threshold that non-deterministic LLMs cannot hit alone. By Q2 2026, the 'Human-in-the-Loop' (HITL) model has evolved into **'Human-on-the-Loop' (HOTL)**—where humans move from processing every exception to governing the system's thresholds and oversight. AGENTIC INSIGHT: This is 'Strategic Guardrailing.' My curated improvement is to implement **'Confidence-Based Routing.'** Define strict risk-tolerance thresholds at the infrastructure level. Only when the agent's confidence score drops or a high-stakes business rule is triggered does the case route to a human reviewer. The reviewer's decision is then fed back into the system to improve the agent's future logic.",
+    "contributor": "Community Feed Curated",
+    "date": "2026-05-04",
+    "practicalUsage": "For B2B deployments, build 'Verification Interfaces' that present the AI's reasoning alongside the original document. This builds stakeholder trust by providing transparency into *why* a decision was made. Your goal is to keep humans 'above the workflow' as governors, not 'inside the workflow' as manual data-entry clerks."
+  },
+  {
     "aifact": "Layer 1: The Memory Layer (The Agent's Constitution)",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, leading agentic architectures have moved away from 'pasting context' to using persistent constitution files (like CLAUDE.md). This layer defines architecture rules, naming conventions, and repo maps that are always active, ensuring consistent behavior across all sessions without repeating prompts. AGENTIC INSIGHT: This is the 'Base-DNA' of your agent. My curated improvement is to implement **'Scoped Inheritance.'** Use a global constitution for company-wide standards and project-specific constitutions for technical requirements. This creates a 'Shared Mental Model' between the developer and the agent that remains stable even as models or tools are updated.",
     "contributor": "Community Feed Curated",
