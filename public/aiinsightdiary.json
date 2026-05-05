@@ -1,5 +1,33 @@
 [
   {
+  "aifact": "The A2A vs. MCP Functional Split",
+  "aifactinsight": "AI FACT/INSIGHT: In 2026, production multi-agent systems differentiate strictly between 'Inter-Agent Collaboration' and 'External Tool Access.' A2A (Agent-to-Agent) is used for high-level task exchange and interoperability between frameworks (e.g., LangGraph delegating to CrewAI), while MCP (Model Context Protocol) is used for standardized, secure I/O with databases, APIs, and file systems. AGENTIC INSIGHT: This is the 'Decoupled Intelligence' architecture. My curated improvement is to implement **'Capability Discovery'**—where agents read an 'Agent Card' (JSON metadata) via A2A to identify a partner's skills before delegating. This prevents the primary orchestrator from needing hard-coded knowledge of every sub-agent's internal tools.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-04",
+  "practicalUsage": "Use A2A when an agent needs to hand off a complex outcome to another autonomous unit. Use MCP when an agent needs a direct 'hand' to perform a specific action, like querying a SQL database or reading a user's private notes. This separation ensures that changing your database schema (MCP) doesn't break your agent-to-agent communication logic (A2A)."
+},
+{
+  "aifact": "The 7B-9B Threshold for Reliable Tool Calling",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, model size has a direct correlation with agentic stability. Research indicates that models under 7B parameters frequently fail at structured JSON generation, leading to silent failures where tool calls are misformatted or hallucinated. The 7B to 9B range is identified as the minimum viable tier for reliable production tool calling. AGENTIC INSIGHT: This is the 'Reliability Floor.' My curated improvement is to use **'Single-Model Consistency'**—assigning each agent a specific model family suited to its specialized role rather than switching models mid-flow. This reduces 'Reasoning Jitter' where an agent’s logic style changes abruptly between workflow steps.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-04",
+  "practicalUsage": "When designing your 'Learning Accelerator' or similar multi-agent system, don't optimize for the smallest possible model just to save cost. If the task involves complex MCP tool-calling, ensure the agent is backed by at least an 8B model. For simpler text-summarization nodes, you can safely drop back to smaller, faster models to optimize the total token budget."
+},
+{
+  "aifact": "Stateful Orchestration via LangGraph Reducers",
+  "aifactinsight": "AI FACT/INSIGHT: To survive production crashes, multi-agent systems must move from 'Ephemeral Chains' to 'Stateful Graphs.' Using a framework like LangGraph allows for persistence at every checkpoint, enabling 'Time-Travel Debugging' where a developer can inspect and resume a workflow from the exact moment of failure. AGENTIC INSIGHT: This is 'Resilient Agency.' My curated improvement is to implement **'Typed State Objects' with Reducer Patterns.** Instead of passing a giant 'context string,' use structured state objects that only allow specific, valid updates at each node. This prevents 'State Corruption' where one agent accidentally overwrites the critical output of a previous agent.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-04",
+  "practicalUsage": "Incorporate 'Human-in-the-Loop' (HITL) as a formal node in your LangGraph. For high-stakes actions, such as an Adapter agent modifying a study roadmap, the graph should pause and persist its state until a human provides an explicit approval. This turns the human into a 'Governor' of the state machine rather than a manual operator."
+},
+{
+  "aifact": "Deterministic MCP Endpoints for Logic Drift Prevention",
+  "aifactinsight": "AI FACT/INSIGHT: A common failure mode in agentic systems is 'Schema Hallucination'—where agents guess the shape of the data returned by a tool. Production-grade MCP servers solve this by enforcing fully deterministic endpoints that validate all incoming and outgoing payloads against strict schemas. AGENTIC INSIGHT: This is 'Structural Integrity.' My curated improvement is to add **'Lightweight Semantic Checks'** to your MCP adapters. Before an agent accepts a task, it should verify simple assertions (e.g., 'list is not empty,' 'status is valid'). These tiny guardrails catch logic drift and malformed outputs before they propagate through the rest of the multi-agent graph.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-04",
+  "practicalUsage": "When building an MCP server for enterprise data, your server must reject any request that doesn't match the predefined schema with a 400-level error. This forces the agent to retry or self-correct its tool-call logic immediately, rather than proceeding with 'junk data' that will crash downstream agents."
+},
+  {
     "aifact": "The 'LLM-is-not-a-Pipeline' Engineering Reality",
     "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, 78% of organizations have moved AI into operational document processing, but the majority fail because they underestimate the engineering overhead. 'Just using an LLM' is not a solution; a production pipeline requires distinct layers for pre-processing, segmentation, classification, and verification. AGENTIC INSIGHT: This is the 'Integration Debt.' My curated improvement is to implement **'Multimodal Extraction Protocols'**—where OCR-produced text provides the reliable content while document images provide the visual layout context. This 'Dual-Stream' approach consistently outperforms single-modal LLM extraction, especially for messy, real-world enterprise documents like handwritten medical prescriptions or blurry invoices.",
     "contributor": "Community Feed Curated",
