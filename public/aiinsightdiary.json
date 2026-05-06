@@ -1,5 +1,33 @@
 [
   {
+  "aifact": "The Human Analogy of Enterprise AI Systems",
+  "aifactinsight": "AI FACT/INSIGHT: Understanding complex AI stacks requires a biological mental model to distinguish between reasoning and execution. LLMs serve as the 'Brain' (reasoning/thinking), RAG acts as 'Brain + Books' (external knowledge/context), AI Agents function as 'Brain + Hands' (autonomous action/multi-step planning), and MCP operates as the 'Nervous System' (the foundational protocol connecting tools and APIs). AGENTIC INSIGHT: This is the 'Biological Architecture.' My curated improvement is to ensure the 'Nervous System' (MCP) is prioritized in design; without a standardized protocol, the 'Hands' (Agents) cannot reliably interact with the environment, leading to high-friction, fragile implementations.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-06",
+  "practicalUsage": "When explaining AI to stakeholders, use this analogy to justify infrastructure spend. Most organizations over-invest in the 'Brain' (Model) but fail because they lack the 'Nervous System' (MCP) to actually connect that intelligence to their existing business data and tools."
+},
+{
+  "aifact": "The 5-Layer Claude Code Architectural Stack",
+  "aifactinsight": "AI FACT/INSIGHT: Production-grade agentic systems like Claude Code rely on five distinct layers: 1) CLAUDE.md (The Constitution/Memory), 2) Skills (Modular Expertise), 3) Hooks (Deterministic Guardrails), 4) Subagents (Hard-boundary Delegation), and 5) Plugins (Distribution Layer). AGENTIC INSIGHT: This is 'Infrastructure-Level Quality Control.' My curated improvement is to focus on **'Layer 3: Hooks.'** By moving quality enforcement from the prompt level to the infrastructure level (e.g., auto-linting on every write or hard-blocking 'rm -rf'), you eliminate the non-deterministic risks inherent in LLM-only systems.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-06",
+  "practicalUsage": "Stop relying on prompts for safety. Implement 'Hooks' as event-driven shell commands that fire during 'SessionStart' or 'PreToolUse.' This creates a deterministic safety net that the AI cannot hallucinate its way out of."
+},
+{
+  "aifact": "From Creation to Action: The Layered Evolution of AI",
+  "aifactinsight": "AI FACT/INSIGHT: AI is evolving through seven distinct layers, moving from simple Classical AI (logic) to Agentic AI (Layer 6: acts/plans/executes) and eventually AGI. We are currently at the 'Turning Point' where the fundamental question has shifted from 'What can AI generate?' to 'What can AI accomplish?' AGENTIC INSIGHT: This is the 'Initiative Shift.' My curated improvement is to design for **'Autonomous Initiative.'** Instead of waiting for a prompt, agents should be integrated into event-driven architectures where they can take initiative based on environmental signals, essentially moving from a 'chatbot' to a 'digital employee.'",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-06",
+  "practicalUsage": "Audit your current AI implementations. If they are primarily 'Layer 5' (Generative), you are likely under-utilizing the technology. Aim for 'Layer 6' by giving your system the memory and tools required to manage multi-step workflows end-to-end without constant human re-prompting."
+},
+{
+  "aifact": "The OpenClaw Security & Performance Model",
+  "aifactinsight": "AI FACT/INSIGHT: Advanced agent frameworks like OpenClaw use specific mechanisms to prevent state corruption and context bloat. Key features include a 'Lane Queue System' for task isolation, 'Semantic Snapshots' that reduce browser context tokens by over 80%, and a '3-Stage Security Gate' to hard-gate shell access. AGENTIC INSIGHT: This is 'Efficiency-Driven Security.' My curated improvement is to prioritize **'Semantic Snapshoting.'** By aggressively pruning non-essential tokens before they hit the LLM, you not only reduce costs but significantly improve the agent's reasoning accuracy by removing the 'distractions' often found in raw DOM or browser context.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-06",
+  "practicalUsage": "Use a markdown-first memory hierarchy (SOUL.md, USER.md, AGENTS.md) to maintain long-term alignment. This structured, human-readable approach ensures that the agent's 'personality' and 'instructions' remain stable across long-running sessions without getting lost in the noise of a large context window."
+},
+  {
   "aifact": "The A2A vs. MCP Functional Split",
   "aifactinsight": "AI FACT/INSIGHT: In 2026, production multi-agent systems differentiate strictly between 'Inter-Agent Collaboration' and 'External Tool Access.' A2A (Agent-to-Agent) is used for high-level task exchange and interoperability between frameworks (e.g., LangGraph delegating to CrewAI), while MCP (Model Context Protocol) is used for standardized, secure I/O with databases, APIs, and file systems. AGENTIC INSIGHT: This is the 'Decoupled Intelligence' architecture. My curated improvement is to implement **'Capability Discovery'**—where agents read an 'Agent Card' (JSON metadata) via A2A to identify a partner's skills before delegating. This prevents the primary orchestrator from needing hard-coded knowledge of every sub-agent's internal tools.",
   "contributor": "Community Feed Curated",
