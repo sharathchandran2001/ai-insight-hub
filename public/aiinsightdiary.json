@@ -1,5 +1,26 @@
 [
   {
+  "aifact": "The Biological Blueprint of Enterprise AI Systems",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the industry has adopted a biological mental model to distinguish between reasoning and execution layers. LLMs serve as the 'Brain' (reasoning), RAG acts as 'Brain + Books' (knowledge), AI Agents function as 'Brain + Hands' (action), and MCP operates as the 'Nervous System' (the foundational protocol). AGENTIC INSIGHT: This is the 'Structural Interdependency' principle. My curated improvement is to prioritize the 'Nervous System' (MCP) during initial architecture. Without a standardized, high-speed protocol, the 'Hands' (Agents) lack the tactile precision required for enterprise-scale automation, leading to disconnected 'intelligence silos' that cannot execute real-world tasks.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-06",
+  "practicalUsage": "When designing your next project, use this analogy to identify your 'Nervous System' first. If your agents are struggling to perform actions, the bottleneck is rarely the model's intelligence; it is likely a weak MCP layer that isn't providing the agent with a stable interface to your existing enterprise tools."
+},
+{
+  "aifact": "The 5-Layer Agent Development Kit (ADK) Stack",
+  "aifactinsight": "AI FACT/INSIGHT: Production-grade agentic systems (like Claude Code) rely on a five-layer stack to ensure reliability: 1) CLAUDE.md (Constitutional Memory), 2) Skills (Modular Expertise), 3) Hooks (Deterministic Guardrails), 4) Subagents (Isolated Delegation), and 5) Plugins (Distribution). AGENTIC INSIGHT: This is 'Infrastructure-Level Reliability.' My curated improvement is to focus on **'Layer 3: Hooks.'** By moving quality enforcement from the prompt to the shell (using event-driven commands like 'Auto-lint on Write'), you create a deterministic safety net that the agent cannot hallucinate its way around, effectively hardening the entire development lifecycle.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-06",
+  "practicalUsage": "Audit your current agentic setup for Layer 1 and Layer 3 gaps. If your agent forgets project rules, you need a persistent 'Constitutional' file (Layer 1). If your agent introduces syntax errors or security risks, you need 'Pre-Flight Hooks' (Layer 3) to validate code before execution."
+},
+{
+  "aifact": "The 4-Phase Evolution of AI Governance",
+  "aifactinsight": "AI FACT/INSIGHT: AI Governance has transitioned from mere model validation to a full systemic control framework. The four phases are: 1) Model Governance (Accuracy), 2) Data Governance (Quality/Bias), 3) System Governance (Workflow Monitoring), and 4) Agent Governance (Decision Boundaries/Autonomy). AGENTIC INSIGHT: This is 'Accountable Infrastructure.' My curated improvement is to implement **'Dynamic Decision Boundaries.'** As agents move into Phase 4, governance must be 'Risk-Aware'—where the level of autonomous authority granted to an agent is dynamically scaled based on the real-time impact level and the historical reliability of that specific agent's 'Path-Trace' audit.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-06",
+  "practicalUsage": "Shift your governance strategy from 'Blockers' to 'Enablers.' Instead of broad restrictions, define specific 'Decision Envelopes' for your agents. For example, an agent can autonomously approve an expense under $500 (Phase 4), but anything higher triggers a mandatory 'Human-on-the-Loop' escalation (Phase 3), ensuring scale without unmanaged risk."
+},
+  {
   "aifact": "The Human Analogy of Enterprise AI Systems",
   "aifactinsight": "AI FACT/INSIGHT: Understanding complex AI stacks requires a biological mental model to distinguish between reasoning and execution. LLMs serve as the 'Brain' (reasoning/thinking), RAG acts as 'Brain + Books' (external knowledge/context), AI Agents function as 'Brain + Hands' (autonomous action/multi-step planning), and MCP operates as the 'Nervous System' (the foundational protocol connecting tools and APIs). AGENTIC INSIGHT: This is the 'Biological Architecture.' My curated improvement is to ensure the 'Nervous System' (MCP) is prioritized in design; without a standardized protocol, the 'Hands' (Agents) cannot reliably interact with the environment, leading to high-friction, fragile implementations.",
   "contributor": "Community Feed Curated",
