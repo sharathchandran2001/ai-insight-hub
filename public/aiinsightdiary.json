@@ -1,5 +1,33 @@
 [
   {
+  "aifact": "The AI Gateway: Architecting for Enterprise Scalability and Control",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the 'AI Gateway' has emerged as the mandatory control plane for production deployments. By utilizing Azure APIM as the central governor, organizations can implement routing, throttling, and managed identity security before requests hit the LLM. AGENTIC INSIGHT: This is 'Gateway-Level Sovereignty.' My curated improvement is to implement **'Semantic Throttling'** at the gateway layer. Instead of just limiting request counts, the gateway analyzes intent to prioritize high-value reasoning tasks over low-priority background processing, ensuring that mission-critical agents maintain peak performance during high-traffic spikes.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-09",
+  "practicalUsage": "When building on Azure, do not connect applications directly to OpenAI PTUs. Route all traffic through an APIM-backed gateway. Use Azure Monitor and Grafana for 'Path-Trace Observability' to visualize not just costs, but the specific decision-chains and latency bottlenecks of your autonomous agents."
+},
+{
+  "aifact": "The 'Nervous System' Protocol: Standardizing the Agent Interface",
+  "aifactinsight": "AI FACT/INSIGHT: Enterprise AI is evolving toward a biological stack: LLMs are the 'Brain,' RAG is the 'Memory,' and Agents are the 'Hands.' However, success depends on the 'Nervous System'—the Model Context Protocol (MCP)—which standardizes how these components communicate. AGENTIC INSIGHT: This is the 'Backbone Principle.' My curated improvement is to treat MCP as a **'Universal Connector'** rather than a set of individual plugins. By standardizing your entire tool and API library on MCP, you enable 'Hot-Swapping' of agents and models without re-writing your integration logic, effectively future-proofing your stack against model-provider lock-in.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-09",
+  "practicalUsage": "Audit your current integrations. If you are building custom wrappers for every API, you are creating technical debt. Migrate to an MCP-first architecture to ensure your 'Brain' (LLM) can instantly access and control your 'Hands' (Agents) through a consistent, enterprise-scale nervous system."
+},
+{
+  "aifact": "Domain-Driven Data Architecture for Agentic Success",
+  "aifactinsight": "AI FACT/INSIGHT: AI agents do not fail because of weak models; they fail because of poor data architecture. The 2026 standard for Enterprise AI success is a 'Domain-Aware Data Lake' (e.g., Microsoft Fabric OneLake) where data is structured, governed, and delivered by business function (HR, Finance, Operations). AGENTIC INSIGHT: This is 'Semantic Segregation.' My curated improvement is to implement **'Domain-Specific Semantic Layers.'** Instead of giving an agent access to a raw data lake, provide it with a domain-aware index. This reduces 'contextual hallucination' by ensuring an HR agent only sees HR-governed data, maintaining strict privacy while maximizing retrieval accuracy.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-09",
+  "practicalUsage": "To solve for agentic drift, stop focusing on 'Bigger Models.' Focus on organizing your landing zones. Separate your workloads into distinct application landing zones and use a unified data lake to provide a single 'Source of Truth' for your RAG and Agentic layers."
+},
+{
+  "aifact": "The Displacement Signal: Moving from Utility to Integrated Outcomes",
+  "aifactinsight": "AI FACT/INSIGHT: Business models based on 'Information Asymmetry'—charging for access to subject matter experts or specific data retrieval—are facing total displacement as AI offers instant, zero-marginal-cost answers. Success now requires moving from being a 'Resource' to an 'Integrated Outcome.' AGENTIC INSIGHT: This is 'Evolutionary Resilience.' My curated improvement is to pivot from 'Providing Answers' to **'Executing Workflows.'** By building agents that own the entire outcome (e.g., not just 'how to file a claim' but actually 'filing, verifying, and reconciling the claim'), you move from a replaceable utility to an essential operating layer that generic AI cannot easily displace.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-09",
+  "practicalUsage": "Audit your professional or company services. If a student or client can get your primary value from a prompt, your model is obsolete. Re-architect your value proposition around 'Complex Execution'—the multi-step, human-verified, and tool-integrated tasks that require sophisticated agentic coordination rather than just text generation."
+},
+  {
   "aifact": "The Biological Blueprint of Enterprise AI Systems",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the industry has adopted a biological mental model to distinguish between reasoning and execution layers. LLMs serve as the 'Brain' (reasoning), RAG acts as 'Brain + Books' (knowledge), AI Agents function as 'Brain + Hands' (action), and MCP operates as the 'Nervous System' (the foundational protocol). AGENTIC INSIGHT: This is the 'Structural Interdependency' principle. My curated improvement is to prioritize the 'Nervous System' (MCP) during initial architecture. Without a standardized, high-speed protocol, the 'Hands' (Agents) lack the tactile precision required for enterprise-scale automation, leading to disconnected 'intelligence silos' that cannot execute real-world tasks.",
   "contributor": "Community Feed Curated",
