@@ -1,5 +1,26 @@
 [
   {
+  "aifact": "Claude Mythos: The 'Capybara' Tier of Autonomous Engineering",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, Anthropic has introduced 'Claude Mythos,' a brand-new tier sitting above Opus, internally codenamed 'Capybara.' Unlike the general-purpose Claude 4 series, Mythos is a specialized 'Super-Engineer' model with a 1M token context window and a 128K token output limit. AGENTIC INSIGHT: This is the first 'System-Native' model. My curated improvement is to implement **'Native Tool-Looping.'** Mythos doesn't just call an API; it can launch a container, execute code, observe the terminal output, and self-correct recursively until the task is complete. This eliminates the 'Prompt-Trial-Error' cycle for developers, moving AI from a code assistant to a fully autonomous system-level operator.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-09",
+  "practicalUsage": "For early access partners in 'Project Glasswing,' Mythos is best used for 'Legacy System Restoration.' Because of its 1M token window and deep reasoning, it can ingest an entire 20-year-old codebase, identify 0-day vulnerabilities (like the FreeBSD NFS exploit discovered in April 2026), and rewrite the security layer while maintaining full feature parity."
+},
+{
+  "aifact": "Vulnerability Discovery & The 'Project Glasswing' Guardrails",
+  "aifactinsight": "AI FACT/INSIGHT: Claude Mythos represents the most powerful cybersecurity model ever developed, scoring 83.1% on the CyberGym benchmark (compared to Opus 4.6's 66.6%). It has already identified 27-year-old 'unfixable' bugs in OpenBSD. AGENTIC INSIGHT: This is 'Asymmetric Defensive Capability.' My curated improvement is to architect **'Automated Red-Teaming'** into your CI/CD pipeline. Use Mythos-class models to perform 'Deep-State Analysis' on every commit—identifying not just pattern-based bugs, but complex logic flaws that chain multiple minor vulnerabilities into a systemic breach. This moves cybersecurity from 'Patch-and-Pray' to 'Predictive Hardening.'",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-09",
+  "practicalUsage": "Access to Mythos is currently restricted to critical infrastructure partners (AWS, Apple, CrowdStrike, etc.). If you are not in the 'Glasswing' program, prepare by building Opus 4.7 pipelines with modular MCP hooks. This ensures that once Mythos (or its defensive derivatives) becomes available, your architecture can 'swap-in' the superior reasoning without a full system rewrite."
+},
+{
+  "aifact": "The 'Capybara' Pricing & Performance Matrix (Q2 2026)",
+  "aifactinsight": "AI FACT/INSIGHT: Claude Mythos introduces a high-premium pricing model—$25/1M input and $125/1M output tokens (5x the cost of Opus 4.7). However, its 93.9% score on SWE-bench Verified suggests it can replace human junior-to-mid-level engineering teams for specific ticket-resolution tasks. AGENTIC INSIGHT: This is 'Value-Based Inference.' My curated improvement is to use **'Strategic Model Routing.'** Do not use Mythos for summarization or general chat. Use a routing layer to send only 'Architectural Conflicts' and 'Complex Debugging' tasks to Mythos, while utilizing Sonnet or Opus 4.7 for the 90% of tasks that don't require 1M-token reasoning. This balances the $125/1M output cost with actual ROI.",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-09",
+  "practicalUsage": "Implement a 'Reasoning-Tier' gateway. If an agent fails to solve a logic puzzle after two attempts with Opus 4.7, escalate the task to a Mythos-backed node. This ensures you only pay for 'Super-Intelligence' when the standard frontier models hit their reasoning ceiling."
+},
+  {
   "aifact": "The AI Gateway: Architecting for Enterprise Scalability and Control",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the 'AI Gateway' has emerged as the mandatory control plane for production deployments. By utilizing Azure APIM as the central governor, organizations can implement routing, throttling, and managed identity security before requests hit the LLM. AGENTIC INSIGHT: This is 'Gateway-Level Sovereignty.' My curated improvement is to implement **'Semantic Throttling'** at the gateway layer. Instead of just limiting request counts, the gateway analyzes intent to prioritize high-value reasoning tasks over low-priority background processing, ensuring that mission-critical agents maintain peak performance during high-traffic spikes.",
   "contributor": "Community Feed Curated",
