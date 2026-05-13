@@ -536,7 +536,7 @@ export default function App() {
             <div>
               <h4 className="text-xs font-mono uppercase tracking-widest mb-2 opacity-50">Educational & Open Source Disclaimer</h4>
               <p className="text-[11px] leading-relaxed opacity-60 font-light">
-                This project is an open-source educational initiative. The insights and facts contained within this ledger are contributed by the community and are provided for informational purposes only. While we strive for accuracy, the AI Insight Hub does not guarantee the validity of any specific entry. Contributions are subject to community review. Use of this data is at your own risk. This project is not affiliated with any specific AI laboratory or corporate entity.
+                AI Insight Hub is an open-source educational initiative. All knowledge cards are community-curated summaries and transformative syntheses of publicly available information, provided for informational and educational purposes only. Factual claims are derived from public sources; all rights in original source material remain with their respective owners. Agentic insights and practical guidance represent original editorial analysis and do not represent the views of any AI laboratory or corporate entity. While we strive for accuracy, AI Insight Hub does not guarantee the validity of any entry. Contributions are subject to community review. Use of this data is at your own risk.
               </p>
             </div>
           </div>
