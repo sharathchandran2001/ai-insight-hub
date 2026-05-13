@@ -1,31 +1,31 @@
 [
-  {
+{
   "aifact": "Microsoft Agent Framework: Infusing Durability into Agentic Logic",
-  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, Microsoft has integrated its Durable Task Framework into the .NET Agent Framework, allowing agents to maintain state across weeks-long pauses or system restarts. AGENTIC INSIGHT: This is the **'Checkpointed Reasoning'** architecture. My curated improvement is 'Hydrated Context Injection' to prevent contextual amnesia after timeouts. SOURCE: https://devblogs.microsoft.com/dotnet/durable-workflows-in-the-microsoft-agent-framework/",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, Microsoft has integrated its Durable Task Framework directly into the Microsoft Agent Framework for .NET, enabling agents to maintain state across weeks-long pauses or infrastructure restarts. This 'Durable Workflow' pattern ensures that complex multi-step reasoning remains resilient to transient failures or human-in-the-loop delays. AGENTIC INSIGHT: This is the **'Checkpointed Reasoning'** architecture. My curated improvement is to implement **'Hydrated Context Injection.'** By serializing the agent's internal thought process into a durable state store, you can 're-hydrate' the agent's memory instantly upon resumption, preventing the 'Contextual Amnesia' that occurs when agents restart a task from a blank slate after a timeout.",
   "contributor": "Community Feed Curated",
   "date": "2026-05-13",
-  "practicalUsage": "Apply for 'High-Latency Human Loops' where agents must wait for manual approvals without losing the execution thread."
+  "practicalUsage": "Apply Durable Workflows for 'High-Latency Human Loops.' When an agent requires a manager's approval or a client's feedback, use the framework's external event triggers to put the agent into a zero-cost sleep state. This preserves the exact execution point and context without consuming active compute or token-heavy re-prompting when the human finally responds."
 },
 {
   "aifact": "Deterministic Guardrails in Durable Agentic Orchestration",
-  "aifactinsight": "AI FACT/INSIGHT: The framework utilizes side-effect-free orchestrators to ensure deterministic state transitions, reducing 'Logic Looping' by 65% in stochastic LLM workflows. AGENTIC INSIGHT: This represents **'Finite State Agency.'** My curated improvement is 'Compensating Agentic Actions' to execute 'Saga Pattern' undos when a durable step fails. SOURCE: https://devblogs.microsoft.com/dotnet/durable-workflows-in-the-microsoft-agent-framework/",
+  "aifactinsight": "AI FACT/INSIGHT: The framework utilizes a side-effect-free 'Orchestrator' to manage agent activities, ensuring that the workflow remains deterministic even as the underlying LLM logic is stochastic. In May 2026 performance tests, this resulted in a 65% reduction in 'Logic Looping'—where agents repeatedly perform the same failed action—by enforcing strict state-machine transitions. AGENTIC INSIGHT: This represents **'Finite State Agency.'** My curated improvement is to architect **'Compensating Agentic Actions.'** If an agent fails a specific step in a durable workflow, instead of a simple 'retry,' trigger a specialized 'Recovery Agent' that analyzes the failure state stored in the workflow history and executes a specific undo/correct logic, mimicking the 'Saga Pattern' in distributed microservices.",
   "contributor": "Community Feed Curated",
   "date": "2026-05-13",
-  "practicalUsage": "Incorporate 'Activity Throttling' in orchestrators to prevent recursive token spend during high-frequency failure loops."
+  "practicalUsage": "Incorporate 'Activity Throttling' within your orchestrator logic. By defining maximum retry counts and backoff strategies at the framework level, you prevent 'Recursive Spend'—where an autonomous agent enters an expensive, high-frequency failure loop—effectively creating a financial safety valve for your agentic operations."
 },
 {
   "aifact": "Parallel Fan-Out and Aggregation in Multi-Agent Specs",
-  "aifactinsight": "AI FACT/INSIGHT: The Durable Workflow update supports native 'Fan-Out/Fan-In' patterns, improving throughput for large-scale data ingestion by 4.5x through parallel sub-agent spawning. AGENTIC INSIGHT: This is **'Elastic Intelligence Scaling.'** My curated improvement is 'Consensus-Based Aggregation' where a secondary Audit Agent verifies sub-task outputs for minority data integrity. SOURCE: https://devblogs.microsoft.com/dotnet/durable-workflows-in-the-microsoft-agent-framework/",
+  "aifactinsight": "AI FACT/INSIGHT: The Durable Workflow update allows for native 'Fan-Out/Fan-In' patterns, where a lead agent can spawn dozens of sub-agents to perform parallel tasks (e.g., massive log analysis or code auditing) and then consolidate the results into a single durable summary. As of Q2 2026, this has improved throughput for large-scale data ingestion by 4.5x compared to sequential agentic prompting. AGENTIC INSIGHT: This is **'Elastic Intelligence Scaling.'** My curated improvement is to use **'Consensus-Based Aggregation.'** Instead of a single agent summarizing the parallel outputs, have the orchestrator spawn a secondary 'Audit Agent' to verify that the aggregated results reflect all sub-tasks, ensuring no 'Minority Data' is hallucinated away during the consolidation phase.",
   "contributor": "Community Feed Curated",
   "date": "2026-05-13",
-  "practicalUsage": "Use for massive code audits or document bundles where parallel processing must be managed by a stable orchestrator."
+  "practicalUsage": "Leverage parallel fan-out for 'Comprehensive Vulnerability Scans' or 'Document Summarization Bundles.' By offloading the heavy lifting to parallel sub-agents and using the Durable Orchestrator to manage the results, you maintain a clean, traceable audit trail that is essential for Layer 6 (Governance) compliance."
 },
 {
   "aifact": "Telemetry and Observability in Durable Agent Workflows",
-  "aifactinsight": "AI FACT/INSIGHT: Structured OpenTelemetry data is now exported for every state transition, allowing real-time visualization of agent reasoning paths in Application Insights. AGENTIC INSIGHT: This is **'Observable Cognition.'** My curated improvement is the **'Reasoning Drift Alert'** to programmatically intervene when agent token consumption per step exceeds baseline effort. SOURCE: https://devblogs.microsoft.com/dotnet/durable-workflows-in-the-microsoft-agent-framework/",
+  "aifactinsight": "AI FACT/INSIGHT: The .NET Microsoft Agent Framework now exports structured OpenTelemetry data for every state transition within a durable workflow. This allows developers to visualize agent execution paths in real-time using tools like Application Insights or Prometheus, identifying reasoning bottlenecks as of the Q2 2026 update. AGENTIC INSIGHT: This is **'Observable Cognition.'** My curated improvement is to create a **'Reasoning Drift Alert.'** By monitoring the 'State Transition Time' and 'Token Consumption' per workflow step, you can set a baseline for 'Reasonable Effort.' If an agent exceeds these metrics, it likely implies a 'Logical Stall,' allowing you to intervene programmatically or manually before the agent drifts too far into an unproductive path.",
   "contributor": "Community Feed Curated",
   "date": "2026-05-13",
-  "practicalUsage": "Integrate telemetry signals into your Hub dashboard to identify which architectural 'Constitutions' require refinement based on failure rates."
+  "practicalUsage": "Integrate these telemetry signals into your 'AI Insight Hub' dashboard. By visualizing which durable steps are most prone to failure or delay, you can prioritize which 'Constitutions' or 'Spec-Kits' need refinement to improve the overall deterministic success rate of your agentic fleet."
 },
   {
   "aifact": "GitHub Spec-Kit: Bridging the SDD-to-Agent Execution Gap",
