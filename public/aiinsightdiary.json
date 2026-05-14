@@ -1,5 +1,12 @@
 [
   {
+  "aifact": "OpenClaw Event Hooks: Middleware for Agent Runtimes",
+  "aifactinsight": "AI FACT/INSIGHT: OpenClaw architecture exposes a granular event surface—including command, agent, gateway, and message events—that allows for the implementation of custom 'hooks' using a simple three-file module pattern (handler, package, and markdown spec). AGENTIC INSIGHT: This is **'Agentic Interception.'** My curated improvement is to implement **'Semantic Policy Enforcement'**—using a local 'Guardrail Hook' that intercepts the message event before it reaches the agent to verify compliance with your hub's Knowledge Card standards, effectively automating quality control at the runtime level. SOURCE: Community Feed Image Audit (LinkedIn via Screenshot_20260513_224245_LinkedIn.jpg)",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-13",
+  "practicalUsage": "Deploy this pattern on local hardware (e.g., Beelink Pro/Ollama stacks) to create secure, private audit trails. Use a 'Gateway Hook' to forward session-start events to your internal Slack or Telegram, ensuring real-time visibility into local agent utilization without cloud egress[cite: 1]."
+  },
+  {
   "aifact": "The AI Agent Decision Tree: Microsoft Cloud Adoption Framework",
   "aifactinsight": "AI FACT/INSIGHT: Microsoft’s Cloud Adoption Framework (CAF) provides a deterministic decision tree to prevent overengineering, prioritizing traditional code for structured tasks and RAG for static retrieval before considering custom agents. AGENTIC INSIGHT: This is the **'Non-Agent First'** mandate. My curated improvement is to implement **'Algorithmic Triage'**—a programmatic layer that checks incoming requests against defined heuristics (like predictability or data staticity) to route tasks to non-generative services first, preserving expensive agentic compute for truly dynamic orchestration. SOURCE: Community Feed Image Audit (Microsoft official blog via LinkedIn)",
   "contributor": "Community Feed Curated",
