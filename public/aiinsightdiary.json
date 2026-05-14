@@ -1,4 +1,32 @@
 [
+  {
+  "aifact": "The AI Agent Decision Tree: Microsoft Cloud Adoption Framework",
+  "aifactinsight": "AI FACT/INSIGHT: Microsoft’s Cloud Adoption Framework (CAF) provides a deterministic decision tree to prevent overengineering, prioritizing traditional code for structured tasks and RAG for static retrieval before considering custom agents. AGENTIC INSIGHT: This is the **'Non-Agent First'** mandate. My curated improvement is to implement **'Algorithmic Triage'**—a programmatic layer that checks incoming requests against defined heuristics (like predictability or data staticity) to route tasks to non-generative services first, preserving expensive agentic compute for truly dynamic orchestration. SOURCE: Community Feed Image Audit (Microsoft official blog via LinkedIn)",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-13",
+  "practicalUsage": "Use this tree as a 'Governance Gate' during project kickoffs. If a task is predictable or purely retrieval-based, force the architecture toward Microsoft Fabric or Azure AI Foundry RAG before approving custom agent development."
+},
+{
+  "aifact": "SaaS Agent Prioritization and the Buy-vs-Build Logic",
+  "aifactinsight": "AI FACT/INSIGHT: The CAF strategy dictates utilizing existing SaaS agents (M365 Copilot, GitHub Copilot, Dynamics 365) whenever they meet business needs rather than building custom logic. AGENTIC INSIGHT: This represents **'Commoditized Agency.'** My curated improvement is to architect a **'Capability Discovery Layer'** that queries available SaaS agent APIs for a specific skill before spawning a custom agent instance, ensuring you aren't paying to build what you already rent. SOURCE: Community Feed Image Audit (Microsoft official blog via LinkedIn)",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-13",
+  "practicalUsage": "Audit your existing M365 and GitHub Copilot seat capabilities before initiating custom development. Most workflow, research, and analysis tasks can be offloaded to these hardened SaaS agents to reduce technical debt."
+},
+{
+  "aifact": "Multi-Agent System Trigger Criteria",
+  "aifactinsight": "AI FACT/INSIGHT: Under the CAF guidelines, multi-agent systems are only approved if security boundaries must be crossed, multiple teams are involved, or single-agent tests fail to meet requirements. AGENTIC INSIGHT: This is **'Just-in-Time Orchestration.'** My curated improvement is to use **'Orchestration Shadowing'**—running a single agent first and monitoring for 'Constraint Violations' (like security context leakage) to programmatically justify the shift to a more complex multi-agent system only when the metrics demand it. SOURCE: Community Feed Image Audit (Microsoft official blog via LinkedIn)",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-13",
+  "practicalUsage": "Default to a single-agent system for all new builds. Only escalate to multi-agent orchestration if the 'Audit Log' shows clear role segregation needs or cross-boundary compliance issues that a single agent cannot legally or technically handle."
+},
+{
+  "aifact": "Overengineering as the New Technical Debt",
+  "aifactinsight": "AI FACT/INSIGHT: Microsoft identifies unnecessary agent complexity as a fast-compounding form of technical debt, emphasizing that the hardest architectural decision is choosing when NOT to use agents. AGENTIC INSIGHT: This represents **'Complexity Budgeting.'** My curated improvement is to assign a **'Debt Weight'** to every agentic layer in your stack; if the architectural complexity doesn't yield a 3x ROI in reasoning capability over a simpler script, the layer should be flagged for 'Simplification Refactoring.' SOURCE: Community Feed Image Audit (Microsoft official blog via LinkedIn)",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-13",
+  "practicalUsage": "Establish a 'Simplicity Review' at the end of every sprint. If a multi-agent workflow has been built for a process that has become predictable over time, refactor it back into a traditional ML model or deterministic code to lower maintenance costs."
+},
 {
   "aifact": "Microsoft Agent Framework: Infusing Durability into Agentic Logic",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, Microsoft has integrated its Durable Task Framework directly into the Microsoft Agent Framework for .NET, enabling agents to maintain state across weeks-long pauses or infrastructure restarts. This 'Durable Workflow' pattern ensures that complex multi-step reasoning remains resilient to transient failures or human-in-the-loop delays. AGENTIC INSIGHT: This is the **'Checkpointed Reasoning'** architecture. My curated improvement is to implement **'Hydrated Context Injection.'** By serializing the agent's internal thought process into a durable state store, you can 're-hydrate' the agent's memory instantly upon resumption, preventing the 'Contextual Amnesia' that occurs when agents restart a task from a blank slate after a timeout. SOURCE: https://devblogs.microsoft.com/dotnet/durable-workflows-in-microsoft-agent-framework/",
