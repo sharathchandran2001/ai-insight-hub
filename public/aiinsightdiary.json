@@ -1,5 +1,40 @@
 [
   {
+  "aifact": "Hybrid RAG: Merging Dense Semantics with Sparse Keyword Indices",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, baseline production RAG environments utilize Hybrid RAG to combat keyword omission, running parallel tracks through dense vector embeddings and traditional BM25 lexical indices. AGENTIC INSIGHT: This represents the **'Dual-Track Retrieval'** pattern. My curated improvement is to implement **'Dynamic Reciprocal Rank Fusion (RRF) Scaling'**—an orchestration layer that adjusts the RRF weighting constant based on the classification of the query, tilting toward lexical matching for specific legal/alphanumeric codes and toward dense vectors for conceptual queries. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Deploy Hybrid RAG as your absolute baseline architectural pattern for search. Do not rely on dense vector embeddings alone when processing documents with strict compliance numbers or industry-specific acronyms."
+},
+{
+  "aifact": "GraphRAG: Extracting Topology and Relational Entity Summaries",
+  "aifactinsight": "AI FACT/INSIGHT: Production pipelines leverage GraphRAG to map data entities and their distinct relationships into a knowledge graph, retrieving entire subgraphs and community summaries rather than isolated, text-only chunks. AGENTIC INSIGHT: This is **'Topological Synthesis.'** My curated improvement is to implement **'Entity-Heuristic Truncation'**—where the retrieval engine prunes non-essential graph edges based on historical agent decision logs, preventing context window explosion while maintaining the core relational path during high-context reasoning. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Utilize GraphRAG when answering complex, non-linear inquiries where the answer requires connecting dots across disparate pages or whole-document ecosystems rather than a single paragraph."
+},
+{
+  "aifact": "Agentic RAG: Multi-Step Tool Routing and Iterative Reasoner Loops",
+  "aifactinsight": "AI FACT/INSIGHT: Advanced data environments employ Agentic RAG, utilizing a dedicated planner agent to choose dynamically between vector indices, web searches, or SQL endpoints to resolve a query. AGENTIC INSIGHT: This represents the **'Multi-Modal Route Arbitration'** pattern. My curated improvement is to deploy a **'Confidence-Threshold Termination Gate'**—where a secondary reasoner agent loops back to test the query outputs against a local validator, terminating the retry cycle immediately when a reliability score is met to control token burn. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Implement Agentic RAG when processing unstructured consumer queries that may require real-time external data validation or multi-step, tabular computations across SQL databases."
+},
+{
+  "aifact": "Corrective RAG (CRAG): Self-Grading and Web Fallback Orchestration",
+  "aifactinsight": "AI FACT/INSIGHT: To eliminate hallucinated outputs, Corrective RAG routes retrieved chunks through an evaluator node that grades relevance; if chunks are deemed ambiguous or incorrect, it initiates a query rewriter and web fallback loop. AGENTIC INSIGHT: This is **'Adversarial Context Grading.'** My curated improvement is to execute **'Local SLM Grading Hooks'**—using a highly optimized local Small Language Model (SLM) on edge hardware to grade chunk relevance instantly, avoiding the latency and API cost of invoking cloud-native frontier models for basic filtration. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Integrate CRAG into public-facing data pipelines or critical compliance workflows where the cost of a hallucinated response is catastrophic, ensuring a strict validation check before text generation."
+},
+{
+  "aifact": "Multimodal RAG: Unified Embeddings for Complex Document Layouts",
+  "aifactinsight": "AI FACT/INSIGHT: Enterprise data architectures use Multimodal RAG with specialized vision-aware models (e.g., ColPali, CLIP) to index text chunks, charts, tables, and images into a single vector database without separate layout parsing. AGENTIC INSIGHT: This is the **'Unified Canvas Indexing'** model. My curated improvement is to pair this layout with **'Vision-Context Stitching'**—where the index matches the geometric coordinates of a chart directly to its surrounding text headers, ensuring the reasoning agent interprets visual data in its exact semantic context. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Deploy Multimodal RAG for scanning complex PDF documents like technical manuals, financial statements, or mortgage appraisal reports where critical insight is locked within visual charts and tabular structures."
+},
+  {
   "aifact": "The Parallel Feature Factory: Multi-Agent Branch Partitioning",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, production-scale implementation of Claude Code relies on partitioning software updates into concurrent sub-agent execution blocks, where a lead orchestrator splits a technical specification into isolated git branches to process complex features simultaneously. AGENTIC INSIGHT: This represents the **'Asynchronous Branch Isolation'** pattern. My curated improvement is to implement **'Semantic Concurrency Arbitration'**—an infrastructure layer that evaluates branch dependencies before task fan-out, blocking sub-agents from writing overlapping code configurations to minimize catastrophic git merge conflicts during compilation. SOURCE: https://www.the-ai-corner.com/p/the-claude-code-system-that-replaces",
   "contributor": "Community Feed Curated",
