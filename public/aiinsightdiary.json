@@ -1,5 +1,33 @@
 [
   {
+  "aifact": "The 4-Layer Claude OS Setup: Moving from Chatbots to Operating Systems",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, high-performance implementations of Anthropic runtimes have shifted from iterative prompt engineering to a structured, filesystem-backed four-layer framework (Rule, Lesson, Action, Team) that operates the LLM like an extensible workspace. AGENTIC INSIGHT: This represents the **'Filesystem-as-a-State-Engine'** design pattern. My curated improvement is to implement **'Dynamic Layer Hot-Swapping'**—using a lightweight orchestration script that monitors local directory paths and automatically injects context vectors only from the active workspace layer, preventing the token bloat caused by loading unneeded team or skill files simultaneously. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Structure your AI developer environments to completely abandon manual system prompting. Enforce a local root workspace split into strict subfolders for rules, memory files, skill scripts, and agent pipelines to ensure modular system execution."
+},
+{
+  "aifact": "Constitutional Workflow Guarding via Persistent CLAUDE.md Layering",
+  "aifactinsight": "AI FACT/INSIGHT: The foundational Rule Layer mandates dropping a persistent `CLAUDE.md` onboarding file in every workspace directory to force the LLM to adhere to absolute brand, voice, and workflow orchestration rules across every session. AGENTIC INSIGHT: This represents **'Deterministic Project Bootstrapping.'** My curated improvement is to wire an **'Inheritance-Chain Script'** to the workspace. When a sub-agent spawns in a nested directory, the infrastructure automatically merges a global enterprise compliance config into the local `CLAUDE.md` file, guaranteeing that high-level security constraints cannot be prompt-engineered away by lower-tier modules. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Establish a base `CLAUDE.md` template across all your software repositories. Populate it with strict 'Plan-Before-Act' instructions, forcing any coding agent that reads the directory to declare its execution graph before mutating any files."
+},
+{
+  "aifact": "Externalizing Long-Term Agentic Memory through the Model Context Protocol",
+  "aifactinsight": "AI FACT/INSIGHT: Operational setups decouple stateful information from the chat history by writing corrections, style guides, and preferences into a dedicated Lesson Layer (`/memory/*.md`) that auto-loads into new sessions via the Model Context Protocol (MCP). AGENTIC INSIGHT: This is **'Decoupled Cognitive Ledgering.'** My curated improvement is to implement **'Automated Lesson Extraction'**—where a post-session analyzer agent extracts user-issued corrections from terminal outputs, formats them into markdown chunks, and commits them back to the MCP-mounted memory path to achieve self-directed system tuning. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Connect your internal document stores or local notes directly to the Lesson Layer using standard open-source MCP connectors. This lets your agent fleet instantly access historic corporate knowledge without heavy RAG fine-tuning."
+},
+{
+  "aifact": "The Team Layer Pipeline: Zero-Human Multi-Agent Orchestration",
+  "aifactinsight": "AI FACT/INSIGHT: Advanced configurations chain specialized agent roles (Strategist, Designer, QA Scorer) sequentially by passing execution outputs through independent, role-specific markdown instruction files without human intermediary intervention. AGENTIC INSIGHT: This represents **'Linear Pipe Agency.'** My curated improvement is to integrate an **'Adversarial QA Gatekeeper'** at the end of the pipeline. The QA agent is bound by a strict code-execution rule that evaluates sub-agent outputs inside an isolated sandbox, automatically routing failed test logs back to the developer node to create a self-correcting execution loop. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Define your complex workflows as a series of standalone, specialized agent files. Avoid massive, all-in-one system prompts by chunking responsibilities out into clear handoff steps, passing the artifact down the line like a factory assembly line."
+},
+  {
   "aifact": "Hybrid RAG: Merging Dense Semantics with Sparse Keyword Indices",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, baseline production RAG environments utilize Hybrid RAG to combat keyword omission, running parallel tracks through dense vector embeddings and traditional BM25 lexical indices. AGENTIC INSIGHT: This represents the **'Dual-Track Retrieval'** pattern. My curated improvement is to implement **'Dynamic Reciprocal Rank Fusion (RRF) Scaling'**—an orchestration layer that adjusts the RRF weighting constant based on the classification of the query, tilting toward lexical matching for specific legal/alphanumeric codes and toward dense vectors for conceptual queries. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
