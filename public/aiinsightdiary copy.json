@@ -1,5 +1,26 @@
 [
   {
+  "aifact": "Microsoft Agent Skills: Reusable Task Specifications for GitHub Copilot",
+  "aifactinsight": "AI FACT/INSIGHT: In May 2026, Microsoft shipped native 'Agent Skills' integration for Visual Studio and GitHub Copilot, standardizing reusable instruction sets via the open `agentskills.io` specification to teach models specific enterprise execution tasks. AGENTIC INSIGHT: This represents the **'Context-on-Demand'** design pattern. My curated improvement is to implement **'Dynamic Skill Registry Pruning'**—an infrastructure hook that analyzes workspace directory layouts to surface only matching `.github/skills/` paths to the compiler, eliminating the context-window clutter caused by loading an entire global organization playbook simultaneously. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Transition away from large, multi-paragraph prompt templates in your team's wiki. Define your specific architecture, testing, and deployment workflows as discrete `SKILL.md` modules within your repositories to let Copilot load them conditionally."
+},
+{
+  "aifact": "Task-Specific Context Loading vs. Persistent Custom Instructions",
+  "aifactinsight": "AI FACT/INSIGHT: The Agent Skills framework differentiates itself from global `copilot-instructions.md` by loading task-specific logic dynamically only when the model detects a matching code context, separating static policies from active runtime playbooks. AGENTIC INSIGHT: This is **'Semantic Context Gating.'** My curated improvement is to architect **'Deterministic Trigger Tracing'**—forcing the IDE runtime to log the exact similarity score or code heuristic that caused an Agent Skill to activate, providing necessary Layer 6 (Governance) audit trails to ensure compliance models aren't bypassing security checks. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Reserve `.github/copilot-instructions.md` exclusively for non-negotiable coding standards (e.g., 'always use tabs, not spaces'). Use the new skills folder format to handle variable tasks like generating boilerplate for a specific internal microservice framework."
+},
+{
+  "aifact": "The Synergy of Agent Skills and the Model Context Protocol",
+  "aifactinsight": "AI FACT/INSIGHT: Under the 2026 Microsoft Developer specification, Agent Skills combine with Model Context Protocol (MCP) tools, where the skill explicitly describes *how* to handle a task while the MCP tool provides the underlying *capability* to execute it. AGENTIC INSIGHT: This represents **'Decoupled Capability-Intent Architecture.'** My curated improvement is to enforce an **'Attestation Guardrail Layer'**—where an MCP tool execution is hard-gated by the active Agent Skill definition, programmatically verifying that the agent's intent matches the specific repository boundaries before a file mutation or bash command is allowed to run. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "When configuring local agent environments, pair your custom internal tool endpoints with clean `SKILL.md` description files. This ensures your code agents understand not just the API parameters of your tools, but the architectural rationale for when to deploy them."
+},
+  {
   "aifact": "The 4-Layer Claude OS Setup: Moving from Chatbots to Operating Systems",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, high-performance implementations of Anthropic runtimes have shifted from iterative prompt engineering to a structured, filesystem-backed four-layer framework (Rule, Lesson, Action, Team) that operates the LLM like an extensible workspace. AGENTIC INSIGHT: This represents the **'Filesystem-as-a-State-Engine'** design pattern. My curated improvement is to implement **'Dynamic Layer Hot-Swapping'**—using a lightweight orchestration script that monitors local directory paths and automatically injects context vectors only from the active workspace layer, preventing the token bloat caused by loading unneeded team or skill files simultaneously. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
