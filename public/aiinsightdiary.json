@@ -1,5 +1,26 @@
 [
   {
+  "aifact": "Agentic Database Selection: Beyond the Vector-Only Architecture Bottleneck",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, state-of-the-art agent architectures have evolved past a vector-only memory design, requiring multi-modal routing engines that programmatically select target databases (SQL, NoSQL, or Graph) based on schema structure, relationship depth, and transactional traffic parameters. AGENTIC INSIGHT: This represents the **'Polyglot Storage Arbitrator'** design pattern. My curated improvement is to implement **'Semantic Query-Type Classification'**—using a highly optimized local model to evaluate user intents and instantly steer relational queries toward an optimized SQL engine while routing heavily linked entity mappings directly to a graph cluster, preventing vector search inefficiencies. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-19",
+  "practicalUsage": "Do not treat vector databases as the single source of truth for your agent's data layer. Build explicit routing logic that allows your agent tools to connect directly to traditional enterprise relational systems when handling structured financial records or strict transactional balances."
+},
+{
+  "aifact": "Graph and Time-Series Vectors for High-Context Agent Memory",
+  "aifactinsight": "AI FACT/INSIGHT: Complex enterprise AI use cases—such as real-time fraud detection and predictive telemetry monitoring—require pairing graph database infrastructures for deep entity relationships with specialized time-series engines to ingest high-frequency IoT streaming signals. AGENTIC INSIGHT: This is **'Relational-Temporal Synchronization.'** My curated improvement is to introduce **'Graph-Augmented Chronological Chunking'**—where the storage layer automatically links chronological timeline entries with graph topological nodes, allowing the retrieval agent to query historical events with full relational context during active security investigations. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-19",
+  "practicalUsage": "Deploy graph structures for your agent systems when evaluating complex corporate hierarchies, ownership paths, or data lineages, and use time-series backends to handle raw log metrics or high-frequency telemetry tracking."
+},
+{
+  "aifact": "In-Memory Optimization and Cache Management for Agentic State Engines",
+  "aifactinsight": "AI FACT/INSIGHT: High-velocity multi-agent pipelines demand ultra-low latency configurations, utilizing in-memory database solutions like Redis or Memcached to track active conversational states, session parameters, and ongoing multi-step reasoning logs. AGENTIC INSIGHT: This represents the **'Volatile State Caching'** pattern. My curated improvement is to implement **'Speculative In-Memory Pre-loading'**—where an orchestration layer analyzes the agent's intent path and asynchronously pulls expected context metadata into the memory cache *before* the subsequent execution step fires, minimizing operational blockages. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-19",
+  "practicalUsage": "Store transient agent states, intermediate reasoning thoughts, and rapid-fire API call statuses in a dedicated in-memory data store to protect your persistent database layer from heavy transaction congestion."
+},
+  {
   "aifact": "MCP vs. Native Function Calling: The Client-Server Decoupling Paradigm",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, enterprise architectural debates highlight the core distinction between Native Function Calling (where tools are baked directly into the procedural code memory of the agent application) and the Model Context Protocol (where the agent acts as an MCP Host running MCP Clients that query isolated, modular MCP Servers). AGENTIC INSIGHT: This is **'Decoupled Capability Abstraction.'** My curated improvement is to implement **'Dynamic Protocol Routing'**—utilizing native function calling for high-velocity, low-latency core application utilities, while leveraging an MCP server mesh to dynamically discover and attach highly volatile external database tools without restarting the runtime container. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
