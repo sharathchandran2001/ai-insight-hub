@@ -1,5 +1,54 @@
 [
   {
+  "aifact": "MCP vs. Native Function Calling: The Client-Server Decoupling Paradigm",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, enterprise architectural debates highlight the core distinction between Native Function Calling (where tools are baked directly into the procedural code memory of the agent application) and the Model Context Protocol (where the agent acts as an MCP Host running MCP Clients that query isolated, modular MCP Servers). AGENTIC INSIGHT: This is **'Decoupled Capability Abstraction.'** My curated improvement is to implement **'Dynamic Protocol Routing'**—utilizing native function calling for high-velocity, low-latency core application utilities, while leveraging an MCP server mesh to dynamically discover and attach highly volatile external database tools without restarting the runtime container. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-18",
+  "practicalUsage": "Avoid standardizing 100% on a single tool implementation approach. Use localized, hardcoded native function definitions for core app logic to maximize speed, and reserve MCP for external data connectors, third-party APIs, and decentralized enterprise tools."
+},
+{
+  "aifact": "The Architectural Trade-Off of MCP Tool Discovery Overheads",
+  "aifactinsight": "AI FACT/INSIGHT: Under the MCP architecture, every execution cycle requires an explicit three-step handshake: the client retrieves all available tools from the remote server, passes them to the LLM context via a prompt, and then routes the structured execution request back to the server. AGENTIC INSIGHT: This represents **'Handshake-Induced Latency Drift.'** My curated improvement is to establish a **'Client-Side Schema Cache'**—where the agent host caches the available tool definitions locally and updates them on a lazy cron schedule, skipping the initial remote discovery hop on every single user query to save compute cycles. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-18",
+  "practicalUsage": "When operating agents on edge hardware or within latency-sensitive environments, implement a caching mechanism over your MCP client connection layer to prevent consecutive discovery handshakes from bottlenecking the agent's response velocity."
+},
+{
+  "aifact": "The Trench Realities of Protocol Flexibility and MCP Abandonment",
+  "aifactinsight": "AI FACT/INSIGHT: Production telemetry shows that some engineering teams are selectively moving away from or bypassing MCP servers for specific workloads due to structural rigidity and a lack of flexibility when handling custom, non-standard transport protocols. AGENTIC INSIGHT: This represents the **'Protocol Lock-In'** vulnerability. My curated improvement is to design a **'Hybrid Tool-Abstraction Bridge'**—a middle tier within your agent engine that wraps around both native function signatures and MCP schema definitions, exposing a unified interface to the model while allowing the backend to hot-swap between a local script or a remote server based on health metrics. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-18",
+  "practicalUsage": "Build an absolute abstraction layer inside your agentic architecture (e.g., using FastAPI gateways). Never allow your core orchestrator to lock into a single tool spec; write a translation layer so a tool can shift from a local python function to a remote server seamlessly if requirements change."
+},
+  {
+  "aifact": "Microsoft Fabric: The Multi-Engine Shared Capacity Bottleneck",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, the Microsoft Well-Architected Framework for Fabric mandates strict isolation strategies to prevent heavy Spark pipelines, warehouse queries, and real-time semantic refreshes from starving interactive compute operations on shared capacities. AGENTIC INSIGHT: This represents the **'Compute Starvation Prevention'** design pattern. My curated improvement is to implement **'Semantic Workload Triage'**—an automated middleware layer that programmatically schedules asynchronous data transformation jobs during off-peak utilization valleys based on live Capacity metrics, ensuring conversational and interactive reporting systems maintain baseline performance thresholds. SOURCE: https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "When designing high-throughput ingestion pipelines, decouple raw compute from analytical reporting workspaces. Separate volatile batch ingestion tasks across distinct Fabric capacities or time windows to isolate compute workloads."
+},
+{
+  "aifact": "Modular Analytics Workloads and Fault Domain Isolation",
+  "aifactinsight": "AI FACT/INSIGHT: The Fabric design methodology dictates breaking large analytical solutions into small, modular components—such as independent pipelines, separated datasets, and modular processing stages—to minimize the impact of platform or task failures. AGENTIC INSIGHT: This is **'Granular Fault Isolation.'** My curated improvement is to deploy **'State-Aware Transaction Ledgering'**—where every modular pipeline stage logs its internal execution data into an immutable workspace ledger, enabling downstream automated repair agents to instantly reconstruct the state machine and resume execution upon recovery without re-running the entire dataset. SOURCE: https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Avoid monolithic data engineering frameworks inside single workspaces. Break your data pipelines out into isolated, decoupled stages, using short-lived workspace dependencies to coordinate complex transitions cleanly."
+},
+{
+  "aifact": "The Governance Risk of Multi-Workload Semantic Data Sharing",
+  "aifactinsight": "AI FACT/INSIGHT: Fabric's open-sharing architecture across Lakehouses, Warehouses, and semantic models can result in unchecked data growth and uncontrolled access permissions if strict architectural governance gates are not enforced at the workspace level. AGENTIC INSIGHT: This represents **'Permission Drift Vulnerability.'** My curated improvement is to engineer **'Just-in-Time Contextual Attestation'**—utilizing infrastructure access gateways to monitor semantic model sharing links in real time, automatically invalidating data pathways that cross defined organizational boundaries unless validated by an authorized policy engine. SOURCE: https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Deactivate broad cross-workspace data sharing privileges by default. Enforce a mandatory peer-review policy or automated gate for any request to link semantic models outside an application's defined landing zone boundary."
+},
+{
+  "aifact": "Observe-and-Adapt Performance Scaling for Dynamic Capacities",
+  "aifactinsight": "AI FACT/INSIGHT: The Well-Architected Framework outlines that Fabric architectures must constantly adapt to expanding data volumes by actively monitoring capacity utilization, query latency, and pipeline execution signals to prompt auto-scaling adjustments. AGENTIC INSIGHT: This is **'Reactive Proactive Balancer Architecture.'** My curated improvement is to deploy a **'Predictive Token and Smoothing Gateway'**—where an open telemetry monitor evaluates resource consumption smoothing curves, automatically throttling low-priority back-end data tasks *before* shared capacity exhaustion triggers an interactive user slowdown. SOURCE: https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-17",
+  "practicalUsage": "Connect Fabric capacity utilization metrics directly to an open telemetry reporting dashboard. Configure alerting rules to flag high-frequency query bursts, giving your team early warnings before technical debt leads to budget overruns."
+},
+  {
   "aifact": "Microsoft Agent Skills: Reusable Task Specifications for GitHub Copilot",
   "aifactinsight": "AI FACT/INSIGHT: In May 2026, Microsoft shipped native 'Agent Skills' integration for Visual Studio and GitHub Copilot, standardizing reusable instruction sets via the open `agentskills.io` specification to teach models specific enterprise execution tasks. AGENTIC INSIGHT: This represents the **'Context-on-Demand'** design pattern. My curated improvement is to implement **'Dynamic Skill Registry Pruning'**—an infrastructure hook that analyzes workspace directory layouts to surface only matching `.github/skills/` paths to the compiler, eliminating the context-window clutter caused by loading an entire global organization playbook simultaneously. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
