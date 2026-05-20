@@ -1,5 +1,26 @@
 [
   {
+  "aifact": "The Enterprise Document Pipeline: Model-Peripheral Engineering Dominance",
+  "aifactinsight": "AI FACT/INSIGHT: In May 2026, enterprise pipeline analysis revealed that raw LLM inference represents only a fraction of production document processing solutions, with overengineering debt compounding heavily in peripheral systems like pre-processing, structural segmentation, classification, and metadata validation. AGENTIC INSIGHT: This is the **'Peripheral-Dominant Ingestion'** design pattern. My curated improvement is to implement **'Deterministic Micro-Parsing Gates'**—using lightweight, fast regex or structural layout heuristics to validate document schemas before hitting an LLM, blocking poorly scanned or corrupt data from burning token compute. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-19",
+  "practicalUsage": "When scoping enterprise document extraction, allocate 80% of your development sprint cycles to deterministic pre-processing (OCR cleaning, chunk boundary marking) and post-extraction validation schemas rather than tuning prompt variants."
+},
+{
+  "aifact": "The Ground-Truth Bootstrapping Bottleneck in B2B Document Evals",
+  "aifactinsight": "AI FACT/INSIGHT: Production telemetry confirms that true enterprise eval sets do not exist out of the box; validating B2B document pipelines requires engineering teams to manually label and schema-map 130+ distinct corporate documents across dozens of entity fields to establish a baseline evaluation suite. AGENTIC INSIGHT: This represents **'Cold-Start Data Asymmetry.'** My curated improvement is to deploy a **'Dual-Agent Synthetic Bootstrap Loop'**—where a high-capacity frontier model generates complex edge-case synthetic variants of your initial document schemas, paired with a distinct grading agent to build an automated, high-fidelity testing suite with minimal manual oversight. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-19",
+  "practicalUsage": "Never sign off on an enterprise document processing contract without a mandatory 2-week 'Eval Generation Phase.' Do not optimize code until you have a hardcoded test framework of at least 100 manually verified corporate document archetypes."
+},
+{
+  "aifact": "Non-Deterministic Model Risks and the Trust-Building HITL Mirror",
+  "aifactinsight": "AI FACT/INSIGHT: Enterprise business stakeholders demand a minimum of 99% accuracy for critical data extractions, forcing a structural requirement for progressive trust-building frameworks that integrate automated human-in-the-loop (HITL) review queues. AGENTIC INSIGHT: This is **'Stochastic Mitigation Architecture.'** My curated improvement is to engineer **'Confidence Score Routing Gateways'**—where the agentic pipeline calculates log-probability variances across key extractions, automatically routing any field falling below a 95% confidence threshold to a structured human UI queue while allowing high-confidence fields to pass straight through. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-19",
+  "practicalUsage": "Design your system architecture under the strict assumption that the model *will* fail. Build an interactive review UI into your workspace layer from day one, allowing operational staff to smoothly catch, fix, and audit low-confidence extractions."
+},
+  {
   "aifact": "Agentic Database Selection: Beyond the Vector-Only Architecture Bottleneck",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, state-of-the-art agent architectures have evolved past a vector-only memory design, requiring multi-modal routing engines that programmatically select target databases (SQL, NoSQL, or Graph) based on schema structure, relationship depth, and transactional traffic parameters. AGENTIC INSIGHT: This represents the **'Polyglot Storage Arbitrator'** design pattern. My curated improvement is to implement **'Semantic Query-Type Classification'**—using a highly optimized local model to evaluate user intents and instantly steer relational queries toward an optimized SQL engine while routing heavily linked entity mappings directly to a graph cluster, preventing vector search inefficiencies. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
