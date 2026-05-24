@@ -1,5 +1,47 @@
 [
   {
+  "aifact": "The Evaluation Plane: Quantifying Triad Metrics in Agentic RAG",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, enterprise RAG verification relies on isolating three deterministic math scoring vectors—Context Relevance, Groundedness, and Answer Relevance—to pinpoint exactly whether system failures stem from poor database retrieval or model generation drift. AGENTIC INSIGHT: This is **'Isolated Telemetry Verification'**. My curated improvement is to implement **'Dynamic Metric Weighting'**—an execution gate that shifts the threshold standards based on the query type, enforcing absolute 100% groundedness for financial math tasks while loosening strict semantic alignment to prioritize synthesis speed for broad exploratory research requests. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-24",
+  "practicalUsage": "Incorporate automated triad testing frameworks into your continuous integration pipeline. Stop manually reviewing RAG chat transcripts and instead pass inputs, retrieved chunks, and generated answers through isolated programmatic grading nodes before code promotion."
+},
+{
+  "aifact": "Context Relevance and Groundedness Gating for Retrieval Quality",
+  "aifactinsight": "AI FACT/INSIGHT: Production pipelines isolate Context Relevance (measuring if retrieved chunks match the query intent without noise) from Groundedness (verifying the generated answer contains *only* facts present in the retrieved context) to prevent hallucinations. AGENTIC INSIGHT: This represents **'Upstream Context Pruning'**. My curated improvement is to deploy an **'Adversarial Extraction Gate'**—utilizing an optimized local SLM to strip non-essential filler text from retrieved chunks *before* they are sent to the generation model, ensuring the generation engine runs with a maximum density of verified facts. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-24",
+  "practicalUsage": "Configure an immediate circuit-breaker path inside your pipeline: if the Context Relevance score drops below a pre-set threshold, abort the generation step entirely and force the system to perform query rewriting or switch to an alternate data index."
+},
+{
+  "aifact": "Answer Relevance Scoring to Eradicate Conversational Drift",
+  "aifactinsight": "AI FACT/INSIGHT: Answer Relevance measures the semantic alignment between the final generated output and the user's initial prompt, identifying instances where a model generates a grammatically correct, highly factual response that completely fails to address the user's explicit question. AGENTIC INSIGHT: This is **'Intent Realignment Verification'**. My curated improvement is to implement **'Reverse Query Mapping'**—forcing an independent validator node to reconstruct a theoretical prompt solely from the generated answer and checking the similarity score of that reconstructed prompt against the user's actual input to catch logical avoidance. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-24",
+  "practicalUsage": "Deploy Answer Relevance checks on public-facing or agentic service desks. If an agent's response scores low on intent alignment, block the output from reaching the user interface and re-route the active state to a fallback deterministic script path."
+},
+  {
+  "aifact": "Flow Engineering: Replacing Stochastic Agent Loops with Deterministic Workflows",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, enterprise architectures are actively pivoting from autonomous multi-agent routing loops to Flow Engineering, where the model's execution path is explicitly structured via hardcoded state machines, code paths, and conditional gates. AGENTIC INSIGHT: This represents the **'Hardcoded State-Machine Paradigm'**. My curated improvement is to implement **'Dynamic Step Bypass'**—where a highly optimized localized model evaluates data payloads at the ingress of a state and programmatically skims past downstream non-essential validation blocks if structural compliance is pre-verified, maximizing processing throughput without introducing non-deterministic loop paths. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-23",
+  "practicalUsage": "When building production-tier solutions, abandon designs where an agent autonomously decides which tool to run next via an open chat prompt. Instead, explicitly code the sequential execution steps using tools like GraphRAG, the AWF CLI, or LangGraph to ensure strict operational reliability."
+},
+{
+  "aifact": "The Strategic Trade-Off of Flow Engineering vs. Full Agent Agency",
+  "aifactinsight": "AI FACT/INSIGHT: While full agentic autonomy provides maximum flexibility for handling ambiguous, unpredictable tasks, it exhibits poor reliability and high token burn; conversely, Flow Engineering delivers high reliability and predictable performance at the cost of diminished flexibility. AGENTIC INSIGHT: This is **'Autonomy-Reliability Asymmetry'**. My curated improvement is to deploy **'Autonomy Escape Hatches'**—structuring the pipeline as a rigid, deterministic workflow by default, but routing specific unhandled exceptions or complex failures to an isolated autonomous 'repair sub-graph' that operates under a strict token budget to fix anomalies on the fly. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-23",
+  "practicalUsage": "Use rigid Flow Engineering for structural business workflows (such as code linting, syntax validation, or transactional data parsing). Reserve open agentic autonomy strictly for exploratory stages like research summarization or initially breaking down unstructured specifications."
+},
+{
+  "aifact": "State Machine State Hydration for Long-Running Enterprise Flows",
+  "aifactinsight": "AI FACT/INSIGHT: Hardened workflow engineering demands that state transitions maintain absolute checkpoint tracking, allowing systems to explicitly freeze, write execution graphs to persistent memory, and handle external human-in-the-loop dependencies seamlessly. AGENTIC INSIGHT: This represents **'Immutable Handoff States'**. My curated improvement is to enforce a **'Schema-Validated Checkpoint Layer'**—where the state machine automatically runs an automated JSON-schema check on the data payload before writing it to the persistence layer, completely preventing corrupted states from hydrating into subsequent downstream execution steps. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-23",
+  "practicalUsage": "Configure persistent storage (e.g., PostgreSQL or Redis backends) at every node intersection in your flow charts. Ensure that if a network timeout occurs or a human approval gate delays execution for hours, the state engine can hydrate the exact context frames cleanly upon resumption."
+},
+  {
   "aifact": "Google I/O 2026: Gemini 3.5 Flash and Native Multimodal Omni Engines",
   "aifactinsight": "AI FACT/INSIGHT: At Google I/O 2026, Google unveiled Gemini 3.5 Flash, an agent-optimized model running 4x faster than flagship models and scoring 76.2% on Terminal-Bench 2.1, alongside Gemini Omni, a native multi-modal engine enforcing structural physics and temporal consistency in video-to-video generation. AGENTIC INSIGHT: This marks the arrival of **'High-Velocity Stochastic Execution.'** My curated improvement is to implement **'Asymmetric Invalidation Routing'**—allocating Gemini 3.5 Flash as the default, low-latency execution node for iterative coding tasks while reserving heavier frontier reasoning engines strictly as validation gates to minimize system runtime costs. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
