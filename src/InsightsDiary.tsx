@@ -11,9 +11,10 @@ import {
   Lightbulb
 } from 'lucide-react';
 
+// Streamlined schema interface matching your unified keys
 interface SecondaryInsight {
-  aifact: string;
-  aifactinsight: string;
+  corefact: string;
+  domaininsight: string;
   contributorSource: string;
   date: string;
 }
@@ -32,7 +33,8 @@ export default function InsightsDiary({ onBack }: InsightsDiaryProps) {
       try {
         const response = await fetch('/insightdiary.json');
         const data = await response.json();
-        setInsights(data);
+        // Fallback to empty array if data isn't structured as expected
+        setInsights(Array.isArray(data) ? data : []);
       } catch (error) {
         console.error('Failed to fetch diary insights:', error);
       } finally {
@@ -43,11 +45,15 @@ export default function InsightsDiary({ onBack }: InsightsDiaryProps) {
     fetchDiaryInsights();
   }, []);
 
-  const filteredInsights = insights.filter(item => 
-    item.aifact.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.aifactinsight.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.contributorSource.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Safe search filtering mapped to the unified keys
+  const filteredInsights = insights.filter(item => {
+    const title = (item.corefact || '').toLowerCase();
+    const insightText = (item.domaininsight || '').toLowerCase();
+    const source = (item.contributorSource || '').toLowerCase();
+    const query = searchQuery.toLowerCase();
+
+    return title.includes(query) || insightText.includes(query) || source.includes(query);
+  });
 
   return (
     <div className="min-h-screen flex flex-col relative">
@@ -101,48 +107,54 @@ export default function InsightsDiary({ onBack }: InsightsDiaryProps) {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-container">
             <AnimatePresence mode="popLayout">
-              {filteredInsights.map((item, idx) => (
-                <motion.div 
-                  key={item.aifact.substring(0, 10) + idx}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                  transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                  className="glass-card card-3d rounded-3xl p-8 group relative overflow-hidden flex flex-col justify-between min-h-[320px]"
-                >
-                  <div>
-                    <div className="flex justify-between items-center mb-6">
-                      <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
-                        <Calendar size={12} className="text-accent" />
-                        <span className="text-[10px] font-mono opacity-60">{item.date}</span>
+              {filteredInsights.map((item, idx) => {
+                // Defensive text fallback execution
+                const fallbackFact = item.corefact || "System Insight Node";
+                const uniqueKey = `diary-node-${fallbackFact.substring(0, 15)}-${idx}`;
+
+                return (
+                  <motion.div 
+                    key={uniqueKey}
+                    layout
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                    transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                    className="glass-card card-3d rounded-3xl p-8 group relative overflow-hidden flex flex-col justify-between min-h-[340px]"
+                  >
+                    <div>
+                      <div className="flex justify-between items-center mb-6">
+                        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                          <Calendar size={12} className="text-accent" />
+                          <span className="text-[10px] font-mono opacity-60">{item.date || 'Pending'}</span>
+                        </div>
                       </div>
+
+                      <h3 className="text-lg font-semibold mb-4 group-hover:text-accent transition-colors leading-tight">
+                        {fallbackFact}
+                      </h3>
+                      
+                      <p className="text-sm leading-relaxed opacity-70 mb-6 font-light">
+                        {item.domaininsight || "No supplemental engineering insight defined."}
+                      </p>
                     </div>
 
-                    <h3 className="text-lg font-semibold mb-4 group-hover:text-accent transition-colors leading-tight">
-                      {item.aifact}
-                    </h3>
-                    
-                    <p className="text-sm leading-relaxed opacity-70 mb-6 font-light">
-                      {item.aifactinsight}
-                    </p>
-                  </div>
-
-                  {item.contributorSource && (
-                    <div className="pt-4 border-t border-white/5">
-                      <a 
-                        href={item.contributorSource}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-[11px] font-mono text-accent opacity-60 hover:opacity-100 transition-opacity break-all"
-                      >
-                        <ExternalLink size={12} className="shrink-0" />
-                        <span>Source Profile</span>
-                      </a>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
+                    {item.contributorSource && (
+                      <div className="pt-4 border-t border-white/5">
+                        <a 
+                          href={item.contributorSource}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-[11px] font-mono text-accent opacity-60 hover:opacity-100 transition-opacity break-all"
+                        >
+                          <ExternalLink size={12} className="shrink-0" />
+                          <span>Source Profile</span>
+                        </a>
+                      </div>
+                    )}
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
           </div>
         )}
