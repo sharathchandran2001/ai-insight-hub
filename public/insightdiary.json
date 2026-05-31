@@ -1,5 +1,23 @@
 [
   {
+    "corefact": "Deterministic code profiling via built-in modules like cProfile captures precise function call counts, total execution durations, and cumulative execution graphs with low programmatic overhead.",
+    "domaininsight": "Blindly troubleshooting high-latency python execution streams often leads developers to optimize trivial code structures. Rely on cProfile in Q2 2026 to systematically identify macro-level bottleneck blocks before applying deep manual code rewrites.",
+    "contributorSource": "https://www.infoworld.com/article/4178850/plunge-into-python-profiling.html",
+    "date": "2026-05-31"
+  },
+  {
+    "corefact": "Line-by-line profilers allow engineers to inspect individual instruction latency, hit rates, and execution time percentages directly inside targeted Python functions via standard decorators.",
+    "domaininsight": "Macro-level profilers isolate slow functions but fail to pinpoint whether the overhead stems from nested loops, data serialization, or slow IO boundaries. Apply the `line_profiler` extension to drill straight into complex functional runtimes and inspect exact execution costs line-by-line.",
+    "contributorSource": "https://www.infoworld.com/article/4178850/plunge-into-python-profiling.html",
+    "date": "2026-05-31"
+  },
+  {
+    "corefact": "Sampling profilers like py-spy inspect the active Python call stack asynchronously at high frequencies without injecting deterministic hooks into the underlying runtime engine.",
+    "domaininsight": "Traditional deterministic tools introduce significant execution overhead, making them dangerous or unusable on production workloads. Utilize low-impact sampling profilers to generate live flame graphs and diagnose active production bottlenecks without risking system slowdowns.",
+    "contributorSource": "https://www.infoworld.com/article/4178850/plunge-into-python-profiling.html",
+    "date": "2026-05-31"
+  },
+  {
     "corefact": "PySpark acts as the Python API for Apache Spark, supporting distributed batch processing, structured streaming, and cluster-scale ML pipelines across hundreds of worker nodes.",
     "domaininsight": "Single-machine memory limitations block petabyte-scale data engineering. Resolve this in Q2 2026 by utilizing PySpark to build distributed extract, transform, and load (ETL) pipelines that split processing tasks across clustered server instances.",
     "contributorSource": "https://www.kdnuggets.com/top-7-python-libraries-for-large-scale-data-processing",
