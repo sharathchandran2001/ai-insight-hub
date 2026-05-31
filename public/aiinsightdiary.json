@@ -1,5 +1,26 @@
 [
   {
+  "aifact": "Claude Code Plan Mode: Eliminating the Generative 'Just Build It' Downward Spiral",
+  "aifactinsight": "AI FACT/INSIGHT: In Q2 2026, terminal engineering data from Anthropic revealed that developers waste hours in recursive debugging loops when letting AI write raw code immediately; utilizing '/plan' mode forces Claude Code to construct, review, and seek explicit human approval for a full markdown spec before mutating local files. AGENTIC INSIGHT: This is **'Pre-Flight Architecture Validation'**. My curated improvement is to implement **'Spec-to-Test Gating'**—forcing the planning phase to output explicit, executable test suites alongside the code architecture spec, ensuring the subagents have a rigid success target before writing a single line of application code. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-31",
+  "practicalUsage": "Never run an open-ended feature prompt directly in your console. Always switch to '/plan' mode first, edit and approve the structural design map, and then let the runtime execute the changes based on that validated whiteboard spec."
+},
+{
+  "aifact": "The CLAUDE.md Context Ledger: Eradicating Context Preamble Overhead",
+  "aifactinsight": "AI FACT/INSIGHT: Claude Code automatically parses a local project-root markdown ledger named CLAUDE.md at session start, instantly injecting tech stack conventions, linting rules, and database schemas without requiring the developer to repeat prompt parameters. AGENTIC INSIGHT: This represents **'Deterministic Context Hydration'**. My curated improvement is to implement **'Dynamic Telemetry Syncing'**—using automated pre-session hooks to append active environment vars, docker compose states, and current database migrations directly into the CLAUDE.md file, guaranteeing the agent operates with exact local system awareness. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-31",
+  "practicalUsage": "Create a standardized CLAUDE.md at your repository root. Populate it with your strict coding guidelines, your preferred Next.js or FastAPI styling choices, and common terminal testing scripts to keep long agent sessions optimized."
+},
+{
+  "aifact": "Asynchronous Subagent Spawning for Multi-Stream Terminal Pipelines",
+  "aifactinsight": "AI FACT/INSIGHT: Rather than executing code tasks sequentially, the modern terminal agent architecture allows a lead coordination agent to spawn multiple parallel background subagents assigned to isolated, concurrent workstreams (e.g., handling the API router, building the data pipeline, and compiling UI components). AGENTIC INSIGHT: This is **'Asynchronous Branch Compartmentalization'**. My curated improvement is to enforce **'Automated Worktree Isolation'**—where the parent orchestration tool dynamically creates isolated local git worktrees for each spawned subagent, eliminating file mutation collision and preventing merge conflicts before the final PR compilation gate. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-31",
+  "practicalUsage": "When assigning complex full-stack feature requests to Claude Code, instruct the lead agent to explicitly delegate components to independent sub-workers. Have one background agent build out your database schemas while an isolated peer simultaneously writes unit test mocks."
+},
+  {
   "aifact": "The Evolution of Context Engineering Over Raw Token Scale",
   "aifactinsight": "AI FACT/INSIGHT: In Q2 2026, enterprise architecture analysis shifted from basic prompting and agent autonomy toward Context Engineering, acknowledging that without structured domain memory, business context, data lineage, and explicit decision boundaries, models function merely as expensive autocomplete engines despite burning trillions of tokens. AGENTIC INSIGHT: This represents **'Context-Deficit Token Inflation'**. My curated improvement is to implement **'Semantic Lineage Injection'**—a programmatic data-layer gate that automatically appends structural metadata, compliance boundaries, and operational histories to retrieval payloads before they reach the model container, reducing token overhead while increasing factual accuracy. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
