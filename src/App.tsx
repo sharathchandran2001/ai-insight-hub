@@ -17,11 +17,21 @@ import {
   ArrowUp,
   Hash,
   Sparkles,
-  Github
+  Github,
+  Lock
 } from 'lucide-react';
 import { AIInsight } from './types';
+// Import the new module view
+import InsightsDiary from './InsightsDiary';
 
 export default function App() {
+  // Navigation & Security States
+  const [currentView, setCurrentView] = useState<'hub' | 'diary'>('hub');
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
+  const [passwordError, setPasswordError] = useState(false);
+
+  // Existing Core States
   const [insights, setInsights] = useState<AIInsight[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
@@ -53,8 +63,6 @@ export default function App() {
 
   const fetchInsights = async () => {
     try {
-      // Fetching directly from the public folder (the "magic" from your other project)
-      // This allows the archive to show up on Vercel deployments.
       const response = await fetch('/aiinsightdiary.json');
       const data = await response.json();
       setInsights(data);
@@ -62,6 +70,20 @@ export default function App() {
       console.error('Failed to fetch insights:', error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  // Password Security Check Handler
+  const handleVerifyPassword = (e: FormEvent) => {
+    e.preventDefault();
+    if (passwordInput === 'sharathinsights') {
+      setPasswordError(false);
+      setShowPasswordModal(false);
+      setPasswordInput('');
+      setCurrentView('diary');
+      window.scrollTo({ top: 0 });
+    } else {
+      setPasswordError(true);
     }
   };
 
@@ -135,7 +157,6 @@ export default function App() {
     item.contributor.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Leaderboard Logic
   const leaderboard = Object.entries(
     insights.reduce((acc, curr) => {
       acc[curr.contributor] = (acc[curr.contributor] || 0) + 1;
@@ -146,6 +167,11 @@ export default function App() {
     .slice(0, 5);
 
   const topContributor = leaderboard[0];
+
+  // Route interception: If view is 'diary', render the specialized clean child view
+  if (currentView === 'diary') {
+    return <InsightsDiary onBack={() => setCurrentView('hub')} />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col relative">
@@ -174,6 +200,15 @@ export default function App() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-6"
         >
+          {/* New Protected Access Button Added Here */}
+          <button
+            onClick={() => setShowPasswordModal(true)}
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-accent/40 text-xs font-mono transition-colors text-accent/90"
+          >
+            <Lock size={12} />
+            Insights Diary
+          </button>
+
           <div className="relative group">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 opacity-30 group-focus-within:opacity-100 transition-opacity" size={16} />
             <input 
@@ -305,7 +340,6 @@ export default function App() {
                   transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                   className="glass-card card-3d rounded-3xl p-8 group relative overflow-hidden"
                 >
-                  {/* Liquid Accent */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/10 transition-colors" />
                   
                   <div className="flex justify-between items-start mb-6 card-3d-inner">
@@ -459,7 +493,6 @@ export default function App() {
               transition={{ delay: 0.3 }}
               className="lg:col-span-4 glass-card card-3d rounded-[2.5rem] p-10 flex flex-col justify-center relative overflow-hidden group"
             >
-              {/* Liquid Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-accent-alt/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               
               <div className="relative z-10 space-y-6 card-3d-inner">
@@ -523,6 +556,66 @@ export default function App() {
               <p className="text-[10px] font-mono opacity-50 uppercase tracking-widest">Node successfully added to archive</p>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Security Gate Password Prompt Modal */}
+      <AnimatePresence>
+        {showPasswordModal && (
+          <div className="fixed inset-0 z-[110] flex items-center justify-center p-6">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => { setShowPasswordModal(false); setPasswordError(false); setPasswordInput(''); }}
+              className="absolute inset-0 bg-black/80 backdrop-blur-md"
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative glass-card w-full max-w-md rounded-3xl p-8 overflow-hidden shadow-2xl border-accent/20"
+            >
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                  <Lock size={22} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif italic">Encrypted Vault Access</h3>
+                  <p className="text-[10px] font-mono uppercase tracking-widest opacity-40 mt-1">Provide credential vector to decrypt node</p>
+                </div>
+
+                <form onSubmit={handleVerifyPassword} className="w-full space-y-4 pt-4">
+                  <input 
+                    required
+                    type="password"
+                    placeholder="Enter security key..."
+                    className={`w-full glass-input rounded-xl p-4 text-center font-mono text-sm outline-none transition-colors ${passwordError ? 'border-red-500/50 focus:border-red-500' : 'focus:border-accent'}`}
+                    value={passwordInput}
+                    onChange={(e) => { setPasswordInput(e.target.value); if(passwordError) setPasswordError(false); }}
+                  />
+                  {passwordError && (
+                    <p className="text-[10px] font-mono text-red-400 uppercase tracking-wider">Invalid credential key</p>
+                  )}
+                  <div className="flex gap-3 pt-2">
+                    <button 
+                      type="button"
+                      onClick={() => { setShowPasswordModal(false); setPasswordError(false); setPasswordInput(''); }}
+                      className="flex-1 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-widest hover:bg-white/5 transition-colors"
+                    >
+                      Abort
+                    </button>
+                    <button 
+                      type="submit"
+                      className="flex-1 py-3 rounded-xl bg-accent text-black text-xs font-bold uppercase tracking-widest hover:bg-accent-alt transition-colors shadow-[0_0_15px_rgba(0,240,255,0.3)]"
+                    >
+                      Decrypt
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
 
@@ -594,102 +687,6 @@ export default function App() {
               </div>
 
               <form onSubmit={handleSubmit} className="p-10 space-y-8">
-                {/* <div className="grid grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <label className="text-[10px] uppercase font-mono tracking-widest opacity-40 ml-1">Contributor ID</label>
-                      <span className="text-[9px] font-mono opacity-30">{(newEntry.contributor?.length || 0)}/30</span>
-                    </div>
-                    <input 
-                      required
-                      maxLength={30}
-                      type="text" 
-                      placeholder="neural_alias"
-                      className="w-full glass-input rounded-2xl p-4 text-sm font-mono outline-none"
-                      value={newEntry.contributor}
-                      onChange={e => setNewEntry({...newEntry, contributor: e.target.value})}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] uppercase font-mono tracking-widest opacity-40 ml-1">Discovery Date</label>
-                    <input 
-                      required
-                      type="date" 
-                      className="w-full glass-input rounded-2xl p-4 text-sm font-mono outline-none"
-                      value={newEntry.date}
-                      onChange={e => setNewEntry({...newEntry, date: e.target.value})}
-                    />
-                  </div>
-                </div> */}
-
-                {/* <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <label className="text-[10px] uppercase font-mono tracking-widest opacity-40 ml-1">Breakthrough Event</label>
-                    <span className="text-[9px] font-mono opacity-30">{(newEntry.aifact?.length || 0)}/120</span>
-                  </div>
-                  <input 
-                    required
-                    maxLength={120}
-                    type="text" 
-                    placeholder="What happened in the AI space?"
-                    className="w-full glass-input rounded-2xl p-4 text-sm outline-none"
-                    value={newEntry.aifact}
-                    onChange={e => setNewEntry({...newEntry, aifact: e.target.value})}
-                  />
-                </div> */}
-
-                {/* <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <label className="text-[10px] uppercase font-mono tracking-widest opacity-40 ml-1">Deep Implication</label>
-                    <span className="text-[9px] font-mono opacity-30">{(newEntry.aifactinsight?.length || 0)}/600</span>
-                  </div>
-                  <textarea 
-                    required
-                    maxLength={600}
-                    rows={3}
-                    placeholder="Analyze the long-term impact..."
-                    className="w-full glass-input rounded-2xl p-4 text-sm outline-none resize-none"
-                    value={newEntry.aifactinsight}
-                    onChange={e => setNewEntry({...newEntry, aifactinsight: e.target.value})}
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <label className="text-[10px] uppercase font-mono tracking-widest opacity-40 ml-1">Practical Application</label>
-                    <span className="text-[9px] font-mono opacity-30">{(newEntry.practicalUsage?.length || 0)}/300</span>
-                  </div>
-                  <input 
-                    maxLength={300}
-                    type="text" 
-                    placeholder="How can this be utilized?"
-                    className="w-full glass-input rounded-2xl p-4 text-sm outline-none"
-                    value={newEntry.practicalUsage}
-                    onChange={e => setNewEntry({...newEntry, practicalUsage: e.target.value})}
-                  />
-                </div> */}
-
-                {/* <button 
-                  disabled={isSubmitting}
-                  type="submit"
-                  className="w-full relative group h-16 rounded-2xl overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent to-accent-alt opacity-80 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative flex items-center justify-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-white">
-                    {isSubmitting ? <Loader2 className="animate-spin" size={20} /> : <ArrowUpRight size={20} />}
-                    Commit to Archive
-                  </div>
-                </button> */}
-
-                {/* <div className="relative">
-                  <div className="absolute inset-0 flex items-center">
-                    <div className="w-full border-t border-white/5"></div>
-                  </div>
-                  <div className="relative flex justify-center text-[10px] uppercase font-mono tracking-widest">
-                    <span className="bg-[#050505] px-4 opacity-30">or</span>
-                  </div>
-                </div> */}
-
                 <a 
                   href="https://github.com/sharathchandran2001/ai-insight-hub/edit/main/public/aiinsightdiary.json"
                   target="_blank"

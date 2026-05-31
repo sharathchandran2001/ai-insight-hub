@@ -1,0 +1,20 @@
+[
+  {
+    "aifact": "Unlike human developers who possess contextual knowledge, AI agents depend entirely on explicit, machine-readable API contracts and schemas to execute tasks.",
+    "aifactinsight": "Ambiguous API structures cause agents to 'hallucinate shapes,' causing production execution blockages. Resolve this in Q2 2026 by enforcing strict request/response validation against OpenAPI specs at the gateway edge to reject non-compliant payloads instantly.",
+    "contributorSource": "https://www.freecodecamp.org/news/how-to-design-apis-for-ai-agents/",
+    "date": "2026-05-31"
+  },
+  {
+    "aifact": "Enforcing deterministic agent behavior requires explicit state lifecycle modeling, uniform pagination patterns, and mandatory idempotency keys for state-changing operations.",
+    "aifactinsight": "Agent errors amplify quickly, turning non-idempotent conflicts into accidental denial-of-wallet loop attacks. Protect infrastructure by enforcing `Idempotency-Key` headers on side-effects and returning structured RFC 7807 problem details payloads.",
+    "contributorSource": "https://www.freecodecamp.org/news/how-to-design-apis-for-ai-agents/",
+    "date": "2026-05-31"
+  },
+  {
+    "aifact": "In agentic architectures, OpenAPI specifications and integration protocols like MCP serve as live, runtime executable contracts rather than passive documentation.",
+    "aifactinsight": "Wrapping inconsistent legacy APIs in tool discovery layers only accelerates system failures. Optimize specifications for LLM function-calling by stripping vague properties, utilizing explicit `enum` arrays, and providing detailed parameters.",
+    "contributorSource": "https://www.freecodecamp.org/news/how-to-design-apis-for-ai-agents/",
+    "date": "2026-05-31"
+  }
+]
