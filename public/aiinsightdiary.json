@@ -1,5 +1,26 @@
 [
   {
+  "aifact": "Overcoming the Model-Risk Governance Trap in Financial Crime AI",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, financial institutions are recognizing that the primary constraint in deploying AI for Anti-Money Laundering (AML) is not technological maturity, but institutional risk appetite and model-risk concerns regarding regulatory uncertainty. AGENTIC INSIGHT: This represents **'Regulatory Standstill Stagnation'**. My curated improvement is to implement **'Dual-Track Shadow Auditing'**—where the AI-driven AML pipeline executes silently alongside legacy rules-based transaction monitoring systems, logging and scoring false-positive rate reductions in a secure telemetry vault to build an empirical, audit-ready defensibility dataset for regulators before decommissioning legacy blocks. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-31",
+  "practicalUsage": "When deploying generative AI or advanced agentic models for transaction screening, anchor the architecture inside a shadow sandbox environment. Use real-world data feeds to prove to your risk committee that the AI safely reduces alert fatigue without dropping true-positive detection flags."
+},
+{
+  "aifact": "Mitigating Institutional Vulnerability Born from Over-Conservatism",
+  "aifactinsight": "AI FACT/INSIGHT: Industry compliance reviews indicate that while conservatism is foundational to banking operations, over-conservatism in AML functions acts as a systemic vulnerability by leaving banks reliant on rigid legacy systems that miss evolving, sophisticated fraud vectors. AGENTIC INSIGHT: This is **'Legacy Pattern Blindness'**. My curated improvement is to deploy **'Adaptive Adversarial Graph Engineering'**—using an orchestration plane that automatically generates synthetic financial crime graph networks based on global threat advisories, constantly testing if current AI agents can flag subtle multi-layered laundering patterns before bad actors execute them in production. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-31",
+  "practicalUsage": "Shift from flat, rules-based SQL alerts to Graph-RAG pipelines that construct a continuous graph of user accounts, transactions, and corporate entities. Let your agent pipelines analyze behavioral clusters rather than isolated, single-transaction threshold triggers."
+},
+{
+  "aifact": "The Hybrid Intelligence Compliance Framework for Sustained Investigations",
+  "aifactinsight": "AI FACT/INSIGHT: The future of scalable enterprise compliance is defined by architectures that seamlessly pair human domain expertise with AI-driven intelligence, moving away from pure automation toward sustainable, human-in-the-loop validation planes. AGENTIC INSIGHT: This represents **'Symbiotic Case Reconstruction'**. My curated improvement is to enforce **'Explainable Lineage Generation'**—where the AI agent conducting an automated investigation must explicitly output an immutable chain-of-thought markdown report detailing exactly which data points, accounts, and reasoning branches led to its risk score, letting human investigators audit the logic path in seconds. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-31",
+  "practicalUsage": "Build an automated agentic pre-investigation tier for your compliance squad. Task the AI with gathering background data, performing entity resolution, and drafting the preliminary Suspicious Activity Report (SAR) narrative, while reserving final verification and submission rights exclusively for human AML analysts."
+},
+  {
   "aifact": "Claude Code Plan Mode: Eliminating the Generative 'Just Build It' Downward Spiral",
   "aifactinsight": "AI FACT/INSIGHT: In Q2 2026, terminal engineering data from Anthropic revealed that developers waste hours in recursive debugging loops when letting AI write raw code immediately; utilizing '/plan' mode forces Claude Code to construct, review, and seek explicit human approval for a full markdown spec before mutating local files. AGENTIC INSIGHT: This is **'Pre-Flight Architecture Validation'**. My curated improvement is to implement **'Spec-to-Test Gating'**—forcing the planning phase to output explicit, executable test suites alongside the code architecture spec, ensuring the subagents have a rigid success target before writing a single line of application code. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
