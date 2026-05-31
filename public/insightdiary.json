@@ -1,5 +1,47 @@
 [
   {
+    "corefact": "PySpark acts as the Python API for Apache Spark, supporting distributed batch processing, structured streaming, and cluster-scale ML pipelines across hundreds of worker nodes.",
+    "domaininsight": "Single-machine memory limitations block petabyte-scale data engineering. Resolve this in Q2 2026 by utilizing PySpark to build distributed extract, transform, and load (ETL) pipelines that split processing tasks across clustered server instances.",
+    "contributorSource": "https://www.kdnuggets.com/top-7-python-libraries-for-large-scale-data-processing",
+    "date": "2026-05-31"
+  },
+  {
+    "corefact": "Dask provides parallel computing abstractions that mirror pandas, NumPy, and scikit-learn APIs, executing tasks lazily on single machines or distributed clusters.",
+    "domaininsight": "Rewriting legacy pandas codebases for big data is resource-intensive and error-prone. Drop in Dask to break datasets into optimized task graphs, scaling workloads beyond local memory limits with minimal changes to your existing code infrastructure.",
+    "contributorSource": "https://www.kdnuggets.com/top-7-python-libraries-for-large-scale-data-processing",
+    "date": "2026-05-31"
+  },
+  {
+    "corefact": "Polars is a highly optimized, multi-threaded DataFrame library written in Rust that leverages the Apache Arrow columnar memory format and lazy query evaluation.",
+    "domaininsight": "Traditional single-threaded pandas workflows experience severe performance degradation on multi-gigabyte files. Switch execution targets to Polars to benefit from automatic query optimization, lower memory footprint, and high-speed local data transformations.",
+    "contributorSource": "https://www.kdnuggets.com/top-7-python-libraries-for-large-scale-data-processing",
+    "date": "2026-05-31"
+  },
+  {
+    "corefact": "Ray is an open-source distributed computing framework that scales Python workloads via a unified task and actor model, utilizing Ray Data for machine learning ingestion pipelines.",
+    "domaininsight": "Standard distributed clusters often separate data processing from deep learning model training, creating network bottlenecks. Employ Ray to run streaming, batched data loading natively alongside PyTorch or TensorFlow training states across cluster compute fabrics.",
+    "contributorSource": "https://www.kdnuggets.com/top-7-python-libraries-for-large-scale-data-processing",
+    "date": "2026-05-31"
+  },
+  {
+    "corefact": "Vaex handles out-of-core DataFrame analysis on a single machine by using memory-mapping and lazy evaluations to analyze billion-row datasets without memory consumption.",
+    "domaininsight": "Spreading workloads onto cloud clusters for exploratory data analysis increases infrastructure costs unnecessarily. Use Vaex locally to calculate statistical summaries and string transformations instantly over massive datasets without loading files entirely into RAM.",
+    "contributorSource": "https://www.kdnuggets.com/top-7-python-libraries-for-large-scale-data-processing",
+    "date": "2026-05-31"
+  },
+  {
+    "corefact": "Apache Kafka (via kafka-python and confluent-kafka clients) acts as a high-throughput, real-time distributed event streaming platform for unbounded data workloads.",
+    "domaininsight": "Batch processing pipelines fail to deliver the instant feedback loops needed for live telemetry or real-time feature stores. Implement Kafka producers and consumers to stream high-velocity events directly into real-time analytical services.",
+    "contributorSource": "https://www.kdnuggets.com/top-7-python-libraries-for-large-scale-data-processing",
+    "date": "2026-05-31"
+  },
+  {
+    "corefact": "DuckDB functions as an embedded, in-process OLAP database engine that processes vectorized SQL queries directly on Parquet, CSV, and JSON formats without an external server.",
+    "domaininsight": "Deploying full database warehouses for standalone file analytics introduces immense setup overhead. Point DuckDB at raw local or object-storage data files to execute sub-second analytical queries straight from a localized Python runtime environment.",
+    "contributorSource": "https://www.kdnuggets.com/top-7-python-libraries-for-large-scale-data-processing",
+    "date": "2026-05-31"
+  },
+  {
     "aifact": "Unlike human developers who possess contextual knowledge, AI agents depend entirely on explicit, machine-readable API contracts and schemas to execute tasks.",
     "aifactinsight": "Ambiguous API structures cause agents to 'hallucinate shapes,' causing production execution blockages. Resolve this in Q2 2026 by enforcing strict request/response validation against OpenAPI specs at the gateway edge to reject non-compliant payloads instantly.",
     "contributorSource": "https://www.freecodecamp.org/news/how-to-design-apis-for-ai-agents/",
