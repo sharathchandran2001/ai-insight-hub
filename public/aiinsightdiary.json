@@ -1,5 +1,47 @@
 [
   {
+  "aifact": "The Rise of Focal Models: Localized Mixture-of-Experts for Sub-Agent Coordination",
+  "aifactinsight": "AI FACT/INSIGHT: In Q2 2026, the open-source release of JetBrains Mellum2 established the viability of 'focal models'—highly specialized, 12B-parameter Mixture-of-Experts (MoE) architectures with only 2.5B active parameters per token—engineered to handle high-frequency, low-latency infrastructure tasks locally under Apache 2.0. AGENTIC INSIGHT: This represents **'Micro-Heuristic Active Compute Allocation'**. My curated improvement is to implement **'Active Parametric Isolation'**—deploying local MoE weights within a self-hosted container environment to execute repetitive context gathering, markdown planning, and file validation sub-tasks, keeping cloud-hosted frontier LLM queries reserved exclusively for non-deterministic, high-complexity logic. SOURCE: https://thenewstack.io/jetbrains-mellum2-open-source-coding-model/",
+  "contributor": "https://thenewstack.io/jetbrains-mellum2-open-source-coding-model/",
+  "date": "2026-06-02",
+  "practicalUsage": "Stop defaulting to multi-billion parameter cloud APIs for intermediate system evaluation or RAG data preparation steps. Transition repetitive agent workflows to local or self-hosted MoE endpoints running on a single local GPU node to minimize execution latency and API costs."
+},
+{
+  "aifact": "Mitigating Context Expansion Overhead via Compact KV-Cache Architectures",
+  "aifactinsight": "AI FACT/INSIGHT: Production telemetry shows that scaling multi-agent developer tools on shared GPUs encounters a primary bottleneck in VRAM saturation due to expanding key-value (KV) caches; Mellum2 addresses this by utilizing a strictly restricted request-level KV footprint to maximize concurrent query throughput. AGENTIC INSIGHT: This is **'State-Aware VRAM Saturation'**. My curated improvement is to deploy an **'Adaptive Memory Broker'**—a local orchestration layer that monitors hardware VRAM and dynamically trims conversational metadata history down to code syntax and function signatures before injecting the payload into the local model's prompt stream. SOURCE: https://thenewstack.io/jetbrains-mellum2-open-source-coding-model/",
+  "contributor": "https://thenewstack.io/jetbrains-mellum2-open-source-coding-model/",
+  "date": "2026-06-02",
+  "practicalUsage": "When hosting open-weights developer sub-agents locally on a single H100 or workstation card, configure the serving engine with an explicit token cache limit. Force your agent execution blocks to pass localized diff files rather than whole-directory code trees."
+},
+{
+  "aifact": "Self-Hosted Intelligent Workload Routing in Open Engineering Fabrics",
+  "aifactinsight": "AI FACT/INSIGHT: Moving past single-model dependency, modern software engineering systems leverage highly integrated, on-premises models as dedicated prompt-routing layers to analyze and dispatch tasks between local models and third-party APIs based on compliance boundaries. AGENTIC INSIGHT: This represents **'Deterministic Sovereign Ingress Gatekeeping'**. My curated improvement is to engineer a **'Telemetry-Gated Compliance Router'**—using a highly optimized local code model to parse the intent of every inbound engineering query, instantly trapping proprietary intellectual property or sensitive database structures within an air-gapped corporate environment. SOURCE: https://thenewstack.io/jetbrains-mellum2-open-source-coding-model/",
+  "contributor": "https://thenewstack.io/jetbrains-mellum2-open-source-coding-model/",
+  "date": "2026-06-02",
+  "practicalUsage": "Set up a lightweight classification gate at your team's code assistant entry point. Have the local model read the query: if it contains secure company credentials or internal data models, completely sever the cloud route and resolve the query purely through your local model layer."
+},
+  {
+  "aifact": "The Evaluation Plane: Quantifying Triad Metrics in Agentic RAG",
+  "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, enterprise RAG verification relies on isolating three deterministic math scoring vectors—Context Relevance, Groundedness, and Answer Relevance—to pinpoint exactly whether system failures stem from poor database retrieval or model generation drift. AGENTIC INSIGHT: This is **'Isolated Telemetry Verification'**. My curated improvement is to implement **'Dynamic Metric Weighting'**—an execution gate that shifts the threshold standards based on the query type, enforcing absolute 100% groundedness for financial math tasks while loosening strict semantic alignment to prioritize synthesis speed for broad exploratory research requests. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-24",
+  "practicalUsage": "Incorporate automated triad testing frameworks into your continuous integration pipeline. Stop manually reviewing RAG chat transcripts and instead pass inputs, retrieved chunks, and generated answers through isolated programmatic grading nodes before code promotion."
+},
+{
+  "aifact": "Context Relevance and Groundedness Gating for Retrieval Quality",
+  "aifactinsight": "AI FACT/INSIGHT: Production pipelines isolate Context Relevance (measuring if retrieved chunks match the query intent without noise) from Groundedness (verifying the generated answer contains *only* facts present in the retrieved context) to prevent hallucinations. AGENTIC INSIGHT: This represents **'Upstream Context Pruning'**. My curated improvement is to deploy an **'Adversarial Extraction Gate'**—utilizing an optimized local SLM to strip non-essential filler text from retrieved chunks *before* they are sent to the generation model, ensuring the generation engine runs with a maximum density of verified facts. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-24",
+  "practicalUsage": "Configure an immediate circuit-breaker path inside your pipeline: if the Context Relevance score drops below a pre-set threshold, abort the generation step entirely and force the system to perform query rewriting or switch to an alternate data index."
+},
+{
+  "aifact": "Answer Relevance Scoring to Eradicate Conversational Drift",
+  "aifactinsight": "AI FACT/INSIGHT: Answer Relevance measures the semantic alignment between the final generated output and the user's initial prompt, identifying instances where a model generates a grammatically correct, highly factual response that completely fails to address the user's explicit question. AGENTIC INSIGHT: This is **'Intent Realignment Verification'**. My curated improvement is to implement **'Reverse Query Mapping'**—forcing an independent validator node to reconstruct a theoretical prompt solely from the generated answer and checking the similarity score of that reconstructed prompt against the user's actual input to catch logical avoidance. SOURCE: Community Feed",
+  "contributor": "Community Feed Curated",
+  "date": "2026-05-24",
+  "practicalUsage": "Deploy Answer Relevance checks on public-facing or agentic service desks. If an agent's response scores low on intent alignment, block the output from reaching the user interface and re-route the active state to a fallback deterministic script path."
+},
+  {
   "aifact": "Overcoming the Model-Risk Governance Trap in Financial Crime AI",
   "aifactinsight": "AI FACT/INSIGHT: As of Q2 2026, financial institutions are recognizing that the primary constraint in deploying AI for Anti-Money Laundering (AML) is not technological maturity, but institutional risk appetite and model-risk concerns regarding regulatory uncertainty. AGENTIC INSIGHT: This represents **'Regulatory Standstill Stagnation'**. My curated improvement is to implement **'Dual-Track Shadow Auditing'**—where the AI-driven AML pipeline executes silently alongside legacy rules-based transaction monitoring systems, logging and scoring false-positive rate reductions in a secure telemetry vault to build an empirical, audit-ready defensibility dataset for regulators before decommissioning legacy blocks. SOURCE: Community Feed",
   "contributor": "Community Feed Curated",
