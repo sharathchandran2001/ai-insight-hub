@@ -1,5 +1,17 @@
 [
   {
+    "corefact": "Spanner Graph builds a unified, scale-out database architecture by deeply integrating graph query interfaces directly into Google Spanner's globally distributed relational engine framework.",
+    "domaininsight": "Siloing graph analysis and transactional data across decoupled platforms introduces expensive data synchronization pipelines and massive system latency. In Q2 2026, leverage Spanner Graph to run highly complex graph algorithms alongside live, high-throughput transactional relational datasets with zero replication overhead.",
+    "contributorSource": "https://cloud.google.com/blog/products/databases/introducing-spanner-graph-algorithms",
+    "date": "2026-06-05"
+  },
+  {
+    "corefact": "The architecture incorporates native, built-in graph algorithm execution support, enabling teams to perform complex centrality, community detection, and topological path analysis using simple query paradigms.",
+    "domaininsight": "Extracting massive database structures into external processing toolsets for structural network analysis causes severe memory bottlenecks and slows operational velocity. Execute algorithms natively within the storage cluster layer to optimize performance metrics on multi-billion node graphs instantly.",
+    "contributorSource": "https://cloud.google.com/blog/products/databases/introducing-spanner-graph-algorithms",
+    "date": "2026-06-05"
+  },
+  {
     "corefact": "Deterministic code profiling via built-in modules like cProfile captures precise function call counts, total execution durations, and cumulative execution graphs with low programmatic overhead.",
     "domaininsight": "Blindly troubleshooting high-latency python execution streams often leads developers to optimize trivial code structures. Rely on cProfile in Q2 2026 to systematically identify macro-level bottleneck blocks before applying deep manual code rewrites.",
     "contributorSource": "https://www.infoworld.com/article/4178850/plunge-into-python-profiling.html",
