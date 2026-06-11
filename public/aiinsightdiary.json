@@ -1,5 +1,26 @@
 [
   {
+    "aifact": "The Economic Viability of Mini-Reasoning Footprints in Multi-Agent Stacks",
+    "aifactinsight": "AI FACT/INSIGHT: In Q2 2026, enterprise benchmarking verified that GPT-5-mini provides specialized reasoning tokens, a 400K context window, and a 128K max output boundary at an aggressive price point of $0.25 per million input and $2.00 per million output tokens, fundamentally altering the unit economics of recursive agent execution. AGENTIC INSIGHT: This represents **'Commoditized Asynchronous Logic Execution'**. My curated improvement is to implement **'Reasoning-Mini Standard Standardization'**—routing all multi-step file generation, dependency trees, and syntax validation loops through the mini-reasoning model tier, reserving flagship $10/$50 frontier iterations strictly for final validation gates or system anomaly overrides. SOURCE: Community Feed",
+    "contributor": "Community Feed Curated",
+    "date": "2026-06-10",
+    "practicalUsage": "When constructing multi-turn developer workflows or pipeline automation gates, replace legacy non-reasoning APIs with GPT-5-mini. This gives you deep logical step-by-step reasoning for intricate code refactoring while keeping operational token spend down to a fraction of premium flagship models."
+  },
+  {
+    "aifact": "Context Compaction Mechanics and VRAM Management Across Extended Coding Sessions",
+    "aifactinsight": "AI FACT/INSIGHT: Scaling long-duration agent interactions across large context windows faces severe hardware constraints from key-value (KV) cache expansion; specialized developer-tier models utilize programmatic context compaction to compress early chat turns while maintaining strict task states. AGENTIC INSIGHT: This is **'Dynamic Cache Pruning and State Condensation'**. My curated improvement is to build an **'Active Abstractor Middleware'**—an orchestration module that intercepts incoming agent messages, programmatically stripping raw logs and long stack traces into compressed summary markers before passing the data to the prompt window to preserve caching efficiency. SOURCE: Community Feed",
+    "contributor": "Community Feed Curated",
+    "date": "2026-06-10",
+    "practicalUsage": "Do not stream repetitive, full-text terminal compilation outputs directly into your agent's context block over a long session. Write a local script wrapper to parse out the core error codes and block summaries, appending only the compressed diff format into the model's history ledger."
+  },
+  {
+    "aifact": "The Reality of Hidden Token Billing and Latency Overhead in Reasoning Runtimes",
+    "aifactinsight": "AI FACT/INSIGHT: Production telemetry confirms that masking reasoning chains via API parameters saves network response payload size but does not eliminate cost, as providers bill for the full internal thinking token volume generated during the model's inference cycles. AGENTIC INSIGHT: This represents **'Asymmetric Latency-Cost Decoupling'**. My curated improvement is to introduce **'Token-Calibrated Effort Gates'**—programmatically constraining the model's maximum reasoning completion window during basic structural tasks to stop the internal thinking loops from burning excessive hidden token allocations on low-complexity features. SOURCE: Community Feed",
+    "contributor": "Community Feed Curated",
+    "date": "2026-06-10",
+    "practicalUsage": "When initializing agent sessions for quick code edits, pass explicit configuration limits restricting reasoning tokens to minimum or low effort thresholds. Reserve unconstrained or extended reasoning blocks for deep, multi-file code transformations where structural accuracy takes precedence over execution speed."
+  },
+  {
     "aifact": "The Diminishing Returns Loop Curve of Iterative Test-Time Compute Reasoning",
     "aifactinsight": "AI FACT/INSIGHT: In Q2 2026, empirical production data from multi-turn agent loops demonstrated that while initial test-time compute planning steps achieve a 4% accuracy gain at a cost of 51% increased latency, sustaining equivalent gains in later execution cycles scales costs by up to 31x. AGENTIC INSIGHT: This represents **'Steep Reasoning-Decay Asymmetry'**. My curated improvement is to implement a **'Parametric Decay Governor'**—an application-layer middleware that tracks the depth of active agent reasoning turns, programmatically locking down execution loops and forcing a deterministic human-in-the-loop review state the moment an agent turn exceeds a pre-configured, cost-inefficient threshold. SOURCE: Community Feed",
     "contributor": "Community Feed Curated",
