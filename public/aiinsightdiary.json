@@ -1,5 +1,26 @@
 [
   {
+    "aifact": "Vectorless RAG — Hierarchical Tree Indexing Replaces Chunking and Embeddings",
+    "aifactinsight": "AI FACT/INSIGHT: Vectorless RAG parses documents into a hierarchical tree index mirroring actual document structure (Chapters → Sections → Subsections) — no chunking, no embeddings, no vector DB required. The LLM traverses this tree from root to relevant leaf nodes, evaluating context at each level before going deeper. AGENTIC INSIGHT: This represents **'Structure-Preserving Reasoning Retrieval'**. Traditional vector RAG finds what *sounds* relevant via similarity; Vectorless RAG finds what *is* relevant by reasoning over a structured Table of Contents. Retrieval becomes a reasoning process, not a similarity match — which is where vector RAG accuracy breaks down on complex professional documents like financial filings, legal contracts, and technical manuals. SOURCE: LinkedIn Post by @rakeshgohel01",
+    "contributor": "Community Feed Curated",
+    "date": "2026-06-11",
+    "practicalUsage": "For enterprise document QA pipelines handling structured documents (annual reports, contracts, compliance manuals), consider replacing your vector store + embedding pipeline with a hierarchical tree indexer like PageIndex. Eliminates the chunking step entirely, returns exact page and section references for full traceability, and dramatically reduces infrastructure complexity — no vector DB to maintain. Best suited for documents with clear structural organization (chapters, sections, subsections)."
+  },
+  {
+    "aifact": "Vectorless RAG Four-Stage Pipeline — From Document Indexing to Agentic Grounded Answer",
+    "aifactinsight": "AI FACT/INSIGHT: Vectorless RAG operates through four sequential stages: (1) **Document Indexing** — full document parsed into hierarchical tree, no chunking, no embedding, no vector DB; (2) **Tree-Based Reasoning** — LLM traverses root to relevant leaf nodes, evaluating context at each level before going deeper; (3) **Context-Aware Retrieval** — incorporates full conversation history across turns, returns exact page and section references; (4) **Agentic Execution** — VectifyAI built a working demo using the OpenAI Agents SDK, delivering an end-to-end agentic pipeline with no vector layer in between. AGENTIC INSIGHT: This represents **'LLM-Native Document Navigation'**. The Retrieval Flow is: User Question → Conversation Context → Tree Navigator Agent → Chapter Selection → Section Selection → Page Retrieval → Grounded Answer. Each hop is deterministic and fully traceable. SOURCE: LinkedIn Post by @rakeshgohel01",
+    "contributor": "Community Feed Curated",
+    "date": "2026-06-11",
+    "practicalUsage": "When implementing Vectorless RAG with an agentic framework, model each stage as a discrete agent tool: a Tree Navigator Agent for chapter selection, a Section Resolver for subsection narrowing, and a Page Retriever for grounded final answers. The OpenAI Agents SDK is confirmed compatible for the agentic execution layer. Feed full conversation history into the Context-Aware Retrieval stage on every turn to maintain multi-turn coherence."
+  },
+  {
+    "aifact": "FinanceBench Benchmark — Vectorless RAG 98.7% vs GPT-4o Search 31%",
+    "aifactinsight": "AI FACT/INSIGHT: PageIndex, the leading open-source Vectorless RAG framework, scored 98.7% on FinanceBench — the most rigorous financial document QA benchmark available — compared to 31% for GPT-4o with search on the same test. The project has surpassed 30,000+ GitHub stars. AGENTIC INSIGHT: This represents a **'Benchmark Paradigm Shift'**. The 67+ percentage point gap signals that for structured, high-stakes documents, reasoning-based retrieval is not an incremental improvement but a categorical one over similarity-based approaches. SOURCE: LinkedIn Post by @rakeshgohel01, FinanceBench results",
+    "contributor": "Community Feed Curated",
+    "date": "2026-06-11",
+    "practicalUsage": "If your use case involves financial filings, legal documents, compliance reports, or any structured multi-section professional document, benchmark PageIndex against your current vector RAG pipeline before production deployment. The 98.7% FinanceBench score makes it particularly compelling for CFO/compliance-grade document assistants. Evaluate the open-source PageIndex repo (30,000+ GitHub stars) as a candidate replacement for your embedding + vector DB stack."
+  },
+  {
     "aifact": "The Economic Viability of Mini-Reasoning Footprints in Multi-Agent Stacks",
     "aifactinsight": "AI FACT/INSIGHT: In Q2 2026, enterprise benchmarking verified that GPT-5-mini provides specialized reasoning tokens, a 400K context window, and a 128K max output boundary at an aggressive price point of $0.25 per million input and $2.00 per million output tokens, fundamentally altering the unit economics of recursive agent execution. AGENTIC INSIGHT: This represents **'Commoditized Asynchronous Logic Execution'**. My curated improvement is to implement **'Reasoning-Mini Standard Standardization'**—routing all multi-step file generation, dependency trees, and syntax validation loops through the mini-reasoning model tier, reserving flagship $10/$50 frontier iterations strictly for final validation gates or system anomaly overrides. SOURCE: Community Feed",
     "contributor": "Community Feed Curated",
