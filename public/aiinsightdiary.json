@@ -1,5 +1,4 @@
-[
-  {
+[{
   "aifact": "LLMs — The Intelligence Layer of the Modern AI Ecosystem",
   "aifactinsight": "AI FACT/INSIGHT: As of Q3 2026, Large Language Models serve as the foundational reasoning and generative engine of the modern AI ecosystem. The primary market implementations span both closed and open-weight models: OpenAI GPT, Anthropic Claude, Google Gemini, Meta Llama, Mistral AI, Cohere, Hugging Face, Ollama, and vLLM. AGENTIC INSIGHT: This establishes **'Cognitive Core Abstraction.'** While foundation models provide raw reasoning and natural language processing capabilities, mature enterprise architecture treats them as commodity compute layers that must be orchestrated via downstream middleware rather than deployed as standalone applications — enabling dynamic model routing based on cost, latency, and task-specific reasoning requirements.",
   "contributor": "Community Feed Curated",
