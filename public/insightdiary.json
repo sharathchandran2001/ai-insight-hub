@@ -1,5 +1,166 @@
 [
   {
+    "topic": "I. Introduction to Physics - ii. What is Physics?",
+    "corefact": "Physics is the fundamental science dedicated to understanding how energy, matter, space, and time interact at every scale of the universe. It provides the core rules that govern everything from subatomic particles to colliding galaxies.",
+    "domaininsight": "Without physics, technologies like smartphones, MRI scans, and space travel could not exist. Mastering these basic principles allows us to predict how real-world objects behave before we ever build or test them.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "I. Introduction to Physics - iii. A Mathematical Toolkit",
+    "corefact": "Mathematics acts as the precise language of physics, allowing scientists to convert physical observations into measurable formulas and equations. Tools like algebra, unit conversions, and scientific notation are essential for tracking real-world physical changes.",
+    "domaininsight": "Math transforms random guesses into predictable engineering outcomes. Engineers use this exact toolkit to calculate precise rocket trajectories, ensuring spacecraft safely reach their targets across millions of miles.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - i. Describing Linear Motion",
+    "corefact": "Linear motion tracks an object moving along a straight line using position, speed, velocity, and acceleration over time. Velocity measures how fast position changes in a specific direction, while acceleration tracks changes in velocity.",
+    "domaininsight": "Understanding linear motion is critical for safety design in automotive engineering. Crashes are minimized when engineers accurately model how fast vehicles accelerate and how long they take to come to a complete stop.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - ii. A Mathematical Model of Motion",
+    "corefact": "Kinematic equations use mathematical models to connect displacement, initial velocity, final velocity, constant acceleration, and time. These relationships allow us to predict an object's exact future position without needing to observe its entire journey.",
+    "domaininsight": "Video game developers rely heavily on these equations to simulate realistic movement. When a character jumps or a car speeds up, mathematical motion models make the onscreen physics feel natural.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - iii. Vector Addition (Trigonometry)",
+    "corefact": "Vectors represent physical quantities that have both magnitude and direction, such as force or velocity. Trigonometry breaks these vectors into horizontal and vertical components so they can be added together accurately.",
+    "domaininsight": "Airplane pilots must calculate vector addition constantly during flight. Crosswinds push aircraft sideways, requiring navigational adjustments so the plane's true path reaches the correct runway.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - iv. Projectile Motion",
+    "corefact": "Projectile motion occurs when an object is launched into the air and moves along a curved path under the influence of gravity alone. Horizontal velocity remains constant (ignoring air resistance) while vertical velocity accelerates downward.",
+    "domaininsight": "Athletes in sports like basketball and football intuitively calculate projectile motion every time they throw a ball. In engineering, artillery and water display fountains use these exact parabolic trajectories for precise targeting.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - v. Newton's Laws - Forces",
+    "corefact": "Newton's Three Laws explain how forces cause motion: objects stay in motion unless acted on, force equals mass times acceleration ($F = ma$), and every action has an equal and opposite reaction. Forces are pushes or pulls that alter an object's motion.",
+    "domaininsight": "Rocket propulsion is a direct application of Newton's Third Law. By blasting hot gas downward at high speeds, the rocket experiences an equal force pushing it straight up into space.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - vi. Forces and Motion in Two Dimensions",
+    "corefact": "Two-dimensional motion involves analyzing forces acting along perpendicular axes simultaneously, such as friction on an inclined plane. Friction resists motion between surfaces, and its strength depends on the normal force pressing the objects together.",
+    "domaininsight": "Roller coaster designers utilize two-dimensional force analysis to craft safe yet thrilling bank turns. Balancing gravitational force and normal force prevents cars from slipping or derailing at high speeds.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - vii. Momentum and its Conservation",
+    "corefact": "Momentum is the product of an object's mass and velocity ($p = mv$), representing how difficult it is to stop. The Law of Conservation of Momentum states that total momentum remains constant in an isolated system during collisions.",
+    "domaininsight": "Car safety features like airbags and crumple zones are designed around impulse and momentum. By increasing the time it takes for a crash to stop a passenger, the impact force on the body is drastically reduced.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - viii. Energy, Work, Power, and Simple Machines",
+    "corefact": "Work is done when a force causes displacement, transferring energy between forms like kinetic and potential energy. Power measures how fast work is performed, while simple machines trade force for distance to make work easier.",
+    "domaininsight": "Energy cannot be destroyed, only transformed from potential stored state to kinetic motion. Hydroelectric dams harness this principle by transforming the potential energy of elevated water into electrical power for millions of homes.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - ix. Circular Motion",
+    "corefact": "Uniform circular motion occurs when an object moves in a circle at a constant speed while constantly changing direction toward the center. This directional change requires a centripetal force constantly pulling the object inward.",
+    "domaininsight": "Satellites stay in orbit around Earth because gravity acts as a continuous centripetal force. The satellite effectively falls around the planet at high speed without ever hitting the ground.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - x. Rotational Mechanics",
+    "corefact": "Rotational mechanics analyzes objects spinning around an axis using rotational equivalents of force, mass, and velocity: torque, rotational inertia, and angular velocity. Torque measures how effectively a force causes an object to rotate.",
+    "domaininsight": "Figure skaters control their spin speeds using rotational inertia. By pulling their arms inward, they decrease their moment of inertia, causing their rotational speed to dramatically increase.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "II. Mechanics - xi. Universal Gravitation",
+    "corefact": "Newton's Law of Universal Gravitation states that every mass attracts every other mass with a force proportional to their masses and inversely proportional to the square of the distance between them. This universal attraction keeps planets orbiting stars.",
+    "domaininsight": "Gravitational pull dictates tides on Earth due to the Moon's shifting distance and orientation. Oceanographers rely on gravitational models to predict coastal sea levels and marine navigation conditions.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "III. Waves and Light - i. Waves and Energy Transfer",
+    "corefact": "Waves are disturbances that transfer energy through matter or space without permanently moving the medium itself. Key properties include wavelength, frequency, amplitude, and wave speed.",
+    "domaininsight": "Seismologists analyze earthquake waves passing through the Earth to map underground rock structures. Understanding wave energy helps engineers build earthquake-resistant skyscrapers.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "III. Waves and Light - ii. The Nature of Sound",
+    "corefact": "Sound is a mechanical longitudinal wave produced by vibrating objects that travel through a medium like air, water, or solids. The pitch of a sound corresponds to its frequency, while volume depends on its amplitude.",
+    "domaininsight": "Noise-canceling headphones utilize wave interference to block background sounds. Microphones capture external noise and instantly produce an inverted sound wave to cancel it out completely.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "III. Waves and Light - iii. The Nature of Light",
+    "corefact": "Light is an electromagnetic wave that can travel through a vacuum at a constant speed of approximately $3 \\times 10^8$ meters per second. It exhibits dual behavior, acting both as continuous waves and discrete energy packets called photons.",
+    "domaininsight": "Solar panels depend directly on the dual nature of light. Photons striking silicon panels knock electrons free, creating usable electric current to power homes and devices.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "III. Waves and Light - iv. Colors in Nature",
+    "corefact": "The color of visible light is determined by its specific wavelength, ranging from red (longer wavelengths) to violet (shorter wavelengths). Objects appear a specific color because they absorb certain wavelengths and reflect or transmit others.",
+    "domaininsight": "Prisms and raindrops separate white light into vivid rainbows through dispersion. Digital screens combine just three primary colors—red, green, and blue—at varying intensities to generate every color imaginable.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "III. Waves and Light - v. Reflection and Refraction",
+    "corefact": "Reflection occurs when light bounces off a surface at the same angle it hits, while refraction is the bending of light as it passes into a different medium. Refraction happens because light changes speed when transitioning between materials.",
+    "domaininsight": "Fiber-optic cables transmit high-speed internet across oceans using total internal reflection. Light pulses bounce along glass fibers without escaping, delivering data around the world at light speed.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "III. Waves and Light - vi. Mirrors and Lenses",
+    "corefact": "Mirrors reflect light to form real or virtual images, while curved lenses refract light to converge or diverge light rays. Concave lenses spread light out, whereas convex lenses focus light rays to a single point.",
+    "domaininsight": "Eyeglasses and contact lenses correct human vision by adjusting how light focuses onto the retina. Microscopes and deep-space telescopes use combinations of lenses to reveal tiny cells or distant galaxies.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "III. Waves and Light - vii. Diffraction and Interference",
+    "corefact": "Diffraction is the bending of waves around obstacles or through narrow openings, while interference occurs when multiple waves overlap and combine. Constructive interference strengthens wave amplitude, while destructive interference cancels it out.",
+    "domaininsight": "The shimmering iridescent colors on soap bubbles and peacock feathers are caused by thin-film light interference. Engineers use interference patterns in laser measurement systems to detect microscopic structural flaws.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "IV. Current Electricity - i. Electrostatics",
+    "corefact": "Electrostatics is the study of electric charges at rest and the forces between them as described by Coulomb's Law. Opposite charges attract each other, while like charges exert a repulsive force.",
+    "domaininsight": "Photocopiers and laser printers rely on electrostatic attraction to function. Charged toner powder sticks to specific static patterns on a drum before being heat-fused onto paper.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "IV. Current Electricity - ii. Electric Current",
+    "corefact": "Electric current is the continuous flow of electric charge through a conductor, driven by potential difference (voltage) and limited by resistance. Ohm's Law states that current equals voltage divided by resistance ($I = V/R$).",
+    "domaininsight": "Battery technology relies on controlling chemical potential to drive electric current. Managing resistance in microchips allows modern electronics to run faster without overheating.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
+    "topic": "IV. Current Electricity - iii. Electrical Circuits",
+    "corefact": "Electrical circuits provide closed conductive loops through which current flows to power devices. Components can be arranged in series (single path) or parallel (multiple branches), altering total current and voltage distribution.",
+    "domaininsight": "Modern home electrical systems use parallel circuits so each outlet receives full voltage independently. This design ensures that turning off a light in one room doesn't cut power to the rest of the house.",
+    "contributorSource": "physics",
+    "date": "2026-08-20"
+  },
+  {
     "corefact": "Spanner Graph builds a unified, scale-out database architecture by deeply integrating graph query interfaces directly into Google Spanner's globally distributed relational engine framework.",
     "domaininsight": "Siloing graph analysis and transactional data across decoupled platforms introduces expensive data synchronization pipelines and massive system latency. In Q2 2026, leverage Spanner Graph to run highly complex graph algorithms alongside live, high-throughput transactional relational datasets with zero replication overhead.",
     "contributorSource": "https://cloud.google.com/blog/products/databases/introducing-spanner-graph-algorithms",
