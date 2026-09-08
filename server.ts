@@ -28,7 +28,7 @@ async function startServer() {
   app.post("/api/insights", async (req, res) => {
     try {
       const { aifact, aifactinsight, contributor, date, practicalUsage } = req.body;
-      
+
       if (!aifact || !aifactinsight || !contributor || !date) {
         return res.status(400).json({ error: "Missing required fields" });
       }
@@ -41,7 +41,7 @@ async function startServer() {
 
       const data = await fs.readFile(DIARY_PATH, "utf-8");
       const insights = JSON.parse(data);
-      
+
       const newEntry = { aifact, aifactinsight, contributor, date, practicalUsage };
       insights.unshift(newEntry); // Add to top
 

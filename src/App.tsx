@@ -1,12 +1,12 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Plus, 
-  Search, 
-  History, 
-  User, 
-  Calendar, 
-  Lightbulb, 
+import {
+  Plus,
+  Search,
+  History,
+  User,
+  Calendar,
+  Lightbulb,
   ArrowUpRight,
   X,
   Loader2,
@@ -16,15 +16,19 @@ import {
   Check,
   ArrowUp,
   Hash,
-  Sparkles,
   Github,
-  Lock
+  Lock,
+  Sun,
+  Moon
 } from 'lucide-react';
 import { AIInsight } from './types';
 // Import the new module view
 import InsightsDiary from './InsightsDiary';
+import { useTheme } from './useTheme';
 
 export default function App() {
+  const { theme, toggleTheme } = useTheme();
+
   // Navigation & Security States
   const [currentView, setCurrentView] = useState<'hub' | 'diary'>('hub');
   const [showPasswordModal, setShowPasswordModal] = useState(false);
@@ -52,11 +56,11 @@ export default function App() {
 
   useEffect(() => {
     fetchInsights();
-    
+
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -125,8 +129,8 @@ export default function App() {
   const handleShare = async (item?: AIInsight) => {
     const shareData = {
       title: item ? `AI Insight: ${item.aifact}` : 'AI Insight Hub',
-      text: item 
-        ? `${item.aifact}: ${item.aifactinsight}` 
+      text: item
+        ? `${item.aifact}: ${item.aifactinsight}`
         : 'Documenting the evolution of artificial intelligence through community-driven insights.',
       url: window.location.origin
     };
@@ -139,8 +143,8 @@ export default function App() {
         }
       }
     } else {
-      const textToCopy = item 
-        ? `${item.aifact}: ${item.aifactinsight}` 
+      const textToCopy = item
+        ? `${item.aifact}: ${item.aifactinsight}`
         : 'AI Insight Hub: Documenting the evolution of artificial intelligence.';
       handleCopy(textToCopy, item ? item.aifact : 'Hub Link');
     }
@@ -151,7 +155,7 @@ export default function App() {
     return keywords.filter(k => text.toLowerCase().includes(k)).map(k => `#${k}`);
   };
 
-  const filteredInsights = insights.filter(item => 
+  const filteredInsights = insights.filter(item =>
     item.aifact.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.aifactinsight.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.contributor.toLowerCase().includes(searchQuery.toLowerCase())
@@ -174,137 +178,139 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className="min-h-screen flex flex-col relative pt-28">
       {/* Liquid Background */}
       <div className="atmosphere" />
-      
-      {/* Header */}
-      <header className="p-8 flex justify-between items-center z-10">
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="space-y-1"
-        >
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_10px_#00F0FF]" />
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em] opacity-50">Community Archive v2.0</span>
-          </div>
-          <h1 className="text-5xl font-serif italic tracking-tighter gradient-text flex items-center gap-3">
-            AI Insights Hub
-            <Sparkles className="text-accent animate-pulse" size={24} />
-          </h1>
-        </motion.div>
-        
-        <motion.div 
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-6"
-        >
-          {/* New Protected Access Button Added Here */}
-          <button
-            onClick={() => setShowPasswordModal(true)}
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-accent/40 text-xs font-mono transition-colors text-accent/90"
-          >
-            <Lock size={12} />
-            Insights Diary
-          </button>
 
-          <div className="relative group">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 opacity-30 group-focus-within:opacity-100 transition-opacity" size={16} />
-            <input 
-              type="text" 
-              placeholder="Query the ledger..."
-              className="glass-input rounded-full py-3 pl-12 pr-6 text-sm font-mono w-72 outline-none"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="group relative px-6 py-3 rounded-full overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-accent to-accent-alt opacity-80 group-hover:opacity-100 transition-opacity" />
-            <div className="relative flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white">
-              <Plus size={16} />
-              Contribute
+      {/* Floating Nav */}
+      <header className="fixed top-6 left-0 right-0 z-40 px-6">
+        <motion.div
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="glass rounded-full max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4"
+        >
+          <div className="flex items-center gap-3 pl-2">
+            <div className="w-9 h-9 rounded-2xl bg-gradient-to-br from-violet-400 to-teal-300 flex items-center justify-center shrink-0" style={{ background: 'linear-gradient(135deg, var(--violet), var(--teal))' }}>
+              <Database size={16} className="text-black/70" />
             </div>
-          </button>
+            <div className="hidden sm:block leading-tight">
+              <p className="text-sm font-semibold">AI Insight Hub</p>
+              <p className="text-[11px] text-faint">Community AI archive</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 flex-1 justify-end">
+            <div className="relative group hidden md:block w-72">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 opacity-40 group-focus-within:opacity-100 transition-opacity" size={16} />
+              <input
+                type="text"
+                placeholder="Search the archive"
+                className="glass-input rounded-full py-2.5 pl-11 pr-5 text-sm w-full"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            <button
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-full glass-input hover:border-[var(--line-2)] flex items-center justify-center transition-colors shrink-0"
+              title="Toggle theme"
+              aria-label="Toggle light and dark theme"
+            >
+              {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+            </button>
+            <button
+              onClick={() => setShowPasswordModal(true)}
+              className="flex items-center gap-2 px-4 py-2.5 rounded-full glass-input hover:border-[var(--line-2)] text-xs font-medium transition-colors"
+            >
+              <Lock size={13} />
+              <span className="hidden sm:inline">Diary</span>
+            </button>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-black transition-transform hover:scale-[1.03]"
+              style={{ background: 'linear-gradient(135deg, var(--violet), var(--teal))' }}
+            >
+              <Plus size={15} />
+              Contribute
+            </button>
+          </div>
         </motion.div>
       </header>
 
       {/* Hero Section */}
-      <section className="px-8 py-12 z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <motion.div 
+      <section className="px-6 py-6 z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch max-w-7xl mx-auto w-full">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="lg:col-span-7 glass-card rounded-[2.5rem] p-10 flex flex-col justify-center"
+            className="lg:col-span-7 glass rounded-[2rem] p-10 flex flex-col justify-center"
           >
-            <h2 className="text-3xl font-serif italic mb-6 leading-tight">
-              Documenting the <span className="text-accent">Collective AI</span> Intelligence.
-            </h2>
-            <p className="text-lg font-light leading-relaxed opacity-80 mb-8">
-              AI Insight Hub is a community-owned ledger capturing AI Insights. 
-              Use these insights to spark ideas and build new technology while contributing to a transparent, decentralized record of our era’s greatest leap.
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
+              Documenting the collective intelligence of AI.
+            </h1>
+            <p className="text-base leading-relaxed text-dim mb-8 max-w-lg">
+              AI Insight Hub is a community-owned ledger capturing AI facts and the practical
+              insight behind them. Read what's here, or add what you know back to the record.
             </p>
-            <div className="flex gap-4">
-              <button 
+            <div className="flex flex-wrap gap-3">
+              <button
                 onClick={() => setIsModalOpen(true)}
-                className="px-8 py-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-3 group"
+                className="px-6 py-3.5 rounded-2xl glass-input hover:border-[var(--line-2)] transition-all flex items-center gap-3 group"
               >
-                <span className="text-sm font-bold uppercase tracking-widest">Join the Initiative</span>
-                <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <span className="text-sm font-medium">Join the initiative</span>
+                <ArrowUpRight size={16} className="opacity-60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </button>
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             id="protocol"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="lg:col-span-5 glass-card rounded-[2.5rem] p-10 flex flex-col scroll-mt-24"
+            transition={{ delay: 0.08 }}
+            className="lg:col-span-5 glass rounded-[2rem] p-10 flex flex-col scroll-mt-24"
           >
             <div className="flex items-center gap-2 mb-6">
-              <History size={18} className="text-accent" />
-              <h3 className="text-xs font-mono uppercase tracking-[0.3em] opacity-50">Community Protocol</h3>
+              <History size={16} className="opacity-60" />
+              <h2 className="text-sm font-semibold">How to contribute</h2>
             </div>
-            <div className="space-y-6 flex-1">
-              <a 
-                href="https://github.com/sharathchandran2001/ai-insight-hub" 
-                target="_blank" 
+            <div className="space-y-5 flex-1 relative">
+              <div className="absolute left-[15px] top-2 bottom-2 w-px bg-[var(--fill-2)]" />
+              <a
+                href="https://github.com/sharathchandran2001/ai-insight-hub"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-4 group/item cursor-pointer"
+                className="flex gap-4 group/item cursor-pointer relative"
               >
-                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent group-hover/item:border-accent group-hover/item:bg-accent/10 transition-all">01</div>
+                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-semibold group-hover/item:border-[var(--line-3)] transition-all bg-[var(--canvas)]">1</div>
                 <div>
-                  <h4 className="text-sm font-semibold mb-1 group-hover/item:text-accent transition-colors">Fork the Ledger</h4>
-                  <p className="text-xs opacity-60 leading-relaxed">Access our public GitHub repository (Refer README steps) and fork the core JSON to add your Insights.</p>
+                  <h3 className="text-sm font-semibold mb-1 group-hover/item:text-[var(--ink)] transition-colors">Fork the ledger</h3>
+                  <p className="text-xs text-faint leading-relaxed">Fork the public GitHub repository and grab a copy of the archive.</p>
                 </div>
               </a>
-              <a 
-                href="https://github.com/sharathchandran2001/ai-insight-hub/edit/main/public/aiinsightdiary.json" 
-                target="_blank" 
+              <a
+                href="https://github.com/sharathchandran2001/ai-insight-hub/edit/main/public/aiinsightdiary.json"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-4 group/item cursor-pointer"
+                className="flex gap-4 group/item cursor-pointer relative"
               >
-                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent group-hover/item:border-accent group-hover/item:bg-accent/10 transition-all">02</div>
+                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-semibold group-hover/item:border-[var(--line-3)] transition-all bg-[var(--canvas)]">2</div>
                 <div>
-                  <h4 className="text-sm font-semibold mb-1 group-hover/item:text-accent transition-colors">Append Insight</h4>
-                  <p className="text-xs opacity-60 leading-relaxed">Add your AI fact following our schema in <code className="bg-white/5 px-1 rounded">aiinsightdiary.json</code>.</p>
+                  <h3 className="text-sm font-semibold mb-1 group-hover/item:text-[var(--ink)] transition-colors">Add your insight</h3>
+                  <p className="text-xs text-faint leading-relaxed">Follow the existing schema in <code className="bg-[var(--fill-2)] px-1.5 py-0.5 rounded">aiinsightdiary.json</code>.</p>
                 </div>
               </a>
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-mono border-accent/30 text-accent">03</div>
+              <div className="flex gap-4 relative">
+                <div className="w-8 h-8 rounded-full glass-input flex items-center justify-center shrink-0 text-xs font-semibold bg-[var(--canvas)]">3</div>
                 <div>
-                  <h4 className="text-sm font-semibold mb-1">Pull Request</h4>
-                  <p className="text-xs opacity-60 leading-relaxed">Submit a PR to have your contribution verified and merged into the live archive.</p>
+                  <h3 className="text-sm font-semibold mb-1">Open a pull request</h3>
+                  <p className="text-xs text-faint leading-relaxed">Submit it for review — once merged, it's live for everyone.</p>
                 </div>
               </div>
             </div>
-            <div className="mt-8 pt-6 border-t border-white/5">
-              <p className="text-[10px] font-mono opacity-40 leading-relaxed">
-                * Contributions are permanent and attributed to your GitHub alias.
+            <div className="mt-8 pt-6 border-t border-[var(--glass-border)]">
+              <p className="text-[11px] text-faint leading-relaxed">
+                Contributions are permanent and stay attributed to your GitHub handle.
               </p>
             </div>
           </motion.div>
@@ -312,216 +318,207 @@ export default function App() {
       </section>
 
       {/* Main Content */}
-      <main id="archive" className="flex-1 px-8 pb-8 z-10 scroll-mt-24">
-        <div className="mb-8 flex items-center justify-between">
-          <h2 className="text-2xl font-serif italic">Historical Archive</h2>
-          <div className="h-px flex-1 mx-8 bg-white/5" />
-          <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest opacity-40">
-            <Database size={12} />
-            Live Neural Feed
+      <main id="archive" className="flex-1 px-6 pb-8 z-10 scroll-mt-24">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="mb-6 flex items-center justify-between">
+            <div>
+              <h2 className="text-xl font-semibold">Archive</h2>
+              <p className="text-xs text-faint mt-0.5">{insights.length} entries logged so far</p>
+            </div>
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-container">
-          {loading ? (
-            <div className="col-span-full flex flex-col items-center justify-center py-40">
-              <Loader2 className="animate-spin text-accent mb-6" size={48} />
-              <p className="font-mono text-xs uppercase tracking-[0.5em] opacity-40">Accessing Neural Core...</p>
-            </div>
-          ) : (
-            <AnimatePresence mode="popLayout">
-              {filteredInsights.map((item, idx) => (
-                <motion.div 
-                  key={item.aifact + idx}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                  transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                  className="glass-card card-3d rounded-3xl p-8 group relative overflow-hidden"
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/10 transition-colors" />
-                  
-                  <div className="flex justify-between items-start mb-6 card-3d-inner">
-                    <div className="flex flex-wrap gap-2">
-                      <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
-                        <Calendar size={12} className="text-accent" />
-                        <span className="text-[10px] font-mono opacity-60">{item.date}</span>
-                      </div>
-                      {getTags(item.aifact + ' ' + item.aifactinsight).map(tag => (
-                        <div key={tag} className="flex items-center gap-1 px-2 py-1 rounded-full bg-accent/5 border border-accent/10 text-[9px] font-mono text-accent uppercase tracking-tighter">
-                          <Hash size={8} />
-                          {tag.slice(1)}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex items-center gap-2 opacity-40 group-hover:opacity-100 transition-opacity">
-                      <User size={12} />
-                      <span className="text-[10px] font-mono">@{item.contributor}</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-semibold mb-4 group-hover:text-accent transition-colors leading-tight card-3d-inner-deep">
-                    {item.aifact}
-                  </h3>
-                  
-                  <p className="text-sm leading-relaxed opacity-70 mb-6 font-light card-3d-inner">
-                    {item.aifactinsight}
-                  </p>
-
-                  {item.practicalUsage && (
-                    <div className="pt-6 border-t border-white/5 space-y-2 card-3d-inner">
-                      <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest opacity-40 font-bold">
-                        <Lightbulb size={12} className="text-accent" />
-                        Practical Usage
-                      </div>
-                      <p className="text-xs italic opacity-60 leading-relaxed">
-                        {item.practicalUsage}
-                      </p>
-                    </div>
-                  )}
-                  
-                  <div className="absolute bottom-6 right-6 flex items-center gap-3 card-3d-inner">
-                    <button 
-                      onClick={() => handleCopy(`${item.aifact}: ${item.aifactinsight}`, item.aifact)}
-                      className="p-2 rounded-full hover:bg-white/5 transition-colors opacity-0 group-hover:opacity-40 hover:!opacity-100"
-                      title="Copy to clipboard"
-                    >
-                      {copyStatus === item.aifact ? <Check size={16} className="text-green-400" /> : <Copy size={16} />}
-                    </button>
-                    <button 
-                      onClick={() => handleShare(item)}
-                      className="p-2 rounded-full hover:bg-white/5 transition-colors opacity-0 group-hover:opacity-40 hover:!opacity-100"
-                      title="Share insight"
-                    >
-                      <Share2 size={16} />
-                    </button>
-                    <ArrowUpRight className="opacity-0 group-hover:opacity-20 transition-opacity" size={24} />
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          )}
-        </div>
-        
-        {!loading && filteredInsights.length === 0 && (
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="flex flex-col items-center justify-center py-40 text-center"
-          >
-            <div className="w-24 h-24 rounded-full bg-accent/5 flex items-center justify-center mb-8 relative">
-              <Database size={48} className="opacity-20" />
-              <motion.div 
-                animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.5, 0.2] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute inset-0 rounded-full border border-accent/20"
-              />
-            </div>
-            <h3 className="text-2xl font-serif italic mb-2">No Records Found</h3>
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] opacity-40 max-w-xs leading-relaxed">
-              The neural archive has no data matching your current query. Try broadening your search.
-            </p>
-            <button 
-              onClick={() => setSearchQuery('')}
-              className="mt-8 px-6 py-2 rounded-full border border-white/10 hover:border-accent/40 text-[10px] font-mono uppercase tracking-widest transition-colors"
-            >
-              Reset Search
-            </button>
-          </motion.div>
-        )}
-
-        {/* Leaderboard & Stats Section */}
-        <section className="mt-12 perspective-container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="lg:col-span-8 glass-card card-3d rounded-[2.5rem] p-10"
-            >
-              <div className="flex items-center justify-between mb-8 card-3d-inner">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                    <History size={20} className="text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-serif italic">Contributor Leaderboard</h3>
-                    <p className="text-[10px] font-mono uppercase tracking-widest opacity-40">Top minds in the neural archive</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-                  <span className="text-[10px] font-mono opacity-60">Total Nodes:</span>
-                  <span className="text-xs font-bold text-accent">{insights.length}</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {loading ? (
+              <div className="col-span-full flex flex-col items-center justify-center py-40">
+                <Loader2 className="animate-spin opacity-50 mb-6" size={40} />
+                <p className="text-sm text-faint">Loading the archive…</p>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 card-3d-inner">
-                {leaderboard.map(([name, count], idx) => (
-                  <motion.div 
-                    key={name}
-                    whileHover={{ scale: 1.02 }}
-                    className="glass-card rounded-2xl p-6 flex items-center justify-between group hover:border-accent/30 transition-all"
+            ) : (
+              <AnimatePresence mode="popLayout">
+                {filteredInsights.map((item, idx) => (
+                  <motion.div
+                    key={item.aifact + idx}
+                    layout
+                    initial={{ opacity: 0, scale: 0.96, y: 16 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.96, y: 16 }}
+                    transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
+                    className="glass liquid-edge lift rounded-3xl p-7 group relative overflow-hidden flex flex-col"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="relative">
-                        <div className="w-10 h-10 rounded-full bg-ink/10 flex items-center justify-center overflow-hidden">
-                          <User size={16} />
+                    <div className="flex justify-between items-start mb-5">
+                      <div className="flex flex-wrap gap-2">
+                        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--fill-1)] border border-[var(--glass-border)]">
+                          <Calendar size={11} className="opacity-60" />
+                          <span className="text-[11px] text-dim">{item.date}</span>
                         </div>
-                        {idx === 0 && (
-                          <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full flex items-center justify-center shadow-[0_0_10px_#00F0FF]">
-                            <ArrowUpRight size={8} className="text-black" />
+                        {getTags(item.aifact + ' ' + item.aifactinsight).slice(0, 3).map(tag => (
+                          <div key={tag} className="flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-medium" style={{ background: 'var(--violet-soft)', color: 'var(--violet)' }}>
+                            <Hash size={9} />
+                            {tag.slice(1)}
                           </div>
-                        )}
+                        ))}
                       </div>
-                      <div>
-                        <p className="text-xs font-bold group-hover:text-accent transition-colors">@{name}</p>
-                        <p className="text-[10px] font-mono opacity-40 uppercase tracking-widest">{count} Contributions</p>
+                      <div className="flex items-center gap-1.5 text-faint shrink-0 ml-2">
+                        <User size={12} />
+                        <span className="text-[11px]">@{item.contributor}</span>
                       </div>
                     </div>
-                    <div className="text-xl font-serif italic opacity-10 group-hover:opacity-30 transition-opacity">
-                      0{idx + 1}
+
+                    <h3 className="text-lg font-semibold mb-3 leading-snug">
+                      {item.aifact}
+                    </h3>
+
+                    <p className="text-sm leading-relaxed text-dim mb-5">
+                      {item.aifactinsight}
+                    </p>
+
+                    {item.practicalUsage && (
+                      <div className="pt-5 border-t border-[var(--glass-border)] space-y-2 mt-auto">
+                        <div className="flex items-center gap-2 text-[11px] font-semibold text-faint">
+                          <Lightbulb size={13} className="opacity-70" />
+                          Practical usage
+                        </div>
+                        <p className="text-xs text-dim leading-relaxed italic">
+                          {item.practicalUsage}
+                        </p>
+                      </div>
+                    )}
+
+                    <div className="flex items-center justify-end gap-2 mt-5 pt-1">
+                      <button
+                        onClick={() => handleCopy(`${item.aifact}: ${item.aifactinsight}`, item.aifact)}
+                        className="p-2 rounded-full hover:bg-[var(--fill-2)] transition-colors opacity-0 group-hover:opacity-100"
+                        title="Copy to clipboard"
+                      >
+                        {copyStatus === item.aifact ? <Check size={15} className="text-emerald-400" /> : <Copy size={15} />}
+                      </button>
+                      <button
+                        onClick={() => handleShare(item)}
+                        className="p-2 rounded-full hover:bg-[var(--fill-2)] transition-colors opacity-0 group-hover:opacity-100"
+                        title="Share insight"
+                      >
+                        <Share2 size={15} />
+                      </button>
                     </div>
                   </motion.div>
                 ))}
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="lg:col-span-4 glass-card card-3d rounded-[2.5rem] p-10 flex flex-col justify-center relative overflow-hidden group"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-accent-alt/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              <div className="relative z-10 space-y-6 card-3d-inner">
-                <div className="w-12 h-12 rounded-2xl bg-accent/20 flex items-center justify-center mb-2">
-                  <Plus size={24} className="text-accent" />
-                </div>
-                <h3 className="text-2xl font-serif italic leading-tight card-3d-inner-deep">
-                  Most Active <span className="text-accent">Neural Contributor</span>
-                </h3>
-                {topContributor ? (
-                  <div className="space-y-2 card-3d-inner">
-                    <p className="text-4xl font-bold tracking-tighter">@{topContributor[0]}</p>
-                    <p className="text-sm font-mono opacity-60 uppercase tracking-widest">
-                      Dominating the ledger with {topContributor[1]} entries
-                    </p>
-                  </div>
-                ) : (
-                  <p className="text-sm font-mono opacity-40 italic">Awaiting first contribution...</p>
-                )}
-                <button 
-                  onClick={() => setIsModalOpen(true)}
-                  className="w-full py-4 rounded-xl bg-ink text-bg text-xs font-bold uppercase tracking-widest hover:bg-accent transition-colors card-3d-inner"
-                >
-                  Surpass the Leader
-                </button>
-              </div>
-            </motion.div>
+              </AnimatePresence>
+            )}
           </div>
-        </section>
+
+          {!loading && filteredInsights.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="flex flex-col items-center justify-center py-32 text-center"
+            >
+              <div className="w-20 h-20 rounded-full bg-[var(--fill-1)] flex items-center justify-center mb-6">
+                <Database size={36} className="opacity-30" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">No matches</h3>
+              <p className="text-sm text-faint max-w-xs leading-relaxed">
+                Nothing in the archive matches that search. Try a different term.
+              </p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="mt-6 px-5 py-2.5 rounded-full glass-input hover:border-[var(--line-2)] text-xs font-medium transition-colors"
+              >
+                Clear search
+              </button>
+            </motion.div>
+          )}
+
+          {/* Leaderboard & Stats Section */}
+          <section className="mt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="lg:col-span-8 glass rounded-[2rem] p-9"
+              >
+                <div className="flex items-center justify-between mb-7">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--fill-1)] flex items-center justify-center">
+                      <History size={18} className="opacity-70" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-semibold">Contributor leaderboard</h3>
+                      <p className="text-xs text-faint">Ranked by entries added</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--fill-1)] border border-[var(--glass-border)] text-xs">
+                    <span className="text-faint">Total</span>
+                    <span className="font-semibold">{insights.length}</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {leaderboard.map(([name, count], idx) => (
+                    <motion.div
+                      key={name}
+                      whileHover={{ scale: 1.02 }}
+                      className="glass-input rounded-2xl p-5 flex items-center justify-between transition-all"
+                    >
+                      <div className="flex items-center gap-3.5">
+                        <div className="relative">
+                          <div className="w-9 h-9 rounded-full bg-[var(--fill-2)] flex items-center justify-center">
+                            <User size={15} />
+                          </div>
+                          {idx === 0 && (
+                            <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full flex items-center justify-center" style={{ background: 'var(--amber)' }}>
+                              <ArrowUpRight size={9} className="text-black" />
+                            </div>
+                          )}
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold">@{name}</p>
+                          <p className="text-[11px] text-faint">{count} contributions</p>
+                        </div>
+                      </div>
+                      <div className="text-lg font-bold opacity-15">
+                        {idx + 1}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.16 }}
+                className="lg:col-span-4 glass rounded-[2rem] p-9 flex flex-col justify-center relative overflow-hidden"
+              >
+                <div className="relative z-10 space-y-5">
+                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center" style={{ background: 'var(--violet-soft)' }}>
+                    <Plus size={20} style={{ color: 'var(--violet)' }} />
+                  </div>
+                  <h3 className="text-xl font-semibold leading-snug">
+                    Most active contributor
+                  </h3>
+                  {topContributor ? (
+                    <div className="space-y-1">
+                      <p className="text-3xl font-bold tracking-tight">@{topContributor[0]}</p>
+                      <p className="text-sm text-faint">
+                        Leading the ledger with {topContributor[1]} entries
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-sm text-faint italic">Awaiting the first contribution…</p>
+                  )}
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="w-full py-3.5 rounded-xl text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
+                    style={{ background: 'linear-gradient(135deg, var(--violet), var(--teal))' }}
+                  >
+                    Add your insight
+                  </button>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </div>
       </main>
 
       {/* Scroll to Top */}
@@ -532,9 +529,9 @@ export default function App() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full glass-card flex items-center justify-center hover:text-accent transition-colors shadow-2xl"
+            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-[var(--fill-2)] transition-colors"
           >
-            <ArrowUp size={20} />
+            <ArrowUp size={18} />
           </motion.button>
         )}
       </AnimatePresence>
@@ -546,14 +543,14 @@ export default function App() {
             initial={{ opacity: 0, y: 50, x: '-50%' }}
             animate={{ opacity: 1, y: 0, x: '-50%' }}
             exit={{ opacity: 0, y: 50, x: '-50%' }}
-            className="fixed bottom-12 left-1/2 z-[100] px-8 py-4 glass-card rounded-2xl border-accent/30 flex items-center gap-4 shadow-[0_0_50px_rgba(0,240,255,0.2)]"
+            className="fixed bottom-10 left-1/2 z-[100] px-7 py-4 glass rounded-2xl flex items-center gap-4"
           >
-            <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
-              <Check size={18} className="text-accent" />
+            <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: 'var(--violet-soft)' }}>
+              <Check size={16} style={{ color: 'var(--violet)' }} />
             </div>
             <div>
-              <p className="text-sm font-bold">Contribution Received</p>
-              <p className="text-[10px] font-mono opacity-50 uppercase tracking-widest">Node successfully added to archive</p>
+              <p className="text-sm font-semibold">Contribution received</p>
+              <p className="text-xs text-faint">It's been added to the archive</p>
             </div>
           </motion.div>
         )}
@@ -563,53 +560,54 @@ export default function App() {
       <AnimatePresence>
         {showPasswordModal && (
           <div className="fixed inset-0 z-[110] flex items-center justify-center p-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => { setShowPasswordModal(false); setPasswordError(false); setPasswordInput(''); }}
-              className="absolute inset-0 bg-black/80 backdrop-blur-md"
+              className="absolute inset-0 bg-black/70 backdrop-blur-md"
             />
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative glass-card w-full max-w-md rounded-3xl p-8 overflow-hidden shadow-2xl border-accent/20"
+              className="relative glass w-full max-w-md rounded-[2rem] p-8"
             >
               <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                  <Lock size={22} />
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: 'var(--violet-soft)', color: 'var(--violet)' }}>
+                  <Lock size={20} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-serif italic">Encrypted Vault Access</h3>
-                  <p className="text-[10px] font-mono uppercase tracking-widest opacity-40 mt-1">Provide credential vector to decrypt node</p>
+                  <h3 className="text-lg font-semibold">Unlock Insights Diary</h3>
+                  <p className="text-xs text-faint mt-1">Enter the passphrase to view this private archive</p>
                 </div>
 
-                <form onSubmit={handleVerifyPassword} className="w-full space-y-4 pt-4">
-                  <input 
+                <form onSubmit={handleVerifyPassword} className="w-full space-y-4 pt-3">
+                  <input
                     required
                     type="password"
-                    placeholder="Enter security key..."
-                    className={`w-full glass-input rounded-xl p-4 text-center font-mono text-sm outline-none transition-colors ${passwordError ? 'border-red-500/50 focus:border-red-500' : 'focus:border-accent'}`}
+                    placeholder="Passphrase"
+                    className={`w-full glass-input rounded-xl p-4 text-center text-sm ${passwordError ? 'border-red-500/50' : ''}`}
                     value={passwordInput}
-                    onChange={(e) => { setPasswordInput(e.target.value); if(passwordError) setPasswordError(false); }}
+                    onChange={(e) => { setPasswordInput(e.target.value); if (passwordError) setPasswordError(false); }}
                   />
                   {passwordError && (
-                    <p className="text-[10px] font-mono text-red-400 uppercase tracking-wider">Invalid credential key</p>
+                    <p className="text-xs text-[var(--danger)]">That passphrase isn't right — try again</p>
                   )}
-                  <div className="flex gap-3 pt-2">
-                    <button 
+                  <div className="flex gap-3 pt-1">
+                    <button
                       type="button"
                       onClick={() => { setShowPasswordModal(false); setPasswordError(false); setPasswordInput(''); }}
-                      className="flex-1 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-widest hover:bg-white/5 transition-colors"
+                      className="flex-1 py-3 rounded-xl glass-input hover:border-[var(--line-2)] text-sm font-medium transition-colors"
                     >
-                      Abort
+                      Cancel
                     </button>
-                    <button 
+                    <button
                       type="submit"
-                      className="flex-1 py-3 rounded-xl bg-accent text-black text-xs font-bold uppercase tracking-widest hover:bg-accent-alt transition-colors shadow-[0_0_15px_rgba(0,240,255,0.3)]"
+                      className="flex-1 py-3 rounded-xl text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
+                      style={{ background: 'linear-gradient(135deg, var(--violet), var(--teal))' }}
                     >
-                      Decrypt
+                      Unlock
                     </button>
                   </div>
                 </form>
@@ -620,36 +618,36 @@ export default function App() {
       </AnimatePresence>
 
       {/* Footer */}
-      <footer className="p-8 z-10 space-y-6">
-        <div className="glass-card rounded-3xl p-8 max-w-4xl mx-auto">
+      <footer className="p-6 z-10 space-y-4 max-w-7xl mx-auto w-full">
+        <div className="glass rounded-3xl p-8">
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
-              <Lightbulb size={20} className="text-accent" />
+            <div className="w-10 h-10 rounded-full bg-[var(--fill-1)] flex items-center justify-center shrink-0">
+              <Lightbulb size={18} className="opacity-70" />
             </div>
             <div>
-              <h4 className="text-xs font-mono uppercase tracking-widest mb-2 opacity-50">Educational & Open Source Disclaimer</h4>
-              <p className="text-[11px] leading-relaxed opacity-60 font-light">
+              <h4 className="text-xs font-semibold text-faint mb-2">Educational & open-source disclaimer</h4>
+              <p className="text-[11px] leading-relaxed text-faint">
                 AI Insight Hub is an open-source educational initiative. All knowledge cards are community-curated summaries and transformative syntheses of publicly available information, provided for informational and educational purposes only. Factual claims are derived from public sources; all rights in original source material remain with their respective owners. Agentic insights and practical guidance represent original editorial analysis and do not represent the views of any AI laboratory or corporate entity. While we strive for accuracy, AI Insight Hub does not guarantee the validity of any entry. Contributions are subject to community review. Use of this data is at your own risk.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="glass-card rounded-2xl p-4 flex justify-between items-center px-8">
-          <div className="flex items-center gap-8 text-[10px] font-mono uppercase tracking-widest opacity-40">
-            <span className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-green-500" /> System Online</span>
-            <span>Archive Size: {insights.length} Nodes</span>
+        <div className="glass rounded-2xl p-4 flex flex-wrap gap-4 justify-between items-center px-7">
+          <div className="flex items-center gap-6 text-xs text-faint">
+            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> System online</span>
+            <span>{insights.length} entries</span>
           </div>
-          <div className="flex items-center gap-6 text-[10px] font-mono uppercase tracking-widest opacity-40">
-            <a href="#protocol" className="hover:text-accent transition-colors">Protocol</a>
-            <a href="#archive" className="hover:text-accent transition-colors">Neural Net</a>
-            <a 
-              href="https://github.com/sharathchandran2001/ai-insight-hub" 
-              target="_blank" 
+          <div className="flex items-center gap-5 text-xs text-faint">
+            <a href="#protocol" className="hover:text-[var(--ink)] transition-colors">How it works</a>
+            <a href="#archive" className="hover:text-[var(--ink)] transition-colors">Archive</a>
+            <a
+              href="https://github.com/sharathchandran2001/ai-insight-hub"
+              target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-accent transition-colors flex items-center gap-2"
+              className="hover:text-[var(--ink)] transition-colors flex items-center gap-1.5"
             >
-              <Github size={12} />
+              <Github size={13} />
               GitHub
             </a>
           </div>
@@ -660,42 +658,45 @@ export default function App() {
       <AnimatePresence>
         {isModalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsModalOpen(false)}
               className="absolute inset-0 bg-black/60 backdrop-blur-md"
             />
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9, y: 40 }}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 40 }}
-              className="relative glass-card w-full max-w-2xl rounded-[2.5rem] overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)]"
+              exit={{ opacity: 0, scale: 0.92, y: 30 }}
+              className="relative glass w-full max-w-2xl rounded-[2rem] overflow-hidden"
             >
-              <div className="p-10 border-b border-white/5 flex justify-between items-center">
+              <div className="p-9 border-b border-[var(--glass-border)] flex justify-between items-center">
                 <div className="space-y-1">
-                  <h2 className="text-3xl font-serif italic">New Archive Node</h2>
-                  <p className="text-[10px] font-mono uppercase tracking-widest opacity-40">Contribute to the collective intelligence</p>
+                  <h2 className="text-2xl font-semibold">Add a new insight</h2>
+                  <p className="text-xs text-faint">Contribute to the collective archive</p>
                 </div>
-                <button 
-                  onClick={() => setIsModalOpen(false)} 
-                  className="w-10 h-10 rounded-full glass-input flex items-center justify-center hover:text-accent transition-colors"
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="w-10 h-10 rounded-full glass-input flex items-center justify-center hover:border-[var(--line-2)] transition-colors"
                 >
-                  <X size={20} />
+                  <X size={18} />
                 </button>
               </div>
 
-              <form onSubmit={handleSubmit} className="p-10 space-y-8">
-                <a 
+              <form onSubmit={handleSubmit} className="p-9 space-y-6">
+                <a
                   href="https://github.com/sharathchandran2001/ai-insight-hub/edit/main/public/aiinsightdiary.json"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full h-16 rounded-2xl border border-white/10 hover:bg-white/5 flex items-center justify-center gap-3 text-sm font-bold uppercase tracking-[0.2em] transition-all group"
+                  className="w-full h-16 rounded-2xl glass-input hover:border-[var(--line-2)] flex items-center justify-center gap-3 text-sm font-semibold transition-all group"
                 >
-                  <Github size={20} className="group-hover:scale-110 transition-transform" />
-                  Initiate GitHub PR
+                  <Github size={18} className="group-hover:scale-110 transition-transform" />
+                  Open a GitHub pull request
                 </a>
+                {isSubmitting && (
+                  <p className="text-xs text-faint text-center">Submitting…</p>
+                )}
               </form>
             </motion.div>
           </div>
